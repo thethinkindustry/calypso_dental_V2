@@ -1,0 +1,10 @@
+c:\users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\calypso_dental_V2.exe.config
+c:\users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.csprojResolveAssemblyReference.cache
+c:\users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.Properties.Resources.resources
+c:\users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.csproj.GenerateResource.Cache
+c:\users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\calypso_dental_V2.exe
+c:\users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\calypso_dental_V2.pdb
+c:\users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\MaterialSkin.dll
+c:\users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.exe
+c:\users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.pdb
+c:\users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.frm_main.resources
