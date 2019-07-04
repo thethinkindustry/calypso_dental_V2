@@ -97,13 +97,8 @@
             this.t25 = new System.Windows.Forms.PictureBox();
             this.t44 = new System.Windows.Forms.PictureBox();
             this.cb_procces_bar = new System.Windows.Forms.ComboBox();
-            this.cb_color = new System.Windows.Forms.ComboBox();
+            this.cb_color_bar = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.rb1 = new System.Windows.Forms.RadioButton();
-            this.rb2 = new System.Windows.Forms.RadioButton();
-            this.rb3 = new System.Windows.Forms.RadioButton();
-            this.rb4 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.chk_sent_toDR = new System.Windows.Forms.CheckBox();
             this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -115,7 +110,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtp_deadline = new System.Windows.Forms.DateTimePicker();
+            this.dtp_register_date = new System.Windows.Forms.DateTimePicker();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.cb_steps_bar = new System.Windows.Forms.ComboBox();
             this.grb_teeth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.t41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t42)).BeginInit();
@@ -149,7 +149,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.t24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t44)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grb_teeth
@@ -922,18 +921,18 @@
             // cb_procces_bar
             // 
             this.cb_procces_bar.FormattingEnabled = true;
-            this.cb_procces_bar.Location = new System.Drawing.Point(558, 111);
+            this.cb_procces_bar.Location = new System.Drawing.Point(579, 176);
             this.cb_procces_bar.Name = "cb_procces_bar";
             this.cb_procces_bar.Size = new System.Drawing.Size(300, 24);
             this.cb_procces_bar.TabIndex = 113;
             // 
-            // cb_color
+            // cb_color_bar
             // 
-            this.cb_color.FormattingEnabled = true;
-            this.cb_color.Location = new System.Drawing.Point(721, 152);
-            this.cb_color.Name = "cb_color";
-            this.cb_color.Size = new System.Drawing.Size(137, 24);
-            this.cb_color.TabIndex = 115;
+            this.cb_color_bar.FormattingEnabled = true;
+            this.cb_color_bar.Location = new System.Drawing.Point(742, 223);
+            this.cb_color_bar.Name = "cb_color_bar";
+            this.cb_color_bar.Size = new System.Drawing.Size(137, 24);
+            this.cb_color_bar.TabIndex = 115;
             // 
             // label7
             // 
@@ -941,93 +940,18 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(592, 215);
+            this.label7.Location = new System.Drawing.Point(604, 282);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(13, 17);
             this.label7.TabIndex = 117;
             this.label7.Text = "*";
-            // 
-            // rb1
-            // 
-            this.rb1.AutoSize = true;
-            this.rb1.BackColor = System.Drawing.SystemColors.Control;
-            this.rb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rb1.ForeColor = System.Drawing.Color.Black;
-            this.rb1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rb1.Location = new System.Drawing.Point(6, 58);
-            this.rb1.Name = "rb1";
-            this.rb1.Size = new System.Drawing.Size(197, 29);
-            this.rb1.TabIndex = 118;
-            this.rb1.TabStop = true;
-            this.rb1.Text = "İskelet Kron Prova ";
-            this.rb1.UseVisualStyleBackColor = false;
-            // 
-            // rb2
-            // 
-            this.rb2.AutoSize = true;
-            this.rb2.BackColor = System.Drawing.SystemColors.Control;
-            this.rb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rb2.ForeColor = System.Drawing.Color.Black;
-            this.rb2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rb2.Location = new System.Drawing.Point(6, 101);
-            this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(150, 29);
-            this.rb2.TabIndex = 119;
-            this.rb2.TabStop = true;
-            this.rb2.Text = "Dentin Prova ";
-            this.rb2.UseVisualStyleBackColor = false;
-            // 
-            // rb3
-            // 
-            this.rb3.AutoSize = true;
-            this.rb3.BackColor = System.Drawing.SystemColors.Control;
-            this.rb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rb3.ForeColor = System.Drawing.Color.Black;
-            this.rb3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rb3.Location = new System.Drawing.Point(6, 143);
-            this.rb3.Name = "rb3";
-            this.rb3.Size = new System.Drawing.Size(130, 29);
-            this.rb3.TabIndex = 120;
-            this.rb3.TabStop = true;
-            this.rb3.Text = "Dişli Prova ";
-            this.rb3.UseVisualStyleBackColor = false;
-            // 
-            // rb4
-            // 
-            this.rb4.AutoSize = true;
-            this.rb4.BackColor = System.Drawing.SystemColors.Control;
-            this.rb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rb4.ForeColor = System.Drawing.Color.Black;
-            this.rb4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rb4.Location = new System.Drawing.Point(6, 183);
-            this.rb4.Name = "rb4";
-            this.rb4.Size = new System.Drawing.Size(69, 29);
-            this.rb4.TabIndex = 121;
-            this.rb4.TabStop = true;
-            this.rb4.Text = "Bitiş";
-            this.rb4.UseVisualStyleBackColor = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.SystemColors.Control;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radioButton1.Location = new System.Drawing.Point(6, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(87, 29);
-            this.radioButton1.TabIndex = 122;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Geçici";
-            this.radioButton1.UseVisualStyleBackColor = false;
             // 
             // chk_sent_toDR
             // 
             this.chk_sent_toDR.AutoSize = true;
             this.chk_sent_toDR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.chk_sent_toDR.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chk_sent_toDR.Location = new System.Drawing.Point(817, 361);
+            this.chk_sent_toDR.Location = new System.Drawing.Point(839, 428);
             this.chk_sent_toDR.Name = "chk_sent_toDR";
             this.chk_sent_toDR.Size = new System.Drawing.Size(18, 17);
             this.chk_sent_toDR.TabIndex = 124;
@@ -1037,7 +961,7 @@
             // 
             this.materialSingleLineTextField4.Depth = 0;
             this.materialSingleLineTextField4.Hint = "";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(654, 358);
+            this.materialSingleLineTextField4.Location = new System.Drawing.Point(653, 423);
             this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
             this.materialSingleLineTextField4.PasswordChar = '\0';
@@ -1053,7 +977,7 @@
             // 
             this.materialSingleLineTextField5.Depth = 0;
             this.materialSingleLineTextField5.Hint = "";
-            this.materialSingleLineTextField5.Location = new System.Drawing.Point(636, 416);
+            this.materialSingleLineTextField5.Location = new System.Drawing.Point(630, 483);
             this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
             this.materialSingleLineTextField5.PasswordChar = '\0';
@@ -1069,10 +993,11 @@
             // 
             this.txt_unit_price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_unit_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.txt_unit_price.Location = new System.Drawing.Point(735, 410);
+            this.txt_unit_price.Location = new System.Drawing.Point(747, 477);
             this.txt_unit_price.Name = "txt_unit_price";
             this.txt_unit_price.Size = new System.Drawing.Size(123, 34);
             this.txt_unit_price.TabIndex = 127;
+            this.txt_unit_price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressed);
             // 
             // btn_add_proc
             // 
@@ -1082,12 +1007,13 @@
             this.btn_add_proc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_add_proc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_add_proc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_add_proc.Location = new System.Drawing.Point(730, 467);
+            this.btn_add_proc.Location = new System.Drawing.Point(742, 534);
             this.btn_add_proc.Name = "btn_add_proc";
             this.btn_add_proc.Size = new System.Drawing.Size(128, 51);
             this.btn_add_proc.TabIndex = 128;
             this.btn_add_proc.Text = "İşlem Ekle ";
             this.btn_add_proc.UseVisualStyleBackColor = false;
+            this.btn_add_proc.Click += new System.EventHandler(this.btn_add_proc_Click);
             // 
             // btn_cancel
             // 
@@ -1097,7 +1023,7 @@
             this.btn_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_cancel.Location = new System.Drawing.Point(596, 467);
+            this.btn_cancel.Location = new System.Drawing.Point(608, 534);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(128, 51);
             this.btn_cancel.TabIndex = 129;
@@ -1110,7 +1036,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(876, 111);
+            this.label1.Location = new System.Drawing.Point(888, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 17);
             this.label1.TabIndex = 130;
@@ -1122,7 +1048,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(876, 150);
+            this.label2.Location = new System.Drawing.Point(888, 243);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 17);
             this.label2.TabIndex = 131;
@@ -1134,7 +1060,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(864, 410);
+            this.label3.Location = new System.Drawing.Point(876, 503);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 17);
             this.label3.TabIndex = 132;
@@ -1147,7 +1073,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(372, 109);
+            this.materialLabel1.Location = new System.Drawing.Point(384, 176);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(180, 24);
@@ -1161,33 +1087,99 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(653, 154);
+            this.materialLabel2.Location = new System.Drawing.Point(665, 221);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(62, 24);
             this.materialLabel2.TabIndex = 140;
             this.materialLabel2.Text = "Renk :";
             // 
-            // groupBox1
+            // dtp_deadline
             // 
-            this.groupBox1.Controls.Add(this.rb1);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.rb4);
-            this.groupBox1.Controls.Add(this.rb3);
-            this.groupBox1.Controls.Add(this.rb2);
-            this.groupBox1.Location = new System.Drawing.Point(376, 215);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(210, 227);
-            this.groupBox1.TabIndex = 141;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Aşamalar";
+            this.dtp_deadline.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_deadline.Location = new System.Drawing.Point(796, 117);
+            this.dtp_deadline.Name = "dtp_deadline";
+            this.dtp_deadline.Size = new System.Drawing.Size(105, 22);
+            this.dtp_deadline.TabIndex = 143;
+            // 
+            // dtp_register_date
+            // 
+            this.dtp_register_date.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dtp_register_date.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dtp_register_date.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.dtp_register_date.CalendarTitleBackColor = System.Drawing.Color.Transparent;
+            this.dtp_register_date.CalendarTitleForeColor = System.Drawing.Color.Transparent;
+            this.dtp_register_date.CalendarTrailingForeColor = System.Drawing.Color.Transparent;
+            this.dtp_register_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_register_date.Location = new System.Drawing.Point(503, 115);
+            this.dtp_register_date.Name = "dtp_register_date";
+            this.dtp_register_date.Size = new System.Drawing.Size(114, 22);
+            this.dtp_register_date.TabIndex = 142;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(640, 115);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(138, 24);
+            this.materialLabel4.TabIndex = 145;
+            this.materialLabel4.Text = "İstenilen Tarih :";
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(375, 113);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(114, 24);
+            this.materialLabel3.TabIndex = 144;
+            this.materialLabel3.Text = "Kayıt Tarihi :";
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(413, 277);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(151, 24);
+            this.materialLabel5.TabIndex = 147;
+            this.materialLabel5.Text = "İşlem Aşaması  :";
+            // 
+            // cb_steps_bar
+            // 
+            this.cb_steps_bar.FormattingEnabled = true;
+            this.cb_steps_bar.Location = new System.Drawing.Point(579, 275);
+            this.cb_steps_bar.Name = "cb_steps_bar";
+            this.cb_steps_bar.Size = new System.Drawing.Size(300, 24);
+            this.cb_steps_bar.TabIndex = 146;
             // 
             // frm_add_proc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 655);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.cb_procces_bar);
+            this.Controls.Add(this.cb_color_bar);
+            this.Controls.Add(this.cb_steps_bar);
+            this.Controls.Add(this.txt_unit_price);
+            this.Controls.Add(this.materialLabel5);
+            this.Controls.Add(this.dtp_deadline);
+            this.Controls.Add(this.dtp_register_date);
+            this.Controls.Add(this.materialLabel4);
+            this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.label3);
@@ -1195,13 +1187,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_add_proc);
-            this.Controls.Add(this.txt_unit_price);
             this.Controls.Add(this.materialSingleLineTextField5);
             this.Controls.Add(this.chk_sent_toDR);
             this.Controls.Add(this.materialSingleLineTextField4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cb_color);
-            this.Controls.Add(this.cb_procces_bar);
             this.Controls.Add(this.grb_teeth);
             this.MinimumSize = new System.Drawing.Size(926, 655);
             this.Name = "frm_add_proc";
@@ -1241,8 +1230,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.t24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t44)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1318,13 +1305,8 @@
         private System.Windows.Forms.PictureBox t25;
         private System.Windows.Forms.PictureBox t44;
         private System.Windows.Forms.ComboBox cb_procces_bar;
-        private System.Windows.Forms.ComboBox cb_color;
+        private System.Windows.Forms.ComboBox cb_color_bar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton rb1;
-        private System.Windows.Forms.RadioButton rb2;
-        private System.Windows.Forms.RadioButton rb3;
-        private System.Windows.Forms.RadioButton rb4;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.CheckBox chk_sent_toDR;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
@@ -1336,6 +1318,11 @@
         private System.Windows.Forms.Label label3;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dtp_deadline;
+        private System.Windows.Forms.DateTimePicker dtp_register_date;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private System.Windows.Forms.ComboBox cb_steps_bar;
     }
 }

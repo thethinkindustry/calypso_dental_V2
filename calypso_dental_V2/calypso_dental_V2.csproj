@@ -62,6 +62,7 @@
     <Compile Include="frm_add_proc.Designer.cs">
       <DependentUpon>frm_add_proc.cs</DependentUpon>
     </Compile>
+    <Compile Include="inproc.cs" />
     <Compile Include="patient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
