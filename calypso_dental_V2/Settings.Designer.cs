@@ -26,24 +26,24 @@ namespace calypso_dental_V2 {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
-        public string ServerIP {
+        public string data_source {
             get {
-                return ((string)(this["ServerIP"]));
+                return ((string)(this["data_source"]));
             }
             set {
-                this["ServerIP"] = value;
+                this["data_source"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3369")]
-        public int ServerPort {
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost ")]
+        public string initial_catalog {
             get {
-                return ((int)(this["ServerPort"]));
+                return ((string)(this["initial_catalog"]));
             }
             set {
-                this["ServerPort"] = value;
+                this["initial_catalog"] = value;
             }
         }
     }
