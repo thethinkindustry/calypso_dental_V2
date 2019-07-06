@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.Globalization;
 namespace calypso_dental_V2
 {
     public partial class frm_main : MaterialForm
@@ -22,43 +23,115 @@ namespace calypso_dental_V2
         SqlDataReader dataReader;
         SqlDataAdapter adapter;
         DataView dv;
+        DataTable table = new DataTable();
+        DataTable search_table = new DataTable();
         public List<inproc> lst = new List<inproc>();
-       
+        int reg_id = 0;
         int id = 0;
         string sql = null;
         string connetionString = null;
         public frm_main()
         {
             InitializeComponent();
-
-            pnl_add_patient.Visible = false;
-            pnl_settings.Visible = false;
-            pnl_init.Visible = true;
+            pnlVisible(pnl_init);
+            
             settings.data_source = "DESKTOP-93568HR";
             settings.initial_catalog = "db_calypso_v2";
-
-            settings.Save();
+          settings.Save();
             connetionString = "Data Source=" + settings.data_source + "\\SQL_2014;Initial Catalog=" + settings.initial_catalog + ";Integrated Security=True";
             cnn = new SqlConnection(connetionString);
         }
+        void dgv_inproc_fill()
+        {
+            try
+            {
+                if (cnn.State == ConnectionState.Closed)
+                {
+                    cnn.Open();
+                }
+                adapter = new SqlDataAdapter("SELECT * FROM tbl_inproc WHERE reg_no=" + reg_id + "", cnn);
+                table.Clear();
+                adapter.Fill(table);
+                dgv_inproc.DataSource = table;
+                adapter.Dispose();
+                cnn.Close();
+            }
+            catch (Exception ex )
+            {
+                MessageBox.Show(""+ex.Message);
+                throw;
+            }
+            dgv_inproc.Columns["inproc_id"].HeaderText = "DB ID";
+            dgv_inproc.Columns["reg_no"].HeaderText = "Kayıt No";
+            dgv_inproc.Columns["proc_name"].HeaderText = "Yapılan İşlem ";
+            dgv_inproc.Columns["inproc_init_date"].HeaderText = "Kayıt Tarihi";
+            dgv_inproc.Columns["inproc_deadline"].HeaderText = "İstenilen Tarih";
+            dgv_inproc.Columns["step_name"].HeaderText = "Aşama";
+            dgv_inproc.Columns["color_name"].HeaderText = "Renk";
+            dgv_inproc.Columns["teet"].HeaderText = "Diş Numaraları";
+            dgv_inproc.Columns["teet_num"].HeaderText = "Diş Adeti";
+            dgv_inproc.Columns["price"].HeaderText = "Birim Fiyat";
+            dgv_inproc.Columns["total_price"].HeaderText = "Toplam Fiyat";
+            dgv_inproc.Columns["sent"].HeaderText = "Doktora Gönderildi";
+            total_price();
 
+        }
         private void btn_add_proc_Click(object sender, EventArgs e)
         {
             MaterialForm frm_proc = new frm_add_proc();
             frm_proc.ShowDialog();
-            dgv_inproc.DataSource = lst;
-        }
+            dgv_inproc_fill();
 
+
+        }
+        void total_price()
+        {
+            UInt32 prices = 0;
+            for (int i = 0; i < dgv_inproc.RowCount; i++)
+            {
+                prices += Convert.ToUInt32(dgv_inproc.Rows[i].Cells[10].Value.ToString());
+            }
+            txt_all_prices.Text = prices.ToString();
+        }
         private void pB_add_pattient_Click(object sender, EventArgs e)
         {
-            pnl_add_patient.Visible = true;
-            pnl_settings.Visible = false;
-            pnl_init.Visible = false;
+
+            pnlVisible(pnl_add_patient);
             cb_doctor_name.Items.Clear();
             try
             {
+                
                 cnn.Open();
-                sql = "SELECT dr_name FROM tbl_dr";
+                sql = "SELECT TOP(1) reg_no  FROM tbl_reg  order by reg_no desc ";
+                command = new SqlCommand(sql, cnn);
+                dataReader = command.ExecuteReader();
+                if (dataReader.Read())
+                {
+                    reg_id = int.Parse(dataReader["reg_no"].ToString());
+                    reg_id += 1;
+                }
+                //MessageBox.Show("reg_id :" + reg_id.ToString());
+                dataReader.Close();
+                cnn.Close();
+                txt_reg_no.Text = (reg_id).ToString();
+                cnn.Open();
+                adapter = new SqlDataAdapter("SELECT * FROM tbl_inproc WHERE reg_no=" + reg_id + "", cnn);
+                table.Clear();
+                adapter.Fill(table);
+                dgv_inproc.DataSource = table;
+                dgv_inproc_fill();
+                adapter.Dispose();
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("hata :" + ex.Message);
+                throw;
+            }
+            try
+            {
+                cnn.Open();
+                sql = "SELECT dr_name FROM tbl_dr ";
                 command = new SqlCommand(sql, cnn);
                 dataReader = command.ExecuteReader();
                 while (dataReader.Read())
@@ -79,8 +152,7 @@ namespace calypso_dental_V2
 
         private void pb_settings_Click(object sender, EventArgs e)
         {
-            pnl_add_patient.Visible = false;
-            pnl_settings.Visible = true;
+            pnlVisible(pnl_settings);
             var pnl = pnl_settings.Controls.OfType<Panel>();
             foreach (var item in pnl)
             {
@@ -240,7 +312,99 @@ namespace calypso_dental_V2
                 MessageBox.Show("hata :" + Ex);
             }
         }
+        public void tableSeach(object sender, EventArgs e)
+        {
+            dv = new DataView(search_table);
+            if (chk_deadline.Checked && chk_init_date.Checked)
+            {
+                dv.RowFilter = string.Format(CultureInfo.InvariantCulture.NumberFormat, "dr_name LIKE '%{0}%' And pat_name LIKE '%{1}%' And proc_name LIKE '%{2}%' And inproc_deadline >=#{3}# And inproc_deadline <=#{4}#And inproc_init_date>= #{5}# And inproc_init_date <= #{6}# And step_name LIKE '%{7}%'", txt_search_dr.Text, txt_search_patient.Text, txt_search_procces.Text, dtb_deadline_init.Value.ToString("yyyy-MM-dd"), dtp_deadline_upperlimit.Value.ToString("yyyy-MM-dd"), dtp_init_date_init.Value.ToString("yyyy-MM-dd"), dtp_init_date_upperlimit.Value.ToString("yyyy-MM-dd"), txt_step.Text);
+            }
+            else if (chk_init_date.Checked)
+            {
+                dv.RowFilter = string.Format(CultureInfo.InvariantCulture.NumberFormat, "dr_name LIKE '%{0}%' And pat_name LIKE '%{1}%' And proc_name LIKE '%{2}%' And inproc_init_date >=#{3}#And inproc_init_date <=#{4}#  And step_name LIKE '%{5}%' ", txt_search_dr.Text, txt_search_patient.Text, txt_search_procces.Text, dtp_init_date_init.Value.ToString("yyyy-MM-dd"), dtp_init_date_upperlimit.Value.ToString("yyyy-MM-dd"), txt_step.Text);
+            }
+            else if (chk_deadline.Checked)
+            {
+                dv.RowFilter = string.Format(CultureInfo.InvariantCulture.NumberFormat, "dr_name LIKE '%{0}%' And pat_name LIKE '%{1}%' And proc_name LIKE '%{2}%' And inproc_deadline >=#{3}# And inproc_deadline <=#{4}# And step_name LIKE '%{5}%' ", txt_search_dr.Text, txt_search_patient.Text, txt_search_procces.Text, dtb_deadline_init.Value.ToString("yyyy-MM-dd"), dtp_deadline_upperlimit.Value.ToString("yyyy-MM-dd"), txt_step.Text);
+            }
+            else
+            {
 
+                dv.RowFilter = string.Format(CultureInfo.InvariantCulture.NumberFormat, "dr_name LIKE '%{0}%' And pat_name LIKE '%{1}%' And proc_name LIKE '%{2}%' And step_name LIKE '%{3}%' ", txt_search_dr.Text, txt_search_patient.Text, txt_search_procces.Text, txt_step.Text);
+            }
+
+
+            dgv_search.DataSource = dv;
+
+            int totalTeeth = 0; ;
+            for (int i = 0; i < dgv_search.Rows.Count; i++)
+            {
+
+                string value = dgv_search.Rows[i].Cells[9].Value.ToString();
+                totalTeeth += int.Parse(value);
+                // totalTeeth += int.Parse(dgv_main.Rows[i].Cells[9].Value.ToString());
+
+            }
+            txt_result.Text = totalTeeth.ToString();
+        }
+        private void search_id(object sender, EventArgs e)
+        {
+            
+            if (txt_id.Text!="")
+            {
+                dv = new DataView(search_table);
+                dv.RowFilter = string.Format(CultureInfo.InvariantCulture.NumberFormat, "reg_no ={0} ", int.Parse(txt_id.Text));
+                dgv_search.DataSource = dv;
+
+                int totalTeeth = 0; ;
+                for (int i = 0; i < dgv_search.Rows.Count; i++)
+                {
+
+                    string value = dgv_search.Rows[i].Cells[9].Value.ToString();
+                    totalTeeth += int.Parse(value);
+                    // totalTeeth += int.Parse(dgv_main.Rows[i].Cells[9].Value.ToString());
+
+                }
+                txt_result.Text = totalTeeth.ToString();
+            }
+            else
+            {
+                dv = new DataView(search_table);
+                dgv_search.DataSource = dv;
+            }
+        }
+      
+        
+        private void chk_deadline_CheckedChanged(object sender, EventArgs e)
+        {
+            if (dtb_deadline_init.Enabled)
+            {
+                dtb_deadline_init.Enabled = false;
+                dtp_deadline_upperlimit.Enabled = false;
+            }
+            else
+            {
+                dtb_deadline_init.Enabled = true;
+                dtp_deadline_upperlimit.Enabled = true;
+            }
+            tableSeach(sender, e);
+
+        }
+        private void chk_save_date_CheckedChanged(object sender, EventArgs e)
+        {
+            if (dtp_init_date_init.Enabled)
+            {
+                dtp_init_date_init.Enabled = false;
+                dtp_init_date_upperlimit.Enabled = false;
+
+            }
+            else
+            {
+                dtp_init_date_init.Enabled = true;
+                dtp_init_date_upperlimit.Enabled = true;
+            }
+            tableSeach(sender, e);
+        }
         private void btn_proc_add_Click(object sender, EventArgs e)
         {
             if (txt_proc.Text == "")
@@ -538,7 +702,174 @@ namespace calypso_dental_V2
                 }
             }
         }
+
+
         #endregion
+
+        private void dgv_inproc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+        }
+
+        private void dgv_inproc_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DialogResult mg;
+            mg = MessageBox.Show(" Seçili işlemi kaldırmak istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (mg == DialogResult.Yes)
+            {
+                dgv_inproc.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                int selectedIndex = dgv_inproc.CurrentCell.RowIndex;
+                if (selectedIndex > -1)
+                {
+                    int db_id = int.Parse(dgv_inproc.CurrentRow.Cells[0].Value.ToString());
+                    try
+                    {
+                        cnn.Open();
+                        sql = "DELETE FROM tbl_inproc WHERE inproc_id=" + db_id + "";
+                        command = new SqlCommand(sql, cnn);
+                        command.ExecuteNonQuery();
+                        command.Dispose();
+                        cnn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hata : "+ex.Message);
+                        throw;
+                    }
+                    
+                    dgv_inproc.Rows.RemoveAt(selectedIndex);
+                    dgv_inproc.Refresh();
+                    total_price();
+                }
+            }
+        }
+        void pnlVisible(Panel pnl)
+        {
+            var panel = this.Controls.OfType<Panel>();
+            foreach (var item in panel)
+            {
+                item.Visible = false;
+            }
+            pnl.Visible = true;
+            pnl_menu.Visible = true;
+        }
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            DialogResult mg;
+            mg = MessageBox.Show(" Kayıdı kaldırmak istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (mg == DialogResult.Yes)
+            {
+                try
+                {
+                    cnn.Open();
+                    sql = "DELETE FROM tbl_inproc WHERE reg_no=" + txt_reg_no.Text + "";
+                    command = new SqlCommand(sql, cnn);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                    cnn.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata :" + ex.Message);
+                    throw;
+                }
+                pnlVisible(pnl_init);
+            }
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            if (cb_doctor_name.Text == "" || txt_patient_name.Text == ""||txt_doctor_notes.Text=="" )
+            {
+                MessageBox.Show("Zorunlu alanlar doldurulmalıdır.");
+            }
+            else if(dgv_inproc.RowCount <= 0)
+            {
+                 MessageBox.Show("Herhagi bir işlem eklenmedi.Lütfen işlem Ekleyiniz");
+            }
+            else
+            {
+                DialogResult mg;
+                mg = MessageBox.Show(" Kayıdı tamamlamak istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (mg == DialogResult.Yes)
+                {
+                    try
+                    {
+                        cnn.Open();
+                        sql = "INSERT INTO tbl_reg(reg_no,dr_name,pat_name,reg_totalprice, reg_drnote)values(@reg,@dr,@pat,@price,@note)";
+                        command = new SqlCommand(sql, cnn);
+                        command.Parameters.AddWithValue("@reg", int.Parse(txt_reg_no.Text));
+                        command.Parameters.AddWithValue("@dr", cb_doctor_name.Text);
+                        command.Parameters.AddWithValue("@pat", txt_patient_name.Text);
+                        command.Parameters.AddWithValue("@price", int.Parse(txt_all_prices.Text));
+                        command.Parameters.AddWithValue("@note", txt_doctor_notes.Text);
+                        command.ExecuteNonQuery();
+                        command.Dispose();
+                        cnn.Close();
+                        cnn.Open();
+                        var totaldebt = new SqlCommand("SELECT dr_debt FROM tbl_dr where dr_name='" + cb_doctor_name.Text + "'", cnn).ExecuteScalar().ToString();
+                        int debt = int.Parse(totaldebt)+int.Parse(txt_all_prices.Text);
+                         sql = "UPDATE  tbl_dr SET dr_debt=@debt WHERE dr_name='" + cb_doctor_name.Text + "'";
+                          command = new SqlCommand(sql, cnn);
+                          command.Parameters.AddWithValue("@debt",debt );
+                          command.ExecuteNonQuery();
+                          command.Dispose();
+                          cnn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hata :" + ex.Message);
+                        throw;
+
+                    }
+                    pnlVisible(pnl_init);
+                }
+            }
+            
+        }
+
+        private void pb_search_Click(object sender, EventArgs e)
+        {
+            pnlVisible(pnl_search);
+            cnn.Open();
+            sql = "SELECT  tbl_reg.reg_no,dr_name,pat_name,proc_name,inproc_init_date,inproc_deadline,step_name,color_name,teet,teet_num,price,total_price,sent,printed,reg_drnote FROM tbl_reg INNER JOIN tbl_inproc ON tbl_reg.reg_no=tbl_inproc.reg_no";
+            adapter = new SqlDataAdapter(sql, cnn);
+            search_table.Clear();
+            adapter.Fill(search_table);
+            dgv_search.DataSource =search_table;
+           dgv_search.Columns["reg_no"].HeaderText = "Kayıt No";
+           dgv_search.Columns["dr_name"].HeaderText = "Doktor Adı";
+           dgv_search.Columns["pat_name"].HeaderText = "Hasta Adı";
+           dgv_search.Columns["proc_name"].HeaderText = "Yapılan İşlem ";
+           dgv_search.Columns["inproc_init_date"].HeaderText = "Kayıt Tarihi";
+           dgv_search.Columns["inproc_deadline"].HeaderText = "İstenilen Tarih";
+           dgv_search.Columns["step_name"].HeaderText = "Aşama";
+           dgv_search.Columns["color_name"].HeaderText = "Renk";
+           dgv_search.Columns["teet"].HeaderText = "Diş Numaraları";
+           dgv_search.Columns["teet_num"].HeaderText = "Diş Adeti";
+           dgv_search.Columns["price"].HeaderText = "Birim Fiyat";
+           dgv_search.Columns["total_price"].HeaderText = "Toplam Fiyat";
+           dgv_search.Columns["sent"].HeaderText = "Doktora Gönderildi";
+            dgv_search.Columns["printed"].HeaderText = "Yazdırıldı";
+            dgv_search.Columns["reg_drnote"].HeaderText = "Doktor Notu";
+            dgv_search.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            adapter.Dispose();
+
+            int totalTeeth = 0; ;
+            for (int i = 0; i < dgv_search.Rows.Count; i++)
+            {
+
+                string value = dgv_search.Rows[i].Cells[9].Value.ToString();
+                totalTeeth += int.Parse(value);
+                // totalTeeth += int.Parse(dgv_main.Rows[i].Cells[9].Value.ToString());
+
+            }
+            txt_result.Text = totalTeeth.ToString();
+            cnn.Close();
+        }
+
+        
     }
     }
 

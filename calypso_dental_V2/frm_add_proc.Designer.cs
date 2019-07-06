@@ -1029,6 +1029,7 @@
             this.btn_cancel.TabIndex = 129;
             this.btn_cancel.Text = "iptal";
             this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // label1
             // 

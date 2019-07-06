@@ -93,31 +93,90 @@ namespace calypso_dental_V2
         }
         private void btn_add_proc_Click(object sender, EventArgs e)
         {
-            
-            if (string.IsNullOrEmpty(cb_procces_bar.Text)|| string.IsNullOrEmpty(cb_color_bar.Text)|| string.IsNullOrEmpty(cb_steps_bar.Text)|| string.IsNullOrEmpty(txt_unit_price.Text))
+
+            if (string.IsNullOrEmpty(cb_procces_bar.Text) || string.IsNullOrEmpty(cb_color_bar.Text) || string.IsNullOrEmpty(cb_steps_bar.Text) || string.IsNullOrEmpty(txt_unit_price.Text))
             {
                 MessageBox.Show("Kayıt İçin Tüm Alanlar Doldurulmalıdır.");
             }
             else
             {
-                var picture = grb_teeth.Controls.OfType<PictureBox>();
-                int counter = 0;
-                string teeth = "";
-                foreach (PictureBox pb in picture)
+                DialogResult ms = MessageBox.Show("Bu işlemi eklemek istediğinizden emin misiniz ?", "Uyarı!", MessageBoxButtons.YesNo);
+                if (ms == DialogResult.Yes)
                 {
-                    if (pb.BackColor == Color.DarkSlateGray)
+
+
+                    var picture = grb_teeth.Controls.OfType<PictureBox>();
+                    int counter = 0;
+                    int price = 0;
+                    string teeth = "";
+                    foreach (PictureBox pb in picture)
                     {
-                        counter++;
-                        teeth += pb.Name.ToString() + "/";
+                        if (pb.BackColor == Color.DarkSlateGray)
+                        {
+                            counter++;
+                            teeth += pb.Name.ToString() + "/";
+                        }
                     }
+                    if (counter == 0)
+                    {
+                        counter = 1;
+                    }
+                    price = int.Parse(txt_unit_price.Text);
+                    try
+                    {
+
+                        int reg_id = 0;
+                        cnn.Open();
+                        sql = "SELECT TOP(1) reg_no  FROM tbl_reg order by reg_no desc ";
+                        command = new SqlCommand(sql, cnn);
+                        dataReader = command.ExecuteReader();
+                        if (dataReader.Read())
+                        {
+                            reg_id = int.Parse(dataReader["reg_no"].ToString());
+                        }
+                        //MessageBox.Show("reg_id :"+reg_id.ToString());
+                        dataReader.Close();
+                        cnn.Close();
+                        reg_id += 1;
+                        string dr_sent = "Hayır";
+                        if (chk_sent_toDR.Checked == true)
+                        {
+                            dr_sent = "Evet";
+                        }
+                        cnn.Open();
+
+                        sql = "INSERT tbl_inproc(reg_no,proc_name,inproc_init_date,inproc_deadline,step_name,color_name,teet,teet_num,price,total_price,sent) VALUES(@reg_no,@proc_name,@init_date,@deadline_date,@step_name,@color_name,@teet,@teet_num,@price,@total_price,@sent)";
+                        command = new SqlCommand(sql, cnn);
+                        command.Parameters.Add(new SqlParameter("@reg_no", reg_id));
+                        command.Parameters.Add(new SqlParameter("@proc_name", cb_procces_bar.Text));
+                        command.Parameters.Add(new SqlParameter("@init_date", dtp_register_date.Value.ToString("yyyy-MM-dd")));
+                        command.Parameters.Add(new SqlParameter("@deadline_date", dtp_deadline.Value.ToString("yyyy-MM-dd")));
+                        command.Parameters.Add(new SqlParameter("@step_name", cb_steps_bar.Text));
+                        command.Parameters.Add(new SqlParameter("@color_name", cb_color_bar.Text));
+                        command.Parameters.Add(new SqlParameter("@teet", teeth));
+                        command.Parameters.Add(new SqlParameter("@teet_num", counter));
+                        command.Parameters.Add(new SqlParameter("@price", price));
+                        command.Parameters.Add(new SqlParameter("@total_price", price * counter));
+                        command.Parameters.Add(new SqlParameter("@sent", dr_sent));
+                        command.ExecuteNonQuery();
+                        command.Dispose();
+                        cnn.Close();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("hata :" + ex.Message);
+                        throw;
+                    }
+                    // this.Close();
+
                 }
-                if (counter == 0)
-                {
-                    counter = 1;
-                }
-               
-                this.Close();
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
