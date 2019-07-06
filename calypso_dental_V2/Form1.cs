@@ -18,6 +18,7 @@ namespace calypso_dental_V2
     {
 
         private Settings settings = new Settings();
+        private id reg_no = new calypso_dental_V2.id();
         SqlConnection cnn;
         SqlCommand command;
         SqlDataReader dataReader;
@@ -144,7 +145,7 @@ namespace calypso_dental_V2
             }
             catch (Exception ex)
             {
-                MessageBox.Show("hata :" + ex);
+                MessageBox.Show("hata :" + ex.Message);
                 throw;
             }
 
@@ -832,30 +833,36 @@ namespace calypso_dental_V2
         private void pb_search_Click(object sender, EventArgs e)
         {
             pnlVisible(pnl_search);
-            cnn.Open();
+            dgvSearchFill();
+        }
+        void dgvSearchFill()
+        {
+            if (cnn.State==ConnectionState.Closed)
+            {
+                cnn.Open();
+            }
             sql = "SELECT  tbl_reg.reg_no,dr_name,pat_name,proc_name,inproc_init_date,inproc_deadline,step_name,color_name,teet,teet_num,price,total_price,sent,printed,reg_drnote FROM tbl_reg INNER JOIN tbl_inproc ON tbl_reg.reg_no=tbl_inproc.reg_no";
             adapter = new SqlDataAdapter(sql, cnn);
             search_table.Clear();
             adapter.Fill(search_table);
-            dgv_search.DataSource =search_table;
-           dgv_search.Columns["reg_no"].HeaderText = "Kayıt No";
-           dgv_search.Columns["dr_name"].HeaderText = "Doktor Adı";
-           dgv_search.Columns["pat_name"].HeaderText = "Hasta Adı";
-           dgv_search.Columns["proc_name"].HeaderText = "Yapılan İşlem ";
-           dgv_search.Columns["inproc_init_date"].HeaderText = "Kayıt Tarihi";
-           dgv_search.Columns["inproc_deadline"].HeaderText = "İstenilen Tarih";
-           dgv_search.Columns["step_name"].HeaderText = "Aşama";
-           dgv_search.Columns["color_name"].HeaderText = "Renk";
-           dgv_search.Columns["teet"].HeaderText = "Diş Numaraları";
-           dgv_search.Columns["teet_num"].HeaderText = "Diş Adeti";
-           dgv_search.Columns["price"].HeaderText = "Birim Fiyat";
-           dgv_search.Columns["total_price"].HeaderText = "Toplam Fiyat";
-           dgv_search.Columns["sent"].HeaderText = "Doktora Gönderildi";
+            dgv_search.DataSource = search_table;
+            dgv_search.Columns["reg_no"].HeaderText = "Kayıt No";
+            dgv_search.Columns["dr_name"].HeaderText = "Doktor Adı";
+            dgv_search.Columns["pat_name"].HeaderText = "Hasta Adı";
+            dgv_search.Columns["proc_name"].HeaderText = "Yapılan İşlem ";
+            dgv_search.Columns["inproc_init_date"].HeaderText = "Kayıt Tarihi";
+            dgv_search.Columns["inproc_deadline"].HeaderText = "İstenilen Tarih";
+            dgv_search.Columns["step_name"].HeaderText = "Aşama";
+            dgv_search.Columns["color_name"].HeaderText = "Renk";
+            dgv_search.Columns["teet"].HeaderText = "Diş Numaraları";
+            dgv_search.Columns["teet_num"].HeaderText = "Diş Adeti";
+            dgv_search.Columns["price"].HeaderText = "Birim Fiyat";
+            dgv_search.Columns["total_price"].HeaderText = "Toplam Fiyat";
+            dgv_search.Columns["sent"].HeaderText = "Doktora Gönderildi";
             dgv_search.Columns["printed"].HeaderText = "Yazdırıldı";
             dgv_search.Columns["reg_drnote"].HeaderText = "Doktor Notu";
             dgv_search.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             adapter.Dispose();
-
             int totalTeeth = 0; ;
             for (int i = 0; i < dgv_search.Rows.Count; i++)
             {
@@ -868,8 +875,26 @@ namespace calypso_dental_V2
             txt_result.Text = totalTeeth.ToString();
             cnn.Close();
         }
+        private void dgv_search_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int selectedIndex = dgv_search.CurrentCell.RowIndex;
+            if (selectedIndex > -1)
+            {
 
-        
+                int reg = int.Parse(dgv_search.CurrentRow.Cells[0].Value.ToString());
+                reg_no.Selected_id =reg;
+                reg_no.Save();
+            }
+            frm_update_pat Frm_update = new frm_update_pat();
+            Frm_update.ShowDialog();
+            dgvSearchFill();
+
+        }
+
+        private void pb_payment_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

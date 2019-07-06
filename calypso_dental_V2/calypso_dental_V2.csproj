@@ -56,11 +56,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_inproc_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_inproc_update.Designer.cs">
+      <DependentUpon>Form_inproc_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_add_proc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_add_proc.Designer.cs">
       <DependentUpon>frm_add_proc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_update_pat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_update_pat.Designer.cs">
+      <DependentUpon>frm_update_pat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="id.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>id.settings</DependentUpon>
     </Compile>
     <Compile Include="inproc.cs" />
     <Compile Include="patient.cs" />
@@ -79,8 +96,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_inproc_update.resx">
+      <DependentUpon>Form_inproc_update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_add_proc.resx">
       <DependentUpon>frm_add_proc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_update_pat.resx">
+      <DependentUpon>frm_update_pat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +118,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource_picture.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="id.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>id.Designer.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
