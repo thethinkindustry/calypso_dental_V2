@@ -144,7 +144,6 @@ namespace calypso_dental_V2
                             dr_sent = "Evet";
                         }
                         cnn.Open();
-
                         sql = "INSERT tbl_inproc(reg_no,proc_name,inproc_init_date,inproc_deadline,step_name,color_name,teet,teet_num,price,total_price,sent) VALUES(@reg_no,@proc_name,@init_date,@deadline_date,@step_name,@color_name,@teet,@teet_num,@price,@total_price,@sent)";
                         command = new SqlCommand(sql, cnn);
                         command.Parameters.Add(new SqlParameter("@reg_no", reg_id));

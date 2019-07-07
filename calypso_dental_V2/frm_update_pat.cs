@@ -80,13 +80,7 @@ namespace calypso_dental_V2
                     dataReader.Close();
                     command.Dispose();
                     cnn.Close();
-                    cnn.Open();
-                    adapter = new SqlDataAdapter("SELECT * FROM tbl_inproc WHERE reg_no=" + reg_no.Selected_id + "", cnn);
-                    table.Clear();
-                    adapter.Fill(table);
-                    dgv_inproc.DataSource = table;
-                    adapter.Dispose();
-                    cnn.Close();
+                    updateDgv_inproc();
                     dgv_inproc.Columns["inproc_id"].HeaderText = "DB ID";
                     dgv_inproc.Columns["reg_no"].HeaderText = "Kayıt No";
                     dgv_inproc.Columns["proc_name"].HeaderText = "Yapılan İşlem ";
@@ -237,14 +231,47 @@ namespace calypso_dental_V2
                }
             }
         }
-
         private void dgv_inproc_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int db_id = int.Parse(dgv_inproc.CurrentRow.Cells[0].Value.ToString());
             reg_no.inproc_id = db_id;
+            reg_no.dr_name = cb_doctor_name.Text;
             reg_no.Save();
             Form_inproc_update frm_inproc_update = new Form_inproc_update();
             frm_inproc_update.ShowDialog();
+            updateDgv_inproc();
+            total_price();
+
+        }
+        void updateDgv_inproc()
+        {
+            cnn.Open();
+            adapter = new SqlDataAdapter("SELECT * FROM tbl_inproc WHERE reg_no=" + reg_no.Selected_id + "", cnn);
+            table.Clear();
+            adapter.Fill(table);
+            dgv_inproc.DataSource = table;
+            adapter.Dispose();
+            cnn.Close();
+        }
+         private void btn_save_Click(object sender, EventArgs e)
+        {
+            DialogResult mg;
+            mg = MessageBox.Show(" Güncellemek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (mg == DialogResult.Yes)
+            {
+                cnn.Open();
+                sql = "UPDATE tbl_reg SET pat_name=@pat_name,reg_totalprice=@total_price,reg_drnote=@note WHERE reg_no=@reg";
+                command = new SqlCommand(sql, cnn);
+                command.Parameters.Add(new SqlParameter("@pat_name", txt_patient_name.Text));
+                command.Parameters.Add(new SqlParameter("@total_price", int.Parse(txt_all_prices.Text)));
+                command.Parameters.Add(new SqlParameter("@note", txt_doctor_notes.Text));
+                command.Parameters.Add(new SqlParameter("@reg", int.Parse(txt_reg_no.Text)));
+                command.ExecuteNonQuery();
+                command.Dispose();
+                cnn.Close();
+                MessageBox.Show("Kayıt başarıyla eklendi.");
+                this.Close();
+            }
         }
     }
 }

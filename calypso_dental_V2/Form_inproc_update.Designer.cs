@@ -44,7 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_add_proc = new System.Windows.Forms.Button();
+            this.btn_update_proc = new System.Windows.Forms.Button();
             this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.chk_sent_toDR = new System.Windows.Forms.CheckBox();
             this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -326,21 +326,23 @@
             this.btn_cancel.TabIndex = 157;
             this.btn_cancel.Text = "İptal";
             this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
-            // btn_add_proc
+            // btn_update_proc
             // 
-            this.btn_add_proc.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btn_add_proc.FlatAppearance.BorderSize = 0;
-            this.btn_add_proc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_add_proc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_add_proc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add_proc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_add_proc.Location = new System.Drawing.Point(742, 541);
-            this.btn_add_proc.Name = "btn_add_proc";
-            this.btn_add_proc.Size = new System.Drawing.Size(128, 51);
-            this.btn_add_proc.TabIndex = 156;
-            this.btn_add_proc.Text = "İşlemi Güncelle";
-            this.btn_add_proc.UseVisualStyleBackColor = false;
+            this.btn_update_proc.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn_update_proc.FlatAppearance.BorderSize = 0;
+            this.btn_update_proc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_update_proc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_update_proc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_update_proc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_update_proc.Location = new System.Drawing.Point(742, 541);
+            this.btn_update_proc.Name = "btn_update_proc";
+            this.btn_update_proc.Size = new System.Drawing.Size(128, 51);
+            this.btn_update_proc.TabIndex = 156;
+            this.btn_update_proc.Text = "İşlemi Güncelle";
+            this.btn_update_proc.UseVisualStyleBackColor = false;
+            this.btn_update_proc.Click += new System.EventHandler(this.btn_update_proc_Click);
             // 
             // materialSingleLineTextField5
             // 
@@ -1184,7 +1186,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.btn_add_proc);
+            this.Controls.Add(this.btn_update_proc);
             this.Controls.Add(this.materialSingleLineTextField5);
             this.Controls.Add(this.chk_sent_toDR);
             this.Controls.Add(this.materialSingleLineTextField4);
@@ -1249,7 +1251,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_cancel;
-        private System.Windows.Forms.Button btn_add_proc;
+        private System.Windows.Forms.Button btn_update_proc;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
         private System.Windows.Forms.CheckBox chk_sent_toDR;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;

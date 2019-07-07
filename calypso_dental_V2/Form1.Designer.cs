@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pb_settings = new System.Windows.Forms.PictureBox();
+            this.pb_payment = new System.Windows.Forms.PictureBox();
+            this.pb_search = new System.Windows.Forms.PictureBox();
+            this.pB_data_view = new System.Windows.Forms.PictureBox();
+            this.pB_add_pattient = new System.Windows.Forms.PictureBox();
             this.pnl_add_patient = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.materialLabel38 = new MaterialSkin.Controls.MaterialLabel();
@@ -147,6 +153,9 @@
             this.btn_color_add = new System.Windows.Forms.Button();
             this.pnl_init = new System.Windows.Forms.Panel();
             this.label54 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_search = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.materialLabel49 = new MaterialSkin.Controls.MaterialLabel();
@@ -173,16 +182,13 @@
             this.txt_search_patient = new System.Windows.Forms.TextBox();
             this.txt_search_dr = new System.Windows.Forms.TextBox();
             this.dgv_search = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pb_settings = new System.Windows.Forms.PictureBox();
-            this.pb_payment = new System.Windows.Forms.PictureBox();
-            this.pb_search = new System.Windows.Forms.PictureBox();
-            this.pB_data_view = new System.Windows.Forms.PictureBox();
-            this.pB_add_pattient = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_payment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).BeginInit();
             this.pnl_add_patient.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_inproc)).BeginInit();
@@ -209,17 +215,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_color_list)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.pnl_init.SuspendLayout();
-            this.pnl_search.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_payment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnl_search.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_menu
@@ -237,6 +237,88 @@
             this.pnl_menu.Name = "pnl_menu";
             this.pnl_menu.Size = new System.Drawing.Size(201, 966);
             this.pnl_menu.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(37, 832);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 121);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pb_settings
+            // 
+            this.pb_settings.BackColor = System.Drawing.Color.Transparent;
+            this.pb_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_settings.Image = global::calypso_dental_V2.Resource_picture.settings;
+            this.pb_settings.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pb_settings.Location = new System.Drawing.Point(66, 566);
+            this.pb_settings.Name = "pb_settings";
+            this.pb_settings.Size = new System.Drawing.Size(135, 118);
+            this.pb_settings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_settings.TabIndex = 16;
+            this.pb_settings.TabStop = false;
+            this.pb_settings.Click += new System.EventHandler(this.pb_settings_Click);
+            // 
+            // pb_payment
+            // 
+            this.pb_payment.BackColor = System.Drawing.Color.Transparent;
+            this.pb_payment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_payment.Image = global::calypso_dental_V2.Resource_picture.tables;
+            this.pb_payment.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pb_payment.Location = new System.Drawing.Point(65, 431);
+            this.pb_payment.Name = "pb_payment";
+            this.pb_payment.Size = new System.Drawing.Size(135, 118);
+            this.pb_payment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_payment.TabIndex = 15;
+            this.pb_payment.TabStop = false;
+            this.pb_payment.Click += new System.EventHandler(this.pb_payment_Click);
+            // 
+            // pb_search
+            // 
+            this.pb_search.BackColor = System.Drawing.Color.Transparent;
+            this.pb_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_search.Image = global::calypso_dental_V2.Resource_picture.search;
+            this.pb_search.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pb_search.Location = new System.Drawing.Point(66, 173);
+            this.pb_search.Name = "pb_search";
+            this.pb_search.Size = new System.Drawing.Size(135, 118);
+            this.pb_search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_search.TabIndex = 14;
+            this.pb_search.TabStop = false;
+            this.pb_search.Click += new System.EventHandler(this.pb_search_Click);
+            // 
+            // pB_data_view
+            // 
+            this.pB_data_view.BackColor = System.Drawing.Color.Transparent;
+            this.pB_data_view.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pB_data_view.Image = global::calypso_dental_V2.Resource_picture.print;
+            this.pB_data_view.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pB_data_view.Location = new System.Drawing.Point(65, 303);
+            this.pB_data_view.Name = "pB_data_view";
+            this.pB_data_view.Size = new System.Drawing.Size(135, 118);
+            this.pB_data_view.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pB_data_view.TabIndex = 13;
+            this.pB_data_view.TabStop = false;
+            // 
+            // pB_add_pattient
+            // 
+            this.pB_add_pattient.BackColor = System.Drawing.Color.Transparent;
+            this.pB_add_pattient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pB_add_pattient.Image = global::calypso_dental_V2.Resource_picture.add_pat;
+            this.pB_add_pattient.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pB_add_pattient.InitialImage = null;
+            this.pB_add_pattient.Location = new System.Drawing.Point(65, 45);
+            this.pB_add_pattient.Name = "pB_add_pattient";
+            this.pB_add_pattient.Size = new System.Drawing.Size(135, 118);
+            this.pB_add_pattient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pB_add_pattient.TabIndex = 7;
+            this.pB_add_pattient.TabStop = false;
+            this.pB_add_pattient.Click += new System.EventHandler(this.pB_add_pattient_Click);
             // 
             // pnl_add_patient
             // 
@@ -287,12 +369,12 @@
             // 
             this.materialLabel38.AutoSize = true;
             this.materialLabel38.Depth = 0;
-            this.materialLabel38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel38.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel38.Location = new System.Drawing.Point(43, 713);
             this.materialLabel38.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel38.Name = "materialLabel38";
-            this.materialLabel38.Size = new System.Drawing.Size(243, 24);
+            this.materialLabel38.Size = new System.Drawing.Size(249, 24);
             this.materialLabel38.TabIndex = 151;
             this.materialLabel38.Text = "bir değişikliğe sebep olmaz.";
             // 
@@ -300,12 +382,12 @@
             // 
             this.materialLabel37.AutoSize = true;
             this.materialLabel37.Depth = 0;
-            this.materialLabel37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel37.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel37.Location = new System.Drawing.Point(39, 689);
             this.materialLabel37.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel37.Name = "materialLabel37";
-            this.materialLabel37.Size = new System.Drawing.Size(317, 24);
+            this.materialLabel37.Size = new System.Drawing.Size(328, 24);
             this.materialLabel37.TabIndex = 150;
             this.materialLabel37.Text = "Kayıdı iptal etmek işlem numarasında";
             // 
@@ -335,12 +417,12 @@
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel3.Location = new System.Drawing.Point(737, 92);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(230, 24);
+            this.materialLabel3.Size = new System.Drawing.Size(246, 24);
             this.materialLabel3.TabIndex = 147;
             this.materialLabel3.Text = "tıkladığınız işlemi silecektir.";
             // 
@@ -348,12 +430,12 @@
             // 
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel4.Location = new System.Drawing.Point(737, 68);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(381, 24);
+            this.materialLabel4.Size = new System.Drawing.Size(397, 24);
             this.materialLabel4.TabIndex = 146;
             this.materialLabel4.Text = "Yapılacak işlemler tablosuna iki kere tıklamak";
             // 
@@ -391,12 +473,12 @@
             this.materialLabel8.AutoSize = true;
             this.materialLabel8.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel8.Location = new System.Drawing.Point(21, 138);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(160, 24);
+            this.materialLabel8.Size = new System.Drawing.Size(165, 24);
             this.materialLabel8.TabIndex = 145;
             this.materialLabel8.Text = "Yapılacak İşlemler";
             // 
@@ -405,12 +487,12 @@
             this.materialLabel7.AutoSize = true;
             this.materialLabel7.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel7.Location = new System.Drawing.Point(660, 625);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(119, 24);
+            this.materialLabel7.Size = new System.Drawing.Size(122, 24);
             this.materialLabel7.TabIndex = 144;
             this.materialLabel7.Text = "Doktor Notu :";
             // 
@@ -419,12 +501,12 @@
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel6.Location = new System.Drawing.Point(1058, 575);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(128, 24);
+            this.materialLabel6.Size = new System.Drawing.Size(131, 24);
             this.materialLabel6.TabIndex = 143;
             this.materialLabel6.Text = "Toplam Fiyat :";
             // 
@@ -433,12 +515,12 @@
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel5.Location = new System.Drawing.Point(501, 23);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(94, 24);
+            this.materialLabel5.Size = new System.Drawing.Size(97, 24);
             this.materialLabel5.TabIndex = 142;
             this.materialLabel5.Text = "İşlem No :";
             // 
@@ -447,12 +529,12 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(30, 91);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(100, 24);
+            this.materialLabel2.Size = new System.Drawing.Size(103, 24);
             this.materialLabel2.TabIndex = 139;
             this.materialLabel2.Text = "Hasta Adı :";
             // 
@@ -461,12 +543,12 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(24, 56);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(107, 24);
+            this.materialLabel1.Size = new System.Drawing.Size(109, 24);
             this.materialLabel1.TabIndex = 138;
             this.materialLabel1.Text = "Doktor Adı :";
             // 
@@ -556,14 +638,14 @@
             this.dgv_inproc.EnableHeadersVisualStyles = false;
             this.dgv_inproc.Location = new System.Drawing.Point(23, 165);
             this.dgv_inproc.Name = "dgv_inproc";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_inproc.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_inproc.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_inproc.RowTemplate.Height = 24;
             this.dgv_inproc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_inproc.Size = new System.Drawing.Size(1262, 398);
@@ -682,12 +764,12 @@
             this.materialLabel20.AutoSize = true;
             this.materialLabel20.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel20.Depth = 0;
-            this.materialLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel20.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel20.Location = new System.Drawing.Point(27, 22);
             this.materialLabel20.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel20.Name = "materialLabel20";
-            this.materialLabel20.Size = new System.Drawing.Size(102, 24);
+            this.materialLabel20.Size = new System.Drawing.Size(105, 24);
             this.materialLabel20.TabIndex = 0;
             this.materialLabel20.Text = "İşlem  Adı :";
             // 
@@ -735,12 +817,12 @@
             // 
             this.materialLabel22.AutoSize = true;
             this.materialLabel22.Depth = 0;
-            this.materialLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel22.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel22.Location = new System.Drawing.Point(42, 480);
             this.materialLabel22.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel22.Name = "materialLabel22";
-            this.materialLabel22.Size = new System.Drawing.Size(290, 24);
+            this.materialLabel22.Size = new System.Drawing.Size(305, 24);
             this.materialLabel22.TabIndex = 132;
             this.materialLabel22.Text = "işlem ve hasta kayıtları silinecektir.";
             // 
@@ -748,12 +830,12 @@
             // 
             this.materialLabel23.AutoSize = true;
             this.materialLabel23.Depth = 0;
-            this.materialLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel23.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel23.Location = new System.Drawing.Point(42, 456);
             this.materialLabel23.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel23.Name = "materialLabel23";
-            this.materialLabel23.Size = new System.Drawing.Size(427, 24);
+            this.materialLabel23.Size = new System.Drawing.Size(432, 24);
             this.materialLabel23.TabIndex = 131;
             this.materialLabel23.Text = "İşlem silmeniz durumunda hastanız sahip olduğu  ";
             // 
@@ -761,12 +843,12 @@
             // 
             this.materialLabel24.AutoSize = true;
             this.materialLabel24.Depth = 0;
-            this.materialLabel24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel24.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel24.Location = new System.Drawing.Point(35, 376);
             this.materialLabel24.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel24.Name = "materialLabel24";
-            this.materialLabel24.Size = new System.Drawing.Size(261, 24);
+            this.materialLabel24.Size = new System.Drawing.Size(280, 24);
             this.materialLabel24.TabIndex = 130;
             this.materialLabel24.Text = " istediğiniz doktora çift tıklayın .";
             // 
@@ -774,12 +856,12 @@
             // 
             this.materialLabel25.AutoSize = true;
             this.materialLabel25.Depth = 0;
-            this.materialLabel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel25.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel25.Location = new System.Drawing.Point(44, 352);
             this.materialLabel25.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel25.Name = "materialLabel25";
-            this.materialLabel25.Size = new System.Drawing.Size(435, 24);
+            this.materialLabel25.Size = new System.Drawing.Size(450, 24);
             this.materialLabel25.TabIndex = 129;
             this.materialLabel25.Text = "İşlem silmek ve güncellemek için işlem listesindeki ";
             // 
@@ -811,14 +893,14 @@
             this.dgv_proc_list.EnableHeadersVisualStyles = false;
             this.dgv_proc_list.Location = new System.Drawing.Point(6, 34);
             this.dgv_proc_list.Name = "dgv_proc_list";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_proc_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_proc_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_proc_list.RowTemplate.Height = 24;
             this.dgv_proc_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_proc_list.Size = new System.Drawing.Size(474, 437);
@@ -843,12 +925,12 @@
             this.materialLabel27.AutoSize = true;
             this.materialLabel27.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel27.Depth = 0;
-            this.materialLabel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel27.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel27.Location = new System.Drawing.Point(27, 22);
             this.materialLabel27.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel27.Name = "materialLabel27";
-            this.materialLabel27.Size = new System.Drawing.Size(97, 24);
+            this.materialLabel27.Size = new System.Drawing.Size(100, 24);
             this.materialLabel27.TabIndex = 0;
             this.materialLabel27.Text = "İşlem Adı :";
             // 
@@ -921,12 +1003,12 @@
             this.materialLabel14.AutoSize = true;
             this.materialLabel14.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel14.Depth = 0;
-            this.materialLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel14.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel14.Location = new System.Drawing.Point(69, 62);
             this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel14.Name = "materialLabel14";
-            this.materialLabel14.Size = new System.Drawing.Size(74, 24);
+            this.materialLabel14.Size = new System.Drawing.Size(72, 24);
             this.materialLabel14.TabIndex = 1;
             this.materialLabel14.Text = "Tel no :";
             // 
@@ -943,12 +1025,12 @@
             this.materialLabel17.AutoSize = true;
             this.materialLabel17.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel17.Depth = 0;
-            this.materialLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel17.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel17.Location = new System.Drawing.Point(27, 22);
             this.materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel17.Name = "materialLabel17";
-            this.materialLabel17.Size = new System.Drawing.Size(107, 24);
+            this.materialLabel17.Size = new System.Drawing.Size(109, 24);
             this.materialLabel17.TabIndex = 0;
             this.materialLabel17.Text = "Doktor Adı :";
             // 
@@ -965,12 +1047,12 @@
             this.materialLabel18.AutoSize = true;
             this.materialLabel18.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel18.Depth = 0;
-            this.materialLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel18.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel18.Location = new System.Drawing.Point(32, 98);
             this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel18.Name = "materialLabel18";
-            this.materialLabel18.Size = new System.Drawing.Size(204, 24);
+            this.materialLabel18.Size = new System.Drawing.Size(202, 24);
             this.materialLabel18.TabIndex = 2;
             this.materialLabel18.Text = "Bulunan Doktor Borcu :";
             // 
@@ -1018,12 +1100,12 @@
             // 
             this.materialLabel16.AutoSize = true;
             this.materialLabel16.Depth = 0;
-            this.materialLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel16.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel16.Location = new System.Drawing.Point(36, 468);
             this.materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel16.Name = "materialLabel16";
-            this.materialLabel16.Size = new System.Drawing.Size(311, 24);
+            this.materialLabel16.Size = new System.Drawing.Size(322, 24);
             this.materialLabel16.TabIndex = 123;
             this.materialLabel16.Text = "ödeme  ve hasta kayıtları silinecektir.";
             // 
@@ -1031,12 +1113,12 @@
             // 
             this.materialLabel15.AutoSize = true;
             this.materialLabel15.Depth = 0;
-            this.materialLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel15.Location = new System.Drawing.Point(28, 444);
             this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel15.Name = "materialLabel15";
-            this.materialLabel15.Size = new System.Drawing.Size(448, 24);
+            this.materialLabel15.Size = new System.Drawing.Size(451, 24);
             this.materialLabel15.TabIndex = 122;
             this.materialLabel15.Text = " Doktor silmeniz durumunda doktorun sahip olduğu  ";
             // 
@@ -1044,12 +1126,12 @@
             // 
             this.materialLabel13.AutoSize = true;
             this.materialLabel13.Depth = 0;
-            this.materialLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel13.Location = new System.Drawing.Point(36, 364);
             this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel13.Name = "materialLabel13";
-            this.materialLabel13.Size = new System.Drawing.Size(261, 24);
+            this.materialLabel13.Size = new System.Drawing.Size(280, 24);
             this.materialLabel13.TabIndex = 120;
             this.materialLabel13.Text = " istediğiniz doktora çift tıklayın .";
             // 
@@ -1057,12 +1139,12 @@
             // 
             this.materialLabel12.AutoSize = true;
             this.materialLabel12.Depth = 0;
-            this.materialLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel12.Location = new System.Drawing.Point(36, 340);
             this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel12.Name = "materialLabel12";
-            this.materialLabel12.Size = new System.Drawing.Size(453, 24);
+            this.materialLabel12.Size = new System.Drawing.Size(467, 24);
             this.materialLabel12.TabIndex = 119;
             this.materialLabel12.Text = "Doktor silmek ve güncellemek için doktor listesindeki ";
             // 
@@ -1094,14 +1176,14 @@
             this.dgv_dr_list.EnableHeadersVisualStyles = false;
             this.dgv_dr_list.Location = new System.Drawing.Point(6, 34);
             this.dgv_dr_list.Name = "dgv_dr_list";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_dr_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_dr_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_dr_list.RowTemplate.Height = 24;
             this.dgv_dr_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_dr_list.Size = new System.Drawing.Size(474, 437);
@@ -1130,12 +1212,12 @@
             this.materialLabel10.AutoSize = true;
             this.materialLabel10.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel10.Depth = 0;
-            this.materialLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel10.Location = new System.Drawing.Point(69, 62);
             this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(74, 24);
+            this.materialLabel10.Size = new System.Drawing.Size(72, 24);
             this.materialLabel10.TabIndex = 1;
             this.materialLabel10.Text = "Tel no :";
             // 
@@ -1152,12 +1234,12 @@
             this.materialLabel9.AutoSize = true;
             this.materialLabel9.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel9.Depth = 0;
-            this.materialLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel9.Location = new System.Drawing.Point(27, 22);
             this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(107, 24);
+            this.materialLabel9.Size = new System.Drawing.Size(109, 24);
             this.materialLabel9.TabIndex = 0;
             this.materialLabel9.Text = "Doktor Adı :";
             // 
@@ -1174,12 +1256,12 @@
             this.materialLabel11.AutoSize = true;
             this.materialLabel11.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel11.Depth = 0;
-            this.materialLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel11.Location = new System.Drawing.Point(32, 98);
             this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel11.Name = "materialLabel11";
-            this.materialLabel11.Size = new System.Drawing.Size(204, 24);
+            this.materialLabel11.Size = new System.Drawing.Size(202, 24);
             this.materialLabel11.TabIndex = 2;
             this.materialLabel11.Text = "Bulunan Doktor Borcu :";
             // 
@@ -1237,12 +1319,12 @@
             this.materialLabel19.AutoSize = true;
             this.materialLabel19.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel19.Depth = 0;
-            this.materialLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel19.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel19.Location = new System.Drawing.Point(30, 22);
             this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel19.Name = "materialLabel19";
-            this.materialLabel19.Size = new System.Drawing.Size(116, 24);
+            this.materialLabel19.Size = new System.Drawing.Size(117, 24);
             this.materialLabel19.TabIndex = 5;
             this.materialLabel19.Text = "Aşama  Adı :";
             // 
@@ -1300,12 +1382,12 @@
             // 
             this.materialLabel32.AutoSize = true;
             this.materialLabel32.Depth = 0;
-            this.materialLabel32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel32.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel32.Location = new System.Drawing.Point(42, 480);
             this.materialLabel32.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel32.Name = "materialLabel32";
-            this.materialLabel32.Size = new System.Drawing.Size(290, 24);
+            this.materialLabel32.Size = new System.Drawing.Size(305, 24);
             this.materialLabel32.TabIndex = 132;
             this.materialLabel32.Text = "işlem ve hasta kayıtları silinecektir.";
             // 
@@ -1313,12 +1395,12 @@
             // 
             this.materialLabel33.AutoSize = true;
             this.materialLabel33.Depth = 0;
-            this.materialLabel33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel33.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel33.Location = new System.Drawing.Point(42, 456);
             this.materialLabel33.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel33.Name = "materialLabel33";
-            this.materialLabel33.Size = new System.Drawing.Size(441, 24);
+            this.materialLabel33.Size = new System.Drawing.Size(444, 24);
             this.materialLabel33.TabIndex = 131;
             this.materialLabel33.Text = "Aşama silmeniz durumunda hastanız sahip olduğu  ";
             // 
@@ -1326,12 +1408,12 @@
             // 
             this.materialLabel34.AutoSize = true;
             this.materialLabel34.Depth = 0;
-            this.materialLabel34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel34.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel34.Location = new System.Drawing.Point(21, 379);
             this.materialLabel34.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel34.Name = "materialLabel34";
-            this.materialLabel34.Size = new System.Drawing.Size(273, 24);
+            this.materialLabel34.Size = new System.Drawing.Size(291, 24);
             this.materialLabel34.TabIndex = 130;
             this.materialLabel34.Text = " istediğiniz aşamaya çift tıklayın .";
             // 
@@ -1339,12 +1421,12 @@
             // 
             this.materialLabel35.AutoSize = true;
             this.materialLabel35.Depth = 0;
-            this.materialLabel35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel35.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel35.Location = new System.Drawing.Point(21, 355);
             this.materialLabel35.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel35.Name = "materialLabel35";
-            this.materialLabel35.Size = new System.Drawing.Size(473, 24);
+            this.materialLabel35.Size = new System.Drawing.Size(486, 24);
             this.materialLabel35.TabIndex = 129;
             this.materialLabel35.Text = "Aşamayı silmek ve güncellemek için aşama listesindeki ";
             // 
@@ -1376,14 +1458,14 @@
             this.dgv_step_list.EnableHeadersVisualStyles = false;
             this.dgv_step_list.Location = new System.Drawing.Point(6, 34);
             this.dgv_step_list.Name = "dgv_step_list";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_step_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_step_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_step_list.RowTemplate.Height = 24;
             this.dgv_step_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_step_list.Size = new System.Drawing.Size(474, 437);
@@ -1408,12 +1490,12 @@
             this.materialLabel36.AutoSize = true;
             this.materialLabel36.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel36.Depth = 0;
-            this.materialLabel36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel36.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel36.Location = new System.Drawing.Point(27, 22);
             this.materialLabel36.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel36.Name = "materialLabel36";
-            this.materialLabel36.Size = new System.Drawing.Size(116, 24);
+            this.materialLabel36.Size = new System.Drawing.Size(117, 24);
             this.materialLabel36.TabIndex = 0;
             this.materialLabel36.Text = "Aşama  Adı :";
             // 
@@ -1471,12 +1553,12 @@
             this.materialLabel31.AutoSize = true;
             this.materialLabel31.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel31.Depth = 0;
-            this.materialLabel31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel31.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel31.Location = new System.Drawing.Point(30, 22);
             this.materialLabel31.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel31.Name = "materialLabel31";
-            this.materialLabel31.Size = new System.Drawing.Size(102, 24);
+            this.materialLabel31.Size = new System.Drawing.Size(100, 24);
             this.materialLabel31.TabIndex = 5;
             this.materialLabel31.Text = "Renk  Adı :";
             // 
@@ -1534,12 +1616,12 @@
             // 
             this.materialLabel21.AutoSize = true;
             this.materialLabel21.Depth = 0;
-            this.materialLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel21.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel21.Location = new System.Drawing.Point(42, 480);
             this.materialLabel21.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel21.Name = "materialLabel21";
-            this.materialLabel21.Size = new System.Drawing.Size(290, 24);
+            this.materialLabel21.Size = new System.Drawing.Size(305, 24);
             this.materialLabel21.TabIndex = 132;
             this.materialLabel21.Text = "işlem ve hasta kayıtları silinecektir.";
             // 
@@ -1547,7 +1629,7 @@
             // 
             this.materialLabel26.AutoSize = true;
             this.materialLabel26.Depth = 0;
-            this.materialLabel26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel26.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel26.Location = new System.Drawing.Point(42, 456);
             this.materialLabel26.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1560,12 +1642,12 @@
             // 
             this.materialLabel28.AutoSize = true;
             this.materialLabel28.Depth = 0;
-            this.materialLabel28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel28.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel28.Location = new System.Drawing.Point(35, 376);
             this.materialLabel28.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel28.Name = "materialLabel28";
-            this.materialLabel28.Size = new System.Drawing.Size(261, 24);
+            this.materialLabel28.Size = new System.Drawing.Size(280, 24);
             this.materialLabel28.TabIndex = 130;
             this.materialLabel28.Text = " istediğiniz doktora çift tıklayın .";
             // 
@@ -1573,12 +1655,12 @@
             // 
             this.materialLabel29.AutoSize = true;
             this.materialLabel29.Depth = 0;
-            this.materialLabel29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel29.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel29.Location = new System.Drawing.Point(44, 352);
             this.materialLabel29.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel29.Name = "materialLabel29";
-            this.materialLabel29.Size = new System.Drawing.Size(434, 24);
+            this.materialLabel29.Size = new System.Drawing.Size(440, 24);
             this.materialLabel29.TabIndex = 129;
             this.materialLabel29.Text = "Rengi silmek ve güncellemek için renk listesindeki ";
             // 
@@ -1610,14 +1692,14 @@
             this.dgv_color_list.EnableHeadersVisualStyles = false;
             this.dgv_color_list.Location = new System.Drawing.Point(6, 34);
             this.dgv_color_list.Name = "dgv_color_list";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_color_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_color_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_color_list.RowTemplate.Height = 24;
             this.dgv_color_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_color_list.Size = new System.Drawing.Size(474, 437);
@@ -1642,12 +1724,12 @@
             this.materialLabel30.AutoSize = true;
             this.materialLabel30.BackColor = System.Drawing.SystemColors.Control;
             this.materialLabel30.Depth = 0;
-            this.materialLabel30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel30.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel30.Location = new System.Drawing.Point(27, 22);
             this.materialLabel30.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel30.Name = "materialLabel30";
-            this.materialLabel30.Size = new System.Drawing.Size(102, 24);
+            this.materialLabel30.Size = new System.Drawing.Size(100, 24);
             this.materialLabel30.TabIndex = 0;
             this.materialLabel30.Text = "Renk  Adı :";
             // 
@@ -1695,6 +1777,42 @@
             this.label54.Size = new System.Drawing.Size(88, 17);
             this.label54.TabIndex = 3;
             this.label54.Text = "Version2.0.0";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox4.Location = new System.Drawing.Point(846, 660);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(488, 116);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(392, 86);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(485, 374);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox3.Location = new System.Drawing.Point(288, 466);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(744, 191);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // pnl_search
             // 
@@ -1746,12 +1864,12 @@
             // 
             this.materialLabel49.AutoSize = true;
             this.materialLabel49.Depth = 0;
-            this.materialLabel49.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel49.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel49.Location = new System.Drawing.Point(89, 125);
             this.materialLabel49.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel49.Name = "materialLabel49";
-            this.materialLabel49.Size = new System.Drawing.Size(470, 24);
+            this.materialLabel49.Size = new System.Drawing.Size(487, 24);
             this.materialLabel49.TabIndex = 172;
             this.materialLabel49.Text = "İşlem güncellemek için tablodaki işleme iki kere tıklayın.";
             // 
@@ -1759,12 +1877,12 @@
             // 
             this.materialLabel48.AutoSize = true;
             this.materialLabel48.Depth = 0;
-            this.materialLabel48.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel48.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel48.Location = new System.Drawing.Point(1022, 36);
             this.materialLabel48.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel48.Name = "materialLabel48";
-            this.materialLabel48.Size = new System.Drawing.Size(16, 24);
+            this.materialLabel48.Size = new System.Drawing.Size(15, 24);
             this.materialLabel48.TabIndex = 170;
             this.materialLabel48.Text = "-";
             // 
@@ -1772,12 +1890,12 @@
             // 
             this.materialLabel47.AutoSize = true;
             this.materialLabel47.Depth = 0;
-            this.materialLabel47.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel47.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel47.Location = new System.Drawing.Point(1019, 81);
             this.materialLabel47.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel47.Name = "materialLabel47";
-            this.materialLabel47.Size = new System.Drawing.Size(16, 24);
+            this.materialLabel47.Size = new System.Drawing.Size(15, 24);
             this.materialLabel47.TabIndex = 169;
             this.materialLabel47.Text = "-";
             // 
@@ -1785,12 +1903,12 @@
             // 
             this.materialLabel46.AutoSize = true;
             this.materialLabel46.Depth = 0;
-            this.materialLabel46.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel46.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel46.Location = new System.Drawing.Point(1205, 33);
             this.materialLabel46.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel46.Name = "materialLabel46";
-            this.materialLabel46.Size = new System.Drawing.Size(163, 24);
+            this.materialLabel46.Size = new System.Drawing.Size(166, 24);
             this.materialLabel46.TabIndex = 168;
             this.materialLabel46.Text = "Toplam Diş Adeti :";
             // 
@@ -1798,12 +1916,12 @@
             // 
             this.materialLabel45.AutoSize = true;
             this.materialLabel45.Depth = 0;
-            this.materialLabel45.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel45.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel45.Location = new System.Drawing.Point(776, 81);
             this.materialLabel45.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel45.Name = "materialLabel45";
-            this.materialLabel45.Size = new System.Drawing.Size(111, 24);
+            this.materialLabel45.Size = new System.Drawing.Size(114, 24);
             this.materialLabel45.TabIndex = 167;
             this.materialLabel45.Text = "Kayıt Tarihi :";
             // 
@@ -1811,12 +1929,12 @@
             // 
             this.materialLabel44.AutoSize = true;
             this.materialLabel44.Depth = 0;
-            this.materialLabel44.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel44.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel44.Location = new System.Drawing.Point(752, 36);
             this.materialLabel44.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel44.Name = "materialLabel44";
-            this.materialLabel44.Size = new System.Drawing.Size(137, 24);
+            this.materialLabel44.Size = new System.Drawing.Size(138, 24);
             this.materialLabel44.TabIndex = 166;
             this.materialLabel44.Text = "İstenilen Tarih :";
             // 
@@ -1824,12 +1942,12 @@
             // 
             this.materialLabel43.AutoSize = true;
             this.materialLabel43.Depth = 0;
-            this.materialLabel43.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel43.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel43.Location = new System.Drawing.Point(373, 85);
             this.materialLabel43.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel43.Name = "materialLabel43";
-            this.materialLabel43.Size = new System.Drawing.Size(124, 24);
+            this.materialLabel43.Size = new System.Drawing.Size(127, 24);
             this.materialLabel43.TabIndex = 165;
             this.materialLabel43.Text = "İşlem Arama :";
             // 
@@ -1837,12 +1955,12 @@
             // 
             this.materialLabel42.AutoSize = true;
             this.materialLabel42.Depth = 0;
-            this.materialLabel42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel42.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel42.Location = new System.Drawing.Point(208, 84);
             this.materialLabel42.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel42.Name = "materialLabel42";
-            this.materialLabel42.Size = new System.Drawing.Size(78, 24);
+            this.materialLabel42.Size = new System.Drawing.Size(79, 24);
             this.materialLabel42.TabIndex = 164;
             this.materialLabel42.Text = "Aşama :";
             // 
@@ -1850,12 +1968,12 @@
             // 
             this.materialLabel41.AutoSize = true;
             this.materialLabel41.Depth = 0;
-            this.materialLabel41.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel41.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel41.Location = new System.Drawing.Point(21, 86);
             this.materialLabel41.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel41.Name = "materialLabel41";
-            this.materialLabel41.Size = new System.Drawing.Size(89, 24);
+            this.materialLabel41.Size = new System.Drawing.Size(92, 24);
             this.materialLabel41.TabIndex = 163;
             this.materialLabel41.Text = "Kayıt No :";
             // 
@@ -1863,12 +1981,12 @@
             // 
             this.materialLabel40.AutoSize = true;
             this.materialLabel40.Depth = 0;
-            this.materialLabel40.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel40.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel40.Location = new System.Drawing.Point(370, 39);
             this.materialLabel40.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel40.Name = "materialLabel40";
-            this.materialLabel40.Size = new System.Drawing.Size(127, 24);
+            this.materialLabel40.Size = new System.Drawing.Size(130, 24);
             this.materialLabel40.TabIndex = 162;
             this.materialLabel40.Text = "Hasta Arama :";
             // 
@@ -1876,12 +1994,12 @@
             // 
             this.materialLabel39.AutoSize = true;
             this.materialLabel39.Depth = 0;
-            this.materialLabel39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel39.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel39.Location = new System.Drawing.Point(21, 39);
             this.materialLabel39.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel39.Name = "materialLabel39";
-            this.materialLabel39.Size = new System.Drawing.Size(134, 24);
+            this.materialLabel39.Size = new System.Drawing.Size(136, 24);
             this.materialLabel39.TabIndex = 161;
             this.materialLabel39.Text = "Doktor Arama :";
             // 
@@ -2018,124 +2136,6 @@
             this.dgv_search.TabIndex = 148;
             this.dgv_search.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_search_CellMouseDoubleClick);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(37, 832);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(140, 121);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pb_settings
-            // 
-            this.pb_settings.BackColor = System.Drawing.Color.Transparent;
-            this.pb_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_settings.Image = global::calypso_dental_V2.Resource_picture.settings;
-            this.pb_settings.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pb_settings.Location = new System.Drawing.Point(66, 566);
-            this.pb_settings.Name = "pb_settings";
-            this.pb_settings.Size = new System.Drawing.Size(135, 118);
-            this.pb_settings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_settings.TabIndex = 16;
-            this.pb_settings.TabStop = false;
-            this.pb_settings.Click += new System.EventHandler(this.pb_settings_Click);
-            // 
-            // pb_payment
-            // 
-            this.pb_payment.BackColor = System.Drawing.Color.Transparent;
-            this.pb_payment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_payment.Image = global::calypso_dental_V2.Resource_picture.tables;
-            this.pb_payment.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pb_payment.Location = new System.Drawing.Point(65, 431);
-            this.pb_payment.Name = "pb_payment";
-            this.pb_payment.Size = new System.Drawing.Size(135, 118);
-            this.pb_payment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_payment.TabIndex = 15;
-            this.pb_payment.TabStop = false;
-            this.pb_payment.Click += new System.EventHandler(this.pb_payment_Click);
-            // 
-            // pb_search
-            // 
-            this.pb_search.BackColor = System.Drawing.Color.Transparent;
-            this.pb_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_search.Image = global::calypso_dental_V2.Resource_picture.search;
-            this.pb_search.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pb_search.Location = new System.Drawing.Point(66, 173);
-            this.pb_search.Name = "pb_search";
-            this.pb_search.Size = new System.Drawing.Size(135, 118);
-            this.pb_search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_search.TabIndex = 14;
-            this.pb_search.TabStop = false;
-            this.pb_search.Click += new System.EventHandler(this.pb_search_Click);
-            // 
-            // pB_data_view
-            // 
-            this.pB_data_view.BackColor = System.Drawing.Color.Transparent;
-            this.pB_data_view.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pB_data_view.Image = global::calypso_dental_V2.Resource_picture.print;
-            this.pB_data_view.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pB_data_view.Location = new System.Drawing.Point(65, 303);
-            this.pB_data_view.Name = "pB_data_view";
-            this.pB_data_view.Size = new System.Drawing.Size(135, 118);
-            this.pB_data_view.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pB_data_view.TabIndex = 13;
-            this.pB_data_view.TabStop = false;
-            // 
-            // pB_add_pattient
-            // 
-            this.pB_add_pattient.BackColor = System.Drawing.Color.Transparent;
-            this.pB_add_pattient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pB_add_pattient.Image = global::calypso_dental_V2.Resource_picture.add_pat;
-            this.pB_add_pattient.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pB_add_pattient.InitialImage = null;
-            this.pB_add_pattient.Location = new System.Drawing.Point(65, 45);
-            this.pB_add_pattient.Name = "pB_add_pattient";
-            this.pB_add_pattient.Size = new System.Drawing.Size(135, 118);
-            this.pB_add_pattient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pB_add_pattient.TabIndex = 7;
-            this.pB_add_pattient.TabStop = false;
-            this.pB_add_pattient.Click += new System.EventHandler(this.pB_add_pattient_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox4.Location = new System.Drawing.Point(846, 660);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(488, 116);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(392, 86);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(485, 374);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(288, 466);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(744, 191);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2143,16 +2143,22 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1572, 1028);
             this.Controls.Add(this.pnl_menu);
-            this.Controls.Add(this.pnl_search);
-            this.Controls.Add(this.pnl_init);
             this.Controls.Add(this.pnl_settings);
             this.Controls.Add(this.pnl_add_patient);
+            this.Controls.Add(this.pnl_search);
+            this.Controls.Add(this.pnl_init);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_main";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calypso Dental ";
             this.pnl_menu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_payment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).EndInit();
             this.pnl_add_patient.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -2195,18 +2201,12 @@
             this.groupBox7.PerformLayout();
             this.pnl_init.ResumeLayout(false);
             this.pnl_init.PerformLayout();
-            this.pnl_search.ResumeLayout(false);
-            this.pnl_search.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_payment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnl_search.ResumeLayout(false);
+            this.pnl_search.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

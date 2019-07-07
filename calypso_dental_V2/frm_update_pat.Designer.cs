@@ -181,6 +181,7 @@
             // 
             // cb_doctor_name
             // 
+            this.cb_doctor_name.Enabled = false;
             this.cb_doctor_name.FormattingEnabled = true;
             this.cb_doctor_name.Location = new System.Drawing.Point(134, 56);
             this.cb_doctor_name.Name = "cb_doctor_name";
@@ -297,6 +298,7 @@
             this.btn_save.TabIndex = 15;
             this.btn_save.Text = "Güncelle";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // txt_doctor_notes
             // 

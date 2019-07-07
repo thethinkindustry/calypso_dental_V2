@@ -46,5 +46,17 @@ namespace calypso_dental_V2 {
                 this["inproc_id"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Null")]
+        public string dr_name {
+            get {
+                return ((string)(this["dr_name"]));
+            }
+            set {
+                this["dr_name"] = value;
+            }
+        }
     }
 }
