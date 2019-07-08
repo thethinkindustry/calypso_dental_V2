@@ -38,11 +38,11 @@ namespace calypso_dental_V2
             prntDataTable.LocalReport.DataSources.Clear();
             prntDataTable.LocalReport.DataSources.Add(rs);
             prntDataTable.LocalReport.ReportEmbeddedResource = "calypso_dental_V2.ReportGenerator.CrystalReport.rpt_inproc.rdlc";
-            Microsoft.Reporting.WinForms.ReportParameter[] rParams = new Microsoft.Reporting.WinForms.ReportParameter[]
+         /*   Microsoft.Reporting.WinForms.ReportParameter[] rParams = new Microsoft.Reporting.WinForms.ReportParameter[]
       {
              
              // new Microsoft.Reporting.WinForms.ReportParameter("ReportParameter_lastpayment",frm1.p_info.dr_last_payment.ToString()+"₺")
-      };
+      };*/
            
 
 

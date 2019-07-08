@@ -71,6 +71,12 @@
     <Compile Include="frm_add_proc.Designer.cs">
       <DependentUpon>frm_add_proc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_print.Designer.cs">
+      <DependentUpon>Frm_print.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_print_search.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,12 +96,18 @@
     </Compile>
     <Compile Include="inproc.cs" />
     <Compile Include="patient.cs" />
+    <Compile Include="print_info.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportGenerator\DataSet\ds_inproc.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_inproc.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerator\DataSet\ds_print.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_print.xsd</DependentUpon>
     </Compile>
     <Compile Include="Resource_picture.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -116,6 +128,9 @@
     <EmbeddedResource Include="frm_add_proc.resx">
       <DependentUpon>frm_add_proc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_print.resx">
+      <DependentUpon>Frm_print.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_print_search.resx">
       <DependentUpon>Frm_print_search.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +147,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ReportGenerator\CrystalReport\rpt_inproc.rdlc" />
+    <EmbeddedResource Include="ReportGenerator\CrystalReport\rpt_print.rdlc" />
     <EmbeddedResource Include="Resource_picture.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource_picture.Designer.cs</LastGenOutput>
@@ -161,6 +177,17 @@
     <None Include="ReportGenerator\DataSet\ds_inproc.xss">
       <DependentUpon>ds_inproc.xsd</DependentUpon>
     </None>
+    <None Include="ReportGenerator\DataSet\ds_print.xsc">
+      <DependentUpon>ds_print.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerator\DataSet\ds_print.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_print.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportGenerator\DataSet\ds_print.xss">
+      <DependentUpon>ds_print.xsd</DependentUpon>
+    </None>
     <None Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -187,7 +214,9 @@
   <ItemGroup>
     <None Include="Resources\yazdır-ikon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-google-web-search-100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -51,7 +51,7 @@ namespace calypso_dental_V2
                 dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    cb_color_bar.Items.Add(dataReader["color_name"].ToString());
+                    cb_color_bar.Items.Add(dataReader["color_name"].ToString().Trim());
                 }
                 dataReader.Close();
                 command.Dispose();
@@ -60,7 +60,7 @@ namespace calypso_dental_V2
                 dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    cb_steps_bar.Items.Add(dataReader["step_name"].ToString());
+                    cb_steps_bar.Items.Add(dataReader["step_name"].ToString().Trim());
                 }
                 dataReader.Close();
                 command.Dispose();
@@ -93,8 +93,8 @@ namespace calypso_dental_V2
         }
         private void btn_add_proc_Click(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrEmpty(cb_procces_bar.Text) || string.IsNullOrEmpty(cb_color_bar.Text) || string.IsNullOrEmpty(cb_steps_bar.Text) || string.IsNullOrEmpty(txt_unit_price.Text))
+            
+            if (string.IsNullOrEmpty(cb_procces_bar?.SelectedItem?.ToString()) || string.IsNullOrEmpty(cb_color_bar.SelectedItem?.ToString()) || string.IsNullOrEmpty(cb_steps_bar?.SelectedItem?.ToString()) || string.IsNullOrEmpty(txt_unit_price.Text))
             {
                 MessageBox.Show("Kayıt İçin Tüm Alanlar Doldurulmalıdır.");
             }
@@ -165,6 +165,7 @@ namespace calypso_dental_V2
                     catch (Exception ex)
                     {
                         MessageBox.Show("hata :" + ex.Message);
+                        
                         throw;
                     }
                     // this.Close();

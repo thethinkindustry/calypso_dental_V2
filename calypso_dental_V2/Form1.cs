@@ -17,6 +17,7 @@ namespace calypso_dental_V2
     public partial class frm_main : MaterialForm
     {
         Frm_print_search frm_print_search ;
+        Frm_print frm_print;
         private Settings settings = new Settings();
         private id reg_no = new calypso_dental_V2.id();
         SqlConnection cnn;
@@ -27,6 +28,8 @@ namespace calypso_dental_V2
         DataTable table = new DataTable();
         DataTable search_table = new DataTable();
         public List<inproc> lst = new List<inproc>();
+        public List<patient> lst_print = new List<patient>();
+        public print_info p_info= new  print_info();
         int reg_id = 0;
         int id = 0;
         string sql = null;
@@ -36,7 +39,9 @@ namespace calypso_dental_V2
             InitializeComponent();
             pnlVisible(pnl_init);
             frm_print_search = new Frm_print_search();
+            frm_print = new Frm_print();
             frm_print_search.frm1 = this;
+            frm_print.frm1 = this;
             settings.data_source = "DESKTOP-93568HR";
             settings.initial_catalog = "db_calypso_v2";
           settings.Save();
@@ -389,7 +394,7 @@ namespace calypso_dental_V2
                 dtb_deadline_init.Enabled = true;
                 dtp_deadline_upperlimit.Enabled = true;
             }
-            tableSeach(sender, e);
+            
 
         }
         private void chk_save_date_CheckedChanged(object sender, EventArgs e)
@@ -405,7 +410,7 @@ namespace calypso_dental_V2
                 dtp_init_date_init.Enabled = true;
                 dtp_init_date_upperlimit.Enabled = true;
             }
-            tableSeach(sender, e);
+            
         }
         private void btn_proc_add_Click(object sender, EventArgs e)
         {
@@ -782,7 +787,11 @@ namespace calypso_dental_V2
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            if (cb_doctor_name.Text == "" || txt_patient_name.Text == ""||txt_doctor_notes.Text=="" )
+            if (txt_doctor_notes.Text == "")
+            {
+                txt_doctor_notes.Text = "Yok";
+            }
+            if (cb_doctor_name.Text == "" || txt_patient_name.Text == "" )
             {
                 MessageBox.Show("Zorunlu alanlar doldurulmalıdır.");
             }
@@ -898,7 +907,13 @@ namespace calypso_dental_V2
 
         private void pb_printp_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgv_search.Rows.Count - 1; i++)
+         
+        }
+
+        private void btn_print_search_Click(object sender, EventArgs e)
+        {
+            lst.Clear();
+            for (int i = 0; i < dgv_search.Rows.Count; i++)
             {
                 lst.Add(new inproc
                 {
@@ -906,7 +921,7 @@ namespace calypso_dental_V2
                     dr_name = dgv_search.Rows[i].Cells[1].Value.ToString(),
                     pat_name = dgv_search.Rows[i].Cells[2].Value.ToString(),
                     proc_name = dgv_search.Rows[i].Cells[3].Value.ToString(),
-                    regDate =dgv_search.Rows[i].Cells[4].Value.ToString(),
+                    regDate = dgv_search.Rows[i].Cells[4].Value.ToString(),
                     delDate = dgv_search.Rows[i].Cells[5].Value.ToString(),
                     step = dgv_search.Rows[i].Cells[6].Value.ToString(),
                     color = dgv_search.Rows[i].Cells[7].Value.ToString(),
@@ -916,11 +931,155 @@ namespace calypso_dental_V2
                     price = int.Parse(dgv_search.Rows[i].Cells[11].Value.ToString())
 
                 });
-               
+
             }
-            
-            frm_print_search.frm1.frm_print_search.ShowDialog();
+
+            frm_print_search.frm1.frm_print_search.ShowDialog();  
         }
+
+        private void pB_data_view_Click(object sender, EventArgs e)
+        {
+            pnlVisible(pnl_print);
+            cb_select_dr.Text = null;
+            cb_select_step.Text = null;
+            cb_select_dr.Items.Clear();
+            cb_select_step.Items.Clear();
+            try
+            {
+                cnn.Open();
+                sql = "SELECT dr_name FROM tbl_dr ";
+                command = new SqlCommand(sql, cnn);
+                dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    cb_select_dr.Items.Add(dataReader["dr_name"].ToString());
+                }
+                dataReader.Close();
+                command.Dispose();
+                cnn.Close();
+                cnn.Open();
+                sql = "SELECT step_name FROM tbl_step ";
+                command = new SqlCommand(sql, cnn);
+                dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    cb_select_step.Items.Add(dataReader["step_name"].ToString());
+                }
+                dataReader.Close();
+                command.Dispose();
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("hata :" + ex.Message);
+                throw;
+            }
+
+
+        }
+        private void btn_search_prt_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cb_select_dr?.SelectedItem?.ToString()) || string.IsNullOrEmpty(cb_select_step.SelectedItem?.ToString()))
+            {
+                MessageBox.Show("Arama için Tüm Alanlar Doldurulmalıdır.");
+            }
+            else
+            {
+                if (cnn.State == ConnectionState.Closed)
+                {
+                    cnn.Open();
+                }
+                sql = "SELECT  tbl_reg.reg_no,pat_name,proc_name,inproc_deadline,price,total_price,printed FROM tbl_reg INNER JOIN tbl_inproc ON tbl_reg.reg_no=tbl_inproc.reg_no Where dr_name='"+cb_select_dr.SelectedItem.ToString()+"' AND step_name='"+cb_select_step.SelectedItem.ToString()+"' ";
+                adapter = new SqlDataAdapter(sql, cnn);
+                DataTable table1 = new DataTable();
+                table1.Clear();
+                adapter.Fill(table1);
+                dgv_print.DataSource = table1;
+                dgv_print.Columns["reg_no"].HeaderText = "Kayıt No";
+                dgv_print.Columns["pat_name"].HeaderText = "Hasta Adı";
+                dgv_print.Columns["proc_name"].HeaderText = "Yapılan İşlem ";
+                dgv_print.Columns["inproc_deadline"].HeaderText = "İstenilen Tarih";
+                dgv_print.Columns["price"].HeaderText = "Birim Fiyat";
+                dgv_print.Columns["total_price"].HeaderText = "Toplam Fiyat";
+                dgv_print.Columns["printed"].HeaderText = "Yazdırıldı";
+                dgv_print.Columns[6].Visible = true;
+                dgv_print.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                adapter.Dispose();
+                cnn.Close();
+            }
+        }
+
+        private void btn_print_click(object sender, EventArgs e)
+        {
+            try
+            {
+                lst.Clear();
+                if (dgv_print.Rows.Count>0)
+                {
+                    for (int i = 0; i < dgv_print.Rows.Count - 1; i++)
+                    {
+                        
+                        if ("Evet" == dgv_print.Rows[i].Cells[6].Value.ToString())
+                        {
+                            DialogResult dialogResult = MessageBox.Show(dgv_print.Rows[i].Cells[1].Value.ToString() + " Adlı hasta daha once yazdırılmış Yazdırmak istediğinizden emin misiniz?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (dialogResult == DialogResult.No)
+                            {
+                                int selectedIndex = dgv_print.Rows[i].Cells[6].RowIndex;
+                                if (selectedIndex > -1)
+                                {
+                                    dgv_print.Rows.RemoveAt(selectedIndex);
+                                    dgv_print.Refresh();
+                                    if (i > -1) i--;
+                                }
+                            }
+                        }
+
+                    }
+                  
+                    for (int i = 0; i < dgv_print.Rows.Count - 1; i++)
+                {
+                        cnn.Open();
+                        sql = "UPDATE  tbl_inproc SET printed=@pat WHERE reg_no=@reg";
+                        command = new SqlCommand(sql, cnn);
+                        command.Parameters.AddWithValue("@pat", "Evet");
+                        command.Parameters.AddWithValue("@reg", dgv_print.Rows[i].Cells[0].Value);
+                        command.ExecuteNonQuery();
+                        command.Dispose();
+                        cnn.Close();
+                        lst_print.Clear();
+                        lst_print.Add(new patient
+                    {
+                        reg_no = int.Parse(dgv_print.Rows[i].Cells[0].Value.ToString()),
+                        pName = dgv_print.Rows[i].Cells[1].Value.ToString(),
+                        progName = dgv_print.Rows[i].Cells[2].Value.ToString(),
+                        regDate = dgv_print.Rows[i].Cells[3].Value.ToString(),
+                        uprice= int.Parse(dgv_print.Rows[i].Cells[4].Value.ToString()),
+                        price = int.Parse(dgv_print.Rows[i].Cells[5].Value.ToString())
+                    });
+                }
+                    cnn.Open();
+                    var totaldebt = new SqlCommand("SELECT dr_debt FROM tbl_dr where dr_name='" + cb_select_dr.Text + "'", cnn).ExecuteScalar().ToString();
+                    string debt = totaldebt.ToString();
+                    p_info.Totaldebt = Convert.ToInt16(debt);
+                    cnn.Close();
+                    p_info.dr_name = cb_select_dr.Text;
+                    p_info.fromDate = dt_fromdate.Value.ToString("yyyy-MM-dd");
+                    p_info.toDate = dt_todate.Value.ToString("yyyy-MM-dd");
+                   frm_print.frm1.frm_print.ShowDialog();
+                    pnlVisible(pnl_init);
+                }
+                else
+                {
+                    MessageBox.Show("Yazdırlacak Öğe Seçilmedi");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("hata" + ex);
+                throw;
+            }
+        }
+
     }
-    }
+}
 
