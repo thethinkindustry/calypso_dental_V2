@@ -16,7 +16,7 @@ namespace calypso_dental_V2
 {
     public partial class frm_main : MaterialForm
     {
-
+        Frm_print_search frm_print_search ;
         private Settings settings = new Settings();
         private id reg_no = new calypso_dental_V2.id();
         SqlConnection cnn;
@@ -35,7 +35,8 @@ namespace calypso_dental_V2
         {
             InitializeComponent();
             pnlVisible(pnl_init);
-            
+            frm_print_search = new Frm_print_search();
+            frm_print_search.frm1 = this;
             settings.data_source = "DESKTOP-93568HR";
             settings.initial_catalog = "db_calypso_v2";
           settings.Save();
@@ -841,7 +842,7 @@ namespace calypso_dental_V2
             {
                 cnn.Open();
             }
-            sql = "SELECT  tbl_reg.reg_no,dr_name,pat_name,proc_name,inproc_init_date,inproc_deadline,step_name,color_name,teet,teet_num,price,total_price,sent,printed,reg_drnote FROM tbl_reg INNER JOIN tbl_inproc ON tbl_reg.reg_no=tbl_inproc.reg_no";
+            sql = "SELECT  tbl_reg.reg_no,dr_name,pat_name,proc_name,inproc_init_date,inproc_deadline,step_name,color_name,teet,teet_num,price,total_price,sent,reg_drnote FROM tbl_reg INNER JOIN tbl_inproc ON tbl_reg.reg_no=tbl_inproc.reg_no";
             adapter = new SqlDataAdapter(sql, cnn);
             search_table.Clear();
             adapter.Fill(search_table);
@@ -859,7 +860,6 @@ namespace calypso_dental_V2
             dgv_search.Columns["price"].HeaderText = "Birim Fiyat";
             dgv_search.Columns["total_price"].HeaderText = "Toplam Fiyat";
             dgv_search.Columns["sent"].HeaderText = "Doktora Gönderildi";
-            dgv_search.Columns["printed"].HeaderText = "Yazdırıldı";
             dgv_search.Columns["reg_drnote"].HeaderText = "Doktor Notu";
             dgv_search.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             adapter.Dispose();
@@ -894,6 +894,32 @@ namespace calypso_dental_V2
         private void pb_payment_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pb_printp_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgv_search.Rows.Count - 1; i++)
+            {
+                lst.Add(new inproc
+                {
+                    reg_no = int.Parse(dgv_search.Rows[i].Cells[0].Value.ToString()),
+                    dr_name = dgv_search.Rows[i].Cells[1].Value.ToString(),
+                    pat_name = dgv_search.Rows[i].Cells[2].Value.ToString(),
+                    proc_name = dgv_search.Rows[i].Cells[3].Value.ToString(),
+                    regDate =dgv_search.Rows[i].Cells[4].Value.ToString(),
+                    delDate = dgv_search.Rows[i].Cells[5].Value.ToString(),
+                    step = dgv_search.Rows[i].Cells[6].Value.ToString(),
+                    color = dgv_search.Rows[i].Cells[7].Value.ToString(),
+                    teet = dgv_search.Rows[i].Cells[8].Value.ToString(),
+                    teet_num = dgv_search.Rows[i].Cells[9].Value.ToString(),
+                    uprice = int.Parse(dgv_search.Rows[i].Cells[10].Value.ToString()),
+                    price = int.Parse(dgv_search.Rows[i].Cells[11].Value.ToString())
+
+                });
+               
+            }
+            
+            frm_print_search.frm1.frm_print_search.ShowDialog();
         }
     }
     }

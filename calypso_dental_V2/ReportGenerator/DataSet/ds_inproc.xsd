@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_inproc" targetNamespace="http://tempuri.org/ds_inproc.xsd" xmlns:mstns="http://tempuri.org/ds_inproc.xsd" xmlns="http://tempuri.org/ds_inproc.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_inproc" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_inproc" msprop:Generator_UserDSName="ds_inproc">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="inproc" msprop:Generator_TableClassName="inprocDataTable" msprop:Generator_TableVarName="tableinproc" msprop:Generator_TablePropName="inproc" msprop:Generator_RowDeletingName="inprocRowDeleting" msprop:Generator_RowChangingName="inprocRowChanging" msprop:Generator_RowEvHandlerName="inprocRowChangeEventHandler" msprop:Generator_RowDeletedName="inprocRowDeleted" msprop:Generator_UserTableName="inproc" msprop:Generator_RowChangedName="inprocRowChanged" msprop:Generator_RowEvArgName="inprocRowChangeEvent" msprop:Generator_RowClassName="inprocRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reg_no" msprop:Generator_ColumnVarNameInTable="columnreg_no" msprop:Generator_ColumnPropNameInRow="reg_no" msprop:Generator_ColumnPropNameInTable="reg_noColumn" msprop:Generator_UserColumnName="reg_no" type="xs:int" minOccurs="0" />
+              <xs:element name="dr_name" msprop:Generator_ColumnVarNameInTable="columndr_name" msprop:Generator_ColumnPropNameInRow="dr_name" msprop:Generator_ColumnPropNameInTable="dr_nameColumn" msprop:Generator_UserColumnName="dr_name" type="xs:string" minOccurs="0" />
+              <xs:element name="proc_name" msprop:Generator_ColumnVarNameInTable="columnproc_name" msprop:Generator_ColumnPropNameInRow="proc_name" msprop:Generator_ColumnPropNameInTable="proc_nameColumn" msprop:Generator_UserColumnName="proc_name" type="xs:string" minOccurs="0" />
+              <xs:element name="regDate" msprop:Generator_ColumnVarNameInTable="columnregDate" msprop:Generator_ColumnPropNameInRow="regDate" msprop:Generator_ColumnPropNameInTable="regDateColumn" msprop:Generator_UserColumnName="regDate" type="xs:string" minOccurs="0" />
+              <xs:element name="delDate" msprop:Generator_ColumnVarNameInTable="columndelDate" msprop:Generator_ColumnPropNameInRow="delDate" msprop:Generator_ColumnPropNameInTable="delDateColumn" msprop:Generator_UserColumnName="delDate" type="xs:string" minOccurs="0" />
+              <xs:element name="step" msprop:Generator_ColumnVarNameInTable="columnstep" msprop:Generator_ColumnPropNameInRow="step" msprop:Generator_ColumnPropNameInTable="stepColumn" msprop:Generator_UserColumnName="step" type="xs:string" minOccurs="0" />
+              <xs:element name="color" msprop:Generator_ColumnVarNameInTable="columncolor" msprop:Generator_ColumnPropNameInRow="color" msprop:Generator_ColumnPropNameInTable="colorColumn" msprop:Generator_UserColumnName="color" type="xs:string" minOccurs="0" />
+              <xs:element name="teet" msprop:Generator_ColumnVarNameInTable="columnteet" msprop:Generator_ColumnPropNameInRow="teet" msprop:Generator_ColumnPropNameInTable="teetColumn" msprop:Generator_UserColumnName="teet" type="xs:string" minOccurs="0" />
+              <xs:element name="teet_num" msprop:Generator_ColumnVarNameInTable="columnteet_num" msprop:Generator_ColumnPropNameInRow="teet_num" msprop:Generator_ColumnPropNameInTable="teet_numColumn" msprop:Generator_UserColumnName="teet_num" type="xs:int" minOccurs="0" />
+              <xs:element name="uprice" msprop:Generator_ColumnVarNameInTable="columnuprice" msprop:Generator_ColumnPropNameInRow="uprice" msprop:Generator_ColumnPropNameInTable="upriceColumn" msprop:Generator_UserColumnName="uprice" type="xs:short" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

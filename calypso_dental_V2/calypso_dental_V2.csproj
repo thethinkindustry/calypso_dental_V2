@@ -37,8 +37,11 @@
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +71,12 @@
     <Compile Include="frm_add_proc.Designer.cs">
       <DependentUpon>frm_add_proc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_print_search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_print_search.Designer.cs">
+      <DependentUpon>Frm_print_search.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_update_pat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +92,11 @@
     <Compile Include="patient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportGenerator\DataSet\ds_inproc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_inproc.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Resource_picture.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -102,6 +116,9 @@
     <EmbeddedResource Include="frm_add_proc.resx">
       <DependentUpon>frm_add_proc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_print_search.resx">
+      <DependentUpon>Frm_print_search.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_update_pat.resx">
       <DependentUpon>frm_update_pat.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +131,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportGenerator\CrystalReport\rpt_inproc.rdlc" />
     <EmbeddedResource Include="Resource_picture.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource_picture.Designer.cs</LastGenOutput>
@@ -132,6 +150,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ReportGenerator\DataSet\ds_inproc.xsc">
+      <DependentUpon>ds_inproc.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerator\DataSet\ds_inproc.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_inproc.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportGenerator\DataSet\ds_inproc.xss">
+      <DependentUpon>ds_inproc.xsd</DependentUpon>
+    </None>
     <None Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,6 +184,10 @@
   <ItemGroup>
     <None Include="Resources\tables.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yazdır-ikon.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
