@@ -6,22 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.39467cm</Width>
+              <Width>3.43133cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.36783cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.9445cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>3.25022cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.30528cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.23cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -37,9 +28,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>İ.No</Value>
+                              <Value>Doktor Adı</Value>
                               <Style>
-                                <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -70,9 +60,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Hasta Adı</Value>
+                              <Value>Ödeme Tarihi</Value>
                               <Style>
-                                <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -103,9 +92,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Yapılan İşlem</Value>
+                              <Value>Ödeme Miktarı</Value>
                               <Style>
-                                <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -127,105 +115,6 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox7">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Tarih</Value>
-                              <Style>
-                                <FontStyle>Normal</FontStyle>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox9">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>B.Fiyat </Value>
-                              <Style>
-                                <FontStyle>Normal</FontStyle>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox9</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox11">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Fiyat</Value>
-                              <Style>
-                                <FontStyle>Normal</FontStyle>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox11</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
@@ -233,23 +122,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="reg_no">
+                    <Textbox Name="dr_name">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!reg_no.Value</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
+                              <Value>=Fields!dr_name.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>reg_no</rd:DefaultName>
+                      <rd:DefaultName>dr_name</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -265,23 +152,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="pName">
+                    <Textbox Name="date">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!pName.Value</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
+                              <Value>=Fields!date.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>pName</rd:DefaultName>
+                      <rd:DefaultName>date</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -297,119 +182,25 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="progName">
+                    <Textbox Name="pay">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!progName.Value</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
+                              <Value>=Fields!pay.Value</Value>
+                              <Style />
                             </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>progName</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="regDate">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
                             <TextRun>
-                              <Value>=Fields!regDate.Value</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
+                              <Value>₺</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>regDate</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="uprice">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!uprice.Value</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>uprice</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="price">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!price.Value</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>price</rd:DefaultName>
+                      <rd:DefaultName>pay</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -432,9 +223,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -447,44 +235,34 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
-        <Top>0.17639cm</Top>
-        <Left>0.81723cm</Left>
+        <DataSetName>DataSet</DataSetName>
+        <Top>1.24037cm</Top>
+        <Left>1.9177cm</Left>
         <Height>1.2cm</Height>
-        <Width>12.62467cm</Width>
+        <Width>9.29916cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox2">
+      <Textbox Name="Textbox9">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>  Toplam Doktor Borcu :</Value>
+                <Value>Toplam Ödeme :</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>SemiBold</FontWeight>
                   <Color>Maroon</Color>
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Parameters!ReportParameter_total_debt.Value</Value>
+                <Value>=Sum(Fields!pay.Value, "DataSet")</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>Maroon</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>₺</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>SemiBold</FontWeight>
                   <Color>Maroon</Color>
                 </Style>
               </TextRun>
@@ -492,11 +270,11 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.97639cm</Top>
-        <Left>8.95923cm</Left>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>2.47564cm</Top>
+        <Left>5.92971cm</Left>
         <Height>0.6cm</Height>
-        <Width>7.15906cm</Width>
+        <Width>4.87067cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -508,33 +286,23 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox4">
+      <Textbox Name="Textbox10">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Toplam işlem Ücretleri :</Value>
+                <Value>Kalan Borç :</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>SemiBold</FontWeight>
                   <Color>Maroon</Color>
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Sum(Fields!price.Value, "DataSet1")</Value>
+                <Value>=Parameters!rp_debt.Value</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>Maroon</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>₺</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>SemiBold</FontWeight>
                   <Color>Maroon</Color>
                 </Style>
               </TextRun>
@@ -542,11 +310,11 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.37639cm</Top>
-        <Left>8.95923cm</Left>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>3.07564cm</Top>
+        <Left>6.46636cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.04239cm</Width>
+        <Width>6.74018cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -559,13 +327,13 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>1.13333in</Height>
+    <Height>1.99167in</Height>
     <Style />
   </Body>
-  <Width>6.34578in</Width>
+  <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>3.55487cm</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -576,7 +344,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Ödeme Listesi</Value>
+                  <Value>Doktor Ödeme Geçmişi</Value>
                   <Style>
                     <FontSize>20pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -587,42 +355,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
-          <Top>1.49888cm</Top>
-          <Left>5.81723cm</Left>
+          <Top>1.21214cm</Top>
+          <Left>6.46636cm</Left>
           <Height>1.01036cm</Height>
-          <Width>6.39467cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox15">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Doktor Adı :</Value>
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox15</rd:DefaultName>
-          <Top>2.72091cm</Top>
-          <Left>1.04778cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
-          <ZIndex>1</ZIndex>
+          <Width>9.6755cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -637,49 +373,17 @@
           <Source>Embedded</Source>
           <Value>CALYPSOpng</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.63528cm</Top>
-          <Left>0.75618cm</Left>
+          <Top>0.34854cm</Top>
+          <Left>1.40531cm</Left>
           <Height>1.90924cm</Height>
           <Width>4.56256cm</Width>
-          <ZIndex>2</ZIndex>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
           </Style>
         </Image>
-        <Textbox Name="ReportParameter_drname">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Parameters!ReportParameter_drname.Value</Value>
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>ReportParameter_drname</rd:DefaultName>
-          <Top>2.72091cm</Top>
-          <Left>3.35728cm</Left>
-          <Height>0.6cm</Height>
-          <Width>5.1035cm</Width>
-          <ZIndex>3</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
         <Textbox Name="Textbox21">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -695,11 +399,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox21</rd:DefaultName>
-          <Top>2.12091cm</Top>
-          <Left>0.81723cm</Left>
+          <Top>1.83417cm</Top>
+          <Left>1.46636cm</Left>
           <Height>0.6cm</Height>
           <Width>4.27096cm</Width>
-          <ZIndex>4</ZIndex>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -718,40 +422,9 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.16417cm</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Textbox Name="OverallPageNumber">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Globals!OverallPageNumber</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>OverallPageNumber</rd:DefaultName>
-          <Top>0.17639cm</Top>
-          <Left>12.13662cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>
@@ -760,8 +433,8 @@
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>0cm</LeftMargin>
-    <RightMargin>1cm</RightMargin>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>
     <BottomMargin>2cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
@@ -769,50 +442,38 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ds_print">
+    <DataSource Name="ds_pay">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>e3a89534-c5f3-4ced-9e77-d9bf63e2c036</rd:DataSourceID>
+      <rd:DataSourceID>7da94d18-f2ae-4446-98c6-c54f8cd9242e</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="DataSet">
       <Query>
-        <DataSourceName>ds_print</DataSourceName>
+        <DataSourceName>ds_pay</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="reg_no">
-          <DataField>reg_no</DataField>
+        <Field Name="dr_name">
+          <DataField>dr_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="pName">
-          <DataField>pName</DataField>
+        <Field Name="date">
+          <DataField>date</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="progName">
-          <DataField>progName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="regDate">
-          <DataField>regDate</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="uprice">
-          <DataField>uprice</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="price">
-          <DataField>price</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="pay">
+          <DataField>pay</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ds_print</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\ReportGenerator\DataSet\ds_print.xsd</rd:SchemaPath>
-        <rd:TableName>print</rd:TableName>
+        <rd:DataSetName>ds_pay</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\ReportGenerator\DataSet\ds_pay.xsd</rd:SchemaPath>
+        <rd:TableName>payment</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -820,11 +481,7 @@
     </DataSet>
   </DataSets>
   <ReportParameters>
-    <ReportParameter Name="ReportParameter_total_debt">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="ReportParameter_drname">
+    <ReportParameter Name="rp_debt">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
@@ -847,5 +504,5 @@ twXeIHHAGARWyl3cSyRFhUnpAbe+UCp4/7vV0ufENFQkbZ6KnLGueMDtM4qkmmM11Q+yq+oji6fJRVLN
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>6488979f-067d-4d8c-9744-8689a8bfb556</rd:ReportID>
+  <rd:ReportID>d63e1ea4-286b-4be9-9bca-c869cb0ab457</rd:ReportID>
 </Report>

@@ -1,6 +1,6 @@
 ﻿namespace calypso_dental_V2
 {
-    partial class Frm_print
+    partial class Frm_print_payment
     {
         /// <summary>
         /// Required designer variable.
@@ -28,51 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.ds_pay = new calypso_dental_V2.ReportGenerator.CrystalReport.DataSet.ds_pay();
-            this.dspayBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_pay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dspayBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ds_pay
-            // 
-            this.ds_pay.DataSetName = "ds_pay";
-            this.ds_pay.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dspayBindingSource
-            // 
-            this.dspayBindingSource.DataSource = this.ds_pay;
-            this.dspayBindingSource.Position = 0;
             // 
             // reportViewer1
             // 
-            this.reportViewer1.DocumentMapWidth = 84;
-            this.reportViewer1.Location = new System.Drawing.Point(1, 65);
+            this.reportViewer1.Location = new System.Drawing.Point(1, 62);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1467, 853);
+            this.reportViewer1.Size = new System.Drawing.Size(1271, 717);
             this.reportViewer1.TabIndex = 0;
             // 
-            // Frm_print
+            // Frm_print_payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1469, 917);
+            this.ClientSize = new System.Drawing.Size(1273, 778);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Frm_print";
+            this.Name = "Frm_print_payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Yazdırma Ekranı ";
-            this.Load += new System.EventHandler(this.Frm_print_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ds_pay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dspayBindingSource)).EndInit();
+            this.Text = "Ödeme yazdırma Ekranı ";
+            this.Load += new System.EventHandler(this.Frm_print_payment_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource dspayBindingSource;
-        private ReportGenerator.CrystalReport.DataSet.ds_pay ds_pay;
+
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

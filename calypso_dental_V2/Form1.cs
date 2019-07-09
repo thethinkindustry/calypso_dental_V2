@@ -18,6 +18,7 @@ namespace calypso_dental_V2
     {
         Frm_print_search frm_print_search ;
         Frm_print frm_print;
+        Frm_print_payment frm_print_pay;
         private Settings settings = new Settings();
         private id reg_no = new calypso_dental_V2.id();
         SqlConnection cnn;
@@ -29,6 +30,7 @@ namespace calypso_dental_V2
         DataTable search_table = new DataTable();
         public List<inproc> lst = new List<inproc>();
         public List<patient> lst_print = new List<patient>();
+        public List<payment> lst_pay = new List<payment>();
         public print_info p_info= new  print_info();
         int reg_id = 0;
         int id = 0;
@@ -39,12 +41,14 @@ namespace calypso_dental_V2
             InitializeComponent();
             pnlVisible(pnl_init);
             frm_print_search = new Frm_print_search();
+            frm_print_pay = new Frm_print_payment();
             frm_print = new Frm_print();
             frm_print_search.frm1 = this;
             frm_print.frm1 = this;
+            frm_print_pay.frm1 = this;
             settings.data_source = "DESKTOP-93568HR";
             settings.initial_catalog = "db_calypso_v2";
-          settings.Save();
+            settings.Save();
             connetionString = "Data Source=" + settings.data_source + "\\SQL_2014;Initial Catalog=" + settings.initial_catalog + ";Integrated Security=True";
             cnn = new SqlConnection(connetionString);
         }
@@ -88,8 +92,6 @@ namespace calypso_dental_V2
             MaterialForm frm_proc = new frm_add_proc();
             frm_proc.ShowDialog();
             dgv_inproc_fill();
-
-
         }
         void total_price()
         {
@@ -761,6 +763,22 @@ namespace calypso_dental_V2
             frm_add_payment.ShowDialog();
             ödemelerToolStripMenuItem_Click(sender, e);
         }
+        private void btn_print_payment_Click(object sender, EventArgs e)
+        {
+            lst_pay.Clear();
+            p_info.Totaldebt =int.Parse( dgv_dr_payment.CurrentRow.Cells[2].Value.ToString());
+            for (int i = 0; i < dgv_old_payment.Rows.Count-1; i++)
+            {
+                lst_pay.Add(new payment
+                {
+                    dr_name = dgv_old_payment.Rows[i].Cells[0].Value.ToString(),
+                    date = dgv_old_payment.Rows[i].Cells[1].Value.ToString(),
+                    pay = int.Parse(dgv_old_payment.Rows[i].Cells[2].Value.ToString())
+                });
+            }
+            frm_print_pay.frm1.frm_print_pay.ShowDialog();
+            pnlVisible(pnl_init);
+        }
         #endregion
         void pnl_settingsVisible(Panel pnl)
         {
@@ -1093,7 +1111,7 @@ namespace calypso_dental_V2
                         }
 
                     }
-                  
+                    lst_print.Clear();
                     for (int i = 0; i < dgv_print.Rows.Count - 1; i++)
                 {
                         cnn.Open();
@@ -1104,7 +1122,7 @@ namespace calypso_dental_V2
                         command.ExecuteNonQuery();
                         command.Dispose();
                         cnn.Close();
-                        lst_print.Clear();
+                        
                         lst_print.Add(new patient
                     {
                         reg_no = int.Parse(dgv_print.Rows[i].Cells[0].Value.ToString()),

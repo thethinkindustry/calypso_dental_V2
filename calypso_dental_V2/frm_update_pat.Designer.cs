@@ -181,6 +181,8 @@
             // 
             // cb_doctor_name
             // 
+            this.cb_doctor_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_doctor_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_doctor_name.Enabled = false;
             this.cb_doctor_name.FormattingEnabled = true;
             this.cb_doctor_name.Location = new System.Drawing.Point(134, 56);

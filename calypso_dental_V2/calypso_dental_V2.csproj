@@ -83,6 +83,12 @@
     <Compile Include="Frm_print.Designer.cs">
       <DependentUpon>Frm_print.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_print_payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_print_payment.Designer.cs">
+      <DependentUpon>Frm_print_payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_print_search.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,15 +108,21 @@
     </Compile>
     <Compile Include="inproc.cs" />
     <Compile Include="patient.cs" />
+    <Compile Include="payment.cs" />
     <Compile Include="print_info.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportGenerator\DataSet\ds_inproc.Designer.cs">
+    <Compile Include="ReportGenerator\CrystalReport\DataSet\ds_inproc.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_inproc.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ReportGenerator\DataSet\ds_print.Designer.cs">
+    <Compile Include="ReportGenerator\CrystalReport\DataSet\ds_pay.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_pay.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerator\CrystalReport\DataSet\ds_print.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_print.xsd</DependentUpon>
@@ -140,6 +152,9 @@
     <EmbeddedResource Include="Frm_print.resx">
       <DependentUpon>Frm_print.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_print_payment.resx">
+      <DependentUpon>Frm_print_payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_print_search.resx">
       <DependentUpon>Frm_print_search.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +171,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ReportGenerator\CrystalReport\rpt_inproc.rdlc" />
+    <EmbeddedResource Include="ReportGenerator\CrystalReport\rpt_pay.rdlc" />
+    <EmbeddedResource Include="ReportGenerator\CrystalReport\rpt_payment.rdlc" />
     <EmbeddedResource Include="ReportGenerator\CrystalReport\rpt_print.rdlc" />
     <EmbeddedResource Include="Resource_picture.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -175,26 +192,37 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ReportGenerator\DataSet\ds_inproc.xsc">
+    <None Include="ReportGenerator\CrystalReport\DataSet\ds_inproc.xsc">
       <DependentUpon>ds_inproc.xsd</DependentUpon>
     </None>
-    <None Include="ReportGenerator\DataSet\ds_inproc.xsd">
+    <None Include="ReportGenerator\CrystalReport\DataSet\ds_inproc.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ds_inproc.Designer.cs</LastGenOutput>
     </None>
-    <None Include="ReportGenerator\DataSet\ds_inproc.xss">
+    <None Include="ReportGenerator\CrystalReport\DataSet\ds_inproc.xss">
       <DependentUpon>ds_inproc.xsd</DependentUpon>
     </None>
-    <None Include="ReportGenerator\DataSet\ds_print.xsc">
+    <None Include="ReportGenerator\CrystalReport\DataSet\ds_pay.xsc">
+      <DependentUpon>ds_pay.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerator\CrystalReport\DataSet\ds_pay.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_pay.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportGenerator\CrystalReport\DataSet\ds_pay.xss">
+      <DependentUpon>ds_pay.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerator\CrystalReport\DataSet\ds_print.xsc">
       <DependentUpon>ds_print.xsd</DependentUpon>
     </None>
-    <None Include="ReportGenerator\DataSet\ds_print.xsd">
+    <None Include="ReportGenerator\CrystalReport\DataSet\ds_print.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ds_print.Designer.cs</LastGenOutput>
     </None>
-    <None Include="ReportGenerator\DataSet\ds_print.xss">
+    <None Include="ReportGenerator\CrystalReport\DataSet\ds_print.xss">
       <DependentUpon>ds_print.xsd</DependentUpon>
     </None>
     <None Include="Settings.settings">

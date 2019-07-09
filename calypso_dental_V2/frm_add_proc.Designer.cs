@@ -926,7 +926,7 @@
             this.cb_procces_bar.Location = new System.Drawing.Point(579, 176);
             this.cb_procces_bar.Name = "cb_procces_bar";
             this.cb_procces_bar.Size = new System.Drawing.Size(300, 24);
-            this.cb_procces_bar.TabIndex = 113;
+            this.cb_procces_bar.TabIndex = 1;
             // 
             // cb_color_bar
             // 
@@ -936,7 +936,7 @@
             this.cb_color_bar.Location = new System.Drawing.Point(742, 223);
             this.cb_color_bar.Name = "cb_color_bar";
             this.cb_color_bar.Size = new System.Drawing.Size(137, 24);
-            this.cb_color_bar.TabIndex = 115;
+            this.cb_color_bar.TabIndex = 2;
             // 
             // label7
             // 
@@ -955,24 +955,24 @@
             this.chk_sent_toDR.AutoSize = true;
             this.chk_sent_toDR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.chk_sent_toDR.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chk_sent_toDR.Location = new System.Drawing.Point(839, 428);
+            this.chk_sent_toDR.Location = new System.Drawing.Point(843, 423);
             this.chk_sent_toDR.Name = "chk_sent_toDR";
             this.chk_sent_toDR.Size = new System.Drawing.Size(18, 17);
-            this.chk_sent_toDR.TabIndex = 124;
+            this.chk_sent_toDR.TabIndex = 4;
             this.chk_sent_toDR.UseVisualStyleBackColor = true;
             // 
             // materialSingleLineTextField4
             // 
             this.materialSingleLineTextField4.Depth = 0;
             this.materialSingleLineTextField4.Hint = "";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(653, 423);
+            this.materialSingleLineTextField4.Location = new System.Drawing.Point(635, 417);
             this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
             this.materialSingleLineTextField4.PasswordChar = '\0';
             this.materialSingleLineTextField4.SelectedText = "";
             this.materialSingleLineTextField4.SelectionLength = 0;
             this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(204, 28);
+            this.materialSingleLineTextField4.Size = new System.Drawing.Size(226, 28);
             this.materialSingleLineTextField4.TabIndex = 125;
             this.materialSingleLineTextField4.Text = "Doktora Gönderildi :";
             this.materialSingleLineTextField4.UseSystemPasswordChar = false;
@@ -1000,7 +1000,7 @@
             this.txt_unit_price.Location = new System.Drawing.Point(747, 477);
             this.txt_unit_price.Name = "txt_unit_price";
             this.txt_unit_price.Size = new System.Drawing.Size(123, 34);
-            this.txt_unit_price.TabIndex = 127;
+            this.txt_unit_price.TabIndex = 5;
             this.txt_unit_price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressed);
             // 
             // btn_add_proc
@@ -1014,7 +1014,7 @@
             this.btn_add_proc.Location = new System.Drawing.Point(742, 534);
             this.btn_add_proc.Name = "btn_add_proc";
             this.btn_add_proc.Size = new System.Drawing.Size(128, 51);
-            this.btn_add_proc.TabIndex = 128;
+            this.btn_add_proc.TabIndex = 6;
             this.btn_add_proc.Text = "İşlem Ekle ";
             this.btn_add_proc.UseVisualStyleBackColor = false;
             this.btn_add_proc.Click += new System.EventHandler(this.btn_add_proc_Click);
@@ -1030,7 +1030,7 @@
             this.btn_cancel.Location = new System.Drawing.Point(608, 534);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(128, 51);
-            this.btn_cancel.TabIndex = 129;
+            this.btn_cancel.TabIndex = 7;
             this.btn_cancel.Text = "iptal";
             this.btn_cancel.UseVisualStyleBackColor = false;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
@@ -1167,18 +1167,19 @@
             // 
             this.cb_steps_bar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_steps_bar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cb_steps_bar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_steps_bar.FormattingEnabled = true;
             this.cb_steps_bar.Location = new System.Drawing.Point(579, 275);
             this.cb_steps_bar.Name = "cb_steps_bar";
             this.cb_steps_bar.Size = new System.Drawing.Size(300, 24);
-            this.cb_steps_bar.TabIndex = 146;
+            this.cb_steps_bar.TabIndex = 3;
             // 
             // frm_add_proc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 655);
+            this.Controls.Add(this.chk_sent_toDR);
+            this.Controls.Add(this.materialSingleLineTextField4);
             this.Controls.Add(this.cb_procces_bar);
             this.Controls.Add(this.cb_color_bar);
             this.Controls.Add(this.cb_steps_bar);
@@ -1196,8 +1197,6 @@
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_add_proc);
             this.Controls.Add(this.materialSingleLineTextField5);
-            this.Controls.Add(this.chk_sent_toDR);
-            this.Controls.Add(this.materialSingleLineTextField4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.grb_teeth);
             this.MinimumSize = new System.Drawing.Size(926, 655);

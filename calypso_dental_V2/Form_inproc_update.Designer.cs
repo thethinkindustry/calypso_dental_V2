@@ -153,6 +153,8 @@
             // 
             // cb_procces_bar
             // 
+            this.cb_procces_bar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_procces_bar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_procces_bar.FormattingEnabled = true;
             this.cb_procces_bar.Location = new System.Drawing.Point(579, 183);
             this.cb_procces_bar.Name = "cb_procces_bar";
@@ -161,6 +163,8 @@
             // 
             // cb_color_bar
             // 
+            this.cb_color_bar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_color_bar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_color_bar.FormattingEnabled = true;
             this.cb_color_bar.Location = new System.Drawing.Point(742, 230);
             this.cb_color_bar.Name = "cb_color_bar";
@@ -169,6 +173,8 @@
             // 
             // cb_steps_bar
             // 
+            this.cb_steps_bar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_steps_bar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_steps_bar.FormattingEnabled = true;
             this.cb_steps_bar.Location = new System.Drawing.Point(579, 282);
             this.cb_steps_bar.Name = "cb_steps_bar";

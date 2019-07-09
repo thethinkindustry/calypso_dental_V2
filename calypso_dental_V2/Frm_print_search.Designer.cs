@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.prntDataTable = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ds_inproc = new calypso_dental_V2.ReportGenerator.DataSet.ds_inproc();
+            this.ds_inproc = new calypso_dental_V2.ReportGenerator.CrystalReport.DataSet.ds_inproc();
             this.dsinprocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inprocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ds_inproc)).BeginInit();
@@ -90,7 +90,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer prntDataTable;
         private System.Windows.Forms.BindingSource dsinprocBindingSource;
-        private ReportGenerator.DataSet.ds_inproc ds_inproc;
+        private ReportGenerator.CrystalReport.DataSet.ds_inproc ds_inproc;
         private System.Windows.Forms.BindingSource inprocBindingSource;
     }
 }

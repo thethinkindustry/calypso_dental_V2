@@ -102,7 +102,6 @@ namespace calypso_dental_V2
                 MessageBox.Show("hata :" + ex);
                 throw;
             }
-
         }
         void total_price()
         {
