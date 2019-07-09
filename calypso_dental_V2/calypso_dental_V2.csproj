@@ -65,6 +65,12 @@
     <Compile Include="Form_inproc_update.Designer.cs">
       <DependentUpon>Form_inproc_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_add_payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_add_payment.Designer.cs">
+      <DependentUpon>Frm_add_payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_add_proc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_inproc_update.resx">
       <DependentUpon>Form_inproc_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_add_payment.resx">
+      <DependentUpon>Frm_add_payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_add_proc.resx">
       <DependentUpon>frm_add_proc.cs</DependentUpon>

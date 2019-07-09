@@ -172,93 +172,99 @@ namespace calypso_dental_V2
         }
         private void btn_update_proc_Click(object sender, EventArgs e)
         {
-            DialogResult mg;
-            mg = MessageBox.Show("Kaydetmek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (mg == DialogResult.Yes)
+            if (string.IsNullOrEmpty(cb_procces_bar?.SelectedItem?.ToString()) || string.IsNullOrEmpty(cb_color_bar.SelectedItem?.ToString()) || string.IsNullOrEmpty(cb_steps_bar?.SelectedItem?.ToString()) || string.IsNullOrEmpty(txt_unit_price.Text))
             {
-                var picture = grb_teeth.Controls.OfType<PictureBox>();
-                int counter = 0;
-                int price = 0;
-                string teeth = "";
-                int dr_debt = 0;
-                foreach (PictureBox pb in picture)
+                MessageBox.Show("Kayıt İçin Tüm Alanlar Doldurulmalıdır.");
+            }
+            else
+            {
+                DialogResult mg;
+                mg = MessageBox.Show("Kaydetmek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (mg == DialogResult.Yes)
                 {
-                    if (pb.BackColor == Color.DarkSlateGray)
+                    var picture = grb_teeth.Controls.OfType<PictureBox>();
+                    int counter = 0;
+                    int price = 0;
+                    string teeth = "";
+                    int dr_debt = 0;
+                    foreach (PictureBox pb in picture)
                     {
-                        counter++;
-                        teeth += pb.Name.ToString() + "/";
+                        if (pb.BackColor == Color.DarkSlateGray)
+                        {
+                            counter++;
+                            teeth += pb.Name.ToString() + "/";
+                        }
                     }
-                }
-                if (counter == 0)
-                {
-                    counter = 1;
-                }
-                price = int.Parse(txt_unit_price.Text);
-                inproc_price = counter * price;
-                try
-                {
+                    if (counter == 0)
+                    {
+                        counter = 1;
+                    }
+                    price = int.Parse(txt_unit_price.Text);
+                    inproc_price = counter * price;
+                    try
+                    {
+                        cnn.Open();
+                        sql = "SELECT  dr_debt FROM tbl_dr  WHERE dr_name ='" + reg_no.dr_name + "'";
+                        command = new SqlCommand(sql, cnn);
+                        dataReader = command.ExecuteReader();
+                        while (dataReader.Read())
+                        {
+                            dr_debt = int.Parse(dataReader["dr_debt"].ToString());
+                        }
+                        dataReader.Close();
+                        command.Dispose();
+                        cnn.Close();
 
-                    cnn.Open();
-                    sql = "SELECT  dr_debt FROM tbl_dr  WHERE dr_name ='" + reg_no.dr_name + "'";
-                    command = new SqlCommand(sql, cnn);
-                    dataReader = command.ExecuteReader();
-                    while (dataReader.Read())
-                    {
-                        dr_debt = int.Parse(dataReader["dr_debt"].ToString());
+                        cnn.Open();
+                        sql = "SELECT  total_price FROM tbl_inproc  WHERE reg_no ='" + reg_no.Selected_id + "'";
+                        command = new SqlCommand(sql, cnn);
+                        dataReader = command.ExecuteReader();
+                        while (dataReader.Read())
+                        {
+                            old_inproc_price = int.Parse(dataReader["total_price"].ToString());
+                        }
+                        dataReader.Close();
+                        command.Dispose();
+                        cnn.Close();
+                        inproc_price -= old_inproc_price;
+                        dr_debt += inproc_price;
+                        // MessageBox.Show(dr_debt.ToString());  
+                        cnn.Open();
+                        sql = "UPDATE tbl_dr SET dr_debt=@debt FROM tbl_dr  WHERE dr_name ='" + reg_no.dr_name + "'";
+                        command = new SqlCommand(sql, cnn);
+                        command.Parameters.Add(new SqlParameter("@debt", dr_debt));
+                        command.ExecuteNonQuery();
+                        command.Dispose();
+                        cnn.Close();
+                        string dr_sent = "Hayır";
+                        if (chk_sent_toDR.Checked == true)
+                        {
+                            dr_sent = "Evet";
+                        }
+                        cnn.Open();
+                        sql = "UPDATE tbl_inproc SET proc_name=@proc_name,inproc_init_date=@init_date,inproc_deadline=@deadline_date,step_name=@step_name,color_name=@color_name,teet=@teet,teet_num=@teet_num,price=@price,total_price=@total_price,sent=@sent WHERE inproc_id=@inproc_id";
+                        command = new SqlCommand(sql, cnn);
+                        command.Parameters.Add(new SqlParameter("@proc_name", cb_procces_bar.Text));
+                        command.Parameters.Add(new SqlParameter("@init_date", dtp_register_date.Value.ToString("yyyy-MM-dd")));
+                        command.Parameters.Add(new SqlParameter("@deadline_date", dtp_deadline.Value.ToString("yyyy-MM-dd")));
+                        command.Parameters.Add(new SqlParameter("@step_name", cb_steps_bar.Text));
+                        command.Parameters.Add(new SqlParameter("@color_name", cb_color_bar.Text));
+                        command.Parameters.Add(new SqlParameter("@teet", teeth));
+                        command.Parameters.Add(new SqlParameter("@teet_num", counter));
+                        command.Parameters.Add(new SqlParameter("@price", price));
+                        command.Parameters.Add(new SqlParameter("@total_price", price * counter));
+                        command.Parameters.Add(new SqlParameter("@sent", dr_sent));
+                        command.Parameters.Add(new SqlParameter("@inproc_id", reg_no.inproc_id));
+                        command.ExecuteNonQuery();
+                        command.Dispose();
+                        cnn.Close();
+                        this.Close();
                     }
-                    dataReader.Close();
-                    command.Dispose();
-                    cnn.Close();
-
-                    cnn.Open();
-                    sql = "SELECT  total_price FROM tbl_inproc  WHERE reg_no ='" + reg_no.Selected_id + "'";
-                    command = new SqlCommand(sql, cnn);
-                    dataReader = command.ExecuteReader();
-                    while (dataReader.Read())
+                    catch (Exception ex)
                     {
-                        old_inproc_price = int.Parse(dataReader["total_price"].ToString());
+                        MessageBox.Show("hata" + ex.Message);
+                        throw;
                     }
-                    dataReader.Close();
-                    command.Dispose();
-                    cnn.Close();
-                    inproc_price -= old_inproc_price;
-                    dr_debt += inproc_price;
-                    // MessageBox.Show(dr_debt.ToString());  
-                    cnn.Open();
-                    sql = "UPDATE tbl_dr SET dr_debt=@debt FROM tbl_dr  WHERE dr_name ='" + reg_no.dr_name + "'";
-                    command = new SqlCommand(sql, cnn);
-                    command.Parameters.Add(new SqlParameter("@debt", dr_debt));
-                    command.ExecuteNonQuery();
-                    command.Dispose();
-                    cnn.Close();
-                    string dr_sent = "Hayır";
-                    if (chk_sent_toDR.Checked == true)
-                    {
-                        dr_sent = "Evet";
-                    }
-                    cnn.Open();
-                    sql = "UPDATE tbl_inproc SET proc_name=@proc_name,inproc_init_date=@init_date,inproc_deadline=@deadline_date,step_name=@step_name,color_name=@color_name,teet=@teet,teet_num=@teet_num,price=@price,total_price=@total_price,sent=@sent WHERE inproc_id=@inproc_id";
-                    command = new SqlCommand(sql, cnn);
-                    command.Parameters.Add(new SqlParameter("@proc_name", cb_procces_bar.Text));
-                    command.Parameters.Add(new SqlParameter("@init_date", dtp_register_date.Value.ToString("yyyy-MM-dd")));
-                    command.Parameters.Add(new SqlParameter("@deadline_date", dtp_deadline.Value.ToString("yyyy-MM-dd")));
-                    command.Parameters.Add(new SqlParameter("@step_name", cb_steps_bar.Text));
-                    command.Parameters.Add(new SqlParameter("@color_name", cb_color_bar.Text));
-                    command.Parameters.Add(new SqlParameter("@teet", teeth));
-                    command.Parameters.Add(new SqlParameter("@teet_num", counter));
-                    command.Parameters.Add(new SqlParameter("@price", price));
-                    command.Parameters.Add(new SqlParameter("@total_price", price * counter));
-                    command.Parameters.Add(new SqlParameter("@sent", dr_sent));
-                    command.Parameters.Add(new SqlParameter("@inproc_id", reg_no.inproc_id));
-                    command.ExecuteNonQuery();
-                    command.Dispose();
-                    cnn.Close();
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("hata" + ex.Message);
-                    throw;
                 }
             }
         }

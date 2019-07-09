@@ -173,10 +173,7 @@ namespace calypso_dental_V2
         #region DoctorSettings
         private void doktorlarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnl_dr_add.Visible = true;
-            pnl_add_proc.Visible = false;
-            pnl_add_color.Visible = false;
-            pnl_add_step.Visible = false;
+            pnl_settingsVisible(pnl_dr_add);
             grb_dr_update.Enabled = false;
             try
             {
@@ -201,10 +198,7 @@ namespace calypso_dental_V2
                 MessageBox.Show("hata :" + Ex);
             }
         }
-
-
-
-        private void button1_Click(object sender, EventArgs e)
+ private void button1_Click(object sender, EventArgs e)
         {
             if (txt_dr_name.Text == "" || txt_dr_debt.Text == "" || txt_tel_no.Text == "")
             {
@@ -292,12 +286,8 @@ namespace calypso_dental_V2
         #region ProcessSettings
         private void işlemlerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnl_add_patient.Visible = false;
-            pnl_add_proc.Visible = true;
-            pnl_add_color.Visible = false;
-            pnl_add_step.Visible = false;
+            pnl_settingsVisible(pnl_add_proc);
             grb_proc_update.Enabled = false;
-
             try
             {
                 cnn.Open();
@@ -494,12 +484,8 @@ namespace calypso_dental_V2
         #region ColorSettings
         private void reToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnl_add_patient.Visible = false;
-            pnl_add_proc.Visible = false;
-            pnl_add_color.Visible = true;
-            pnl_add_step.Visible = false;
+            pnl_settingsVisible(pnl_add_color);
             grb_color_update.Enabled = false;
-
             try
             {
                 cnn.Open();
@@ -605,12 +591,8 @@ namespace calypso_dental_V2
         #region StepSettings
         private void aşamaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnl_add_patient.Visible = false;
-            pnl_add_proc.Visible = false;
-            pnl_add_color.Visible = false;
-            pnl_add_step.Visible = true;
+            pnl_settingsVisible(pnl_add_step);
             grb_step_update.Enabled = false;
-
             try
             {
                 cnn.Open();
@@ -712,12 +694,88 @@ namespace calypso_dental_V2
 
 
         #endregion
-
+        #region Payment
+        private void ödemelerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnl_settingsVisible(pnl_payment);
+            dgv_old_payment.DataSource = null;
+            grb_pay_his.Enabled = false;
+            try
+            {
+                cnn.Open();
+                sql = "select dr_name,dr_tel,dr_debt From tbl_dr ";
+                adapter = new SqlDataAdapter(sql, cnn);
+                DataTable paytable = new DataTable();
+                adapter.Fill(paytable);
+                dgv_dr_payment.DataSource = paytable;
+                int total_payment = 0;
+                for (int i = 0; i < dgv_dr_payment.Rows.Count - 1; i++)
+                {
+                    total_payment += int.Parse(dgv_dr_payment.Rows[i].Cells[2].Value.ToString());
+                }
+                txt_total_debt.Text = total_payment.ToString();
+                dgv_dr_payment.Columns[0].HeaderText = "Doktor Adı";
+                dgv_dr_payment.Columns[1].HeaderText = "Tel. No";
+                dgv_dr_payment.Columns[2].HeaderText = "Borç Miktarı";
+                dgv_dr_payment.SelectionMode = DataGridViewSelectionMode.FullRowSelect; adapter.Dispose();
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR" + ex.Message);
+                throw;
+            }
+        }
+        private void dgv_dr_payment_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            grb_pay_his.Enabled = true;
+            try
+            {
+                cnn.Open();
+                sql = "select dr_name,pay_date,pay_price From tbl_dr INNER JOIN tbl_pay ON tbl_dr.dr_id=tbl_pay.dr_id WHERE dr_name='"+ dgv_dr_payment.CurrentRow.Cells[0].Value.ToString()+ "' ";
+                adapter = new SqlDataAdapter(sql, cnn);
+                adapter = new SqlDataAdapter(sql, cnn);
+                DataTable oldpaytable = new DataTable();
+                adapter.Fill(oldpaytable);
+                cnn.Close();
+                dgv_old_payment.DataSource = oldpaytable;
+                dgv_old_payment.Columns[0].HeaderText = "Doktor Adı";
+                dgv_old_payment.Columns[1].HeaderText = "Ödeme Tarihi";
+                dgv_old_payment.Columns[2].HeaderText = "Miktar";
+                dgv_dr_payment.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                adapter.Dispose();
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR" + ex.Message);
+                throw;
+            }
+        }
+        
+        private void btn_add_payment_Click(object sender, EventArgs e)
+        {
+            string _dr_name = dgv_dr_payment.CurrentRow.Cells[0].Value.ToString();
+            string _dr_debt = dgv_dr_payment.CurrentRow.Cells[2].Value.ToString();
+            Frm_add_payment frm_add_payment = new Frm_add_payment(_dr_name,_dr_debt);
+            frm_add_payment.ShowDialog();
+            ödemelerToolStripMenuItem_Click(sender, e);
+        }
+        #endregion
+        void pnl_settingsVisible(Panel pnl)
+        {
+            var panel = pnl_settings.Controls.OfType<Panel>();
+            foreach (var item in panel)
+            {
+                item.Visible = false;
+            }
+            pnl.Visible = true;
+           // pnl_menu.Visible = true;
+        }
         private void dgv_inproc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
           
         }
-
         private void dgv_inproc_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             DialogResult mg;
@@ -791,7 +849,7 @@ namespace calypso_dental_V2
             {
                 txt_doctor_notes.Text = "Yok";
             }
-            if (cb_doctor_name.Text == "" || txt_patient_name.Text == "" )
+            if (string.IsNullOrEmpty( cb_doctor_name?.SelectedItem?.ToString())|| string.IsNullOrEmpty(txt_patient_name.Text) )
             {
                 MessageBox.Show("Zorunlu alanlar doldurulmalıdır.");
             }

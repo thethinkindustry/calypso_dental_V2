@@ -28,3 +28,4 @@ C:\Users\m98tu\Documents\Visual Studio 2015\Projects\calypso_dental_V2\calypso_d
 C:\Users\m98tu\Documents\Visual Studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\RdlCompile.cache
 C:\Users\m98tu\Documents\Visual Studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\RdlCompile.compiled
 C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.Frm_print.resources
+C:\Users\m98tu\Documents\Visual Studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.Frm_add_payment.resources
