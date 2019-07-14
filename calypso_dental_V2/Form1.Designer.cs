@@ -29,17 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_menu = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pb_settings = new System.Windows.Forms.PictureBox();
-            this.pb_search = new System.Windows.Forms.PictureBox();
-            this.pB_data_view = new System.Windows.Forms.PictureBox();
-            this.pB_add_pattient = new System.Windows.Forms.PictureBox();
             this.pnl_add_patient = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.materialLabel38 = new MaterialSkin.Controls.MaterialLabel();
@@ -71,40 +66,6 @@
             this.reToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aşamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ödemelerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnl_payment = new System.Windows.Forms.Panel();
-            this.materialLabel56 = new MaterialSkin.Controls.MaterialLabel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.materialLabel54 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel55 = new MaterialSkin.Controls.MaterialLabel();
-            this.grb_pay_his = new System.Windows.Forms.GroupBox();
-            this.btn_add_payment = new System.Windows.Forms.Button();
-            this.dgv_old_payment = new System.Windows.Forms.DataGridView();
-            this.btn_print_payment = new System.Windows.Forms.Button();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.materialLabel58 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel57 = new MaterialSkin.Controls.MaterialLabel();
-            this.txt_total_debt = new System.Windows.Forms.TextBox();
-            this.dgv_dr_payment = new System.Windows.Forms.DataGridView();
-            this.pnl_add_proc = new System.Windows.Forms.Panel();
-            this.grb_proc_update = new System.Windows.Forms.GroupBox();
-            this.materialLabel59 = new MaterialSkin.Controls.MaterialLabel();
-            this.txt_new_proc_name = new System.Windows.Forms.TextBox();
-            this.btn_proc_delete = new System.Windows.Forms.Button();
-            this.materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
-            this.txt_proc_update = new System.Windows.Forms.TextBox();
-            this.btn_proc_update = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.materialLabel22 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel23 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel24 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel25 = new MaterialSkin.Controls.MaterialLabel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dgv_proc_list = new System.Windows.Forms.DataGridView();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.materialLabel27 = new MaterialSkin.Controls.MaterialLabel();
-            this.txt_proc = new System.Windows.Forms.TextBox();
-            this.btn_proc_add = new System.Windows.Forms.Button();
             this.pnl_dr_add = new System.Windows.Forms.Panel();
             this.grb_dr_update = new System.Windows.Forms.GroupBox();
             this.txt_new_dr_debt = new System.Windows.Forms.TextBox();
@@ -177,13 +138,47 @@
             this.materialLabel30 = new MaterialSkin.Controls.MaterialLabel();
             this.txt_color_add = new System.Windows.Forms.TextBox();
             this.btn_color_add = new System.Windows.Forms.Button();
+            this.pnl_payment = new System.Windows.Forms.Panel();
+            this.materialLabel65 = new MaterialSkin.Controls.MaterialLabel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.materialLabel66 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel67 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel56 = new MaterialSkin.Controls.MaterialLabel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.materialLabel54 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel55 = new MaterialSkin.Controls.MaterialLabel();
+            this.grb_pay_his = new System.Windows.Forms.GroupBox();
+            this.btn_add_payment = new System.Windows.Forms.Button();
+            this.dgv_old_payment = new System.Windows.Forms.DataGridView();
+            this.btn_print_payment = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.materialLabel58 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel57 = new MaterialSkin.Controls.MaterialLabel();
+            this.txt_total_debt = new System.Windows.Forms.TextBox();
+            this.dgv_dr_payment = new System.Windows.Forms.DataGridView();
+            this.pnl_add_proc = new System.Windows.Forms.Panel();
+            this.grb_proc_update = new System.Windows.Forms.GroupBox();
+            this.materialLabel59 = new MaterialSkin.Controls.MaterialLabel();
+            this.txt_new_proc_name = new System.Windows.Forms.TextBox();
+            this.btn_proc_delete = new System.Windows.Forms.Button();
+            this.materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
+            this.txt_proc_update = new System.Windows.Forms.TextBox();
+            this.btn_proc_update = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.materialLabel22 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel23 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel24 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel25 = new MaterialSkin.Controls.MaterialLabel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dgv_proc_list = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.materialLabel27 = new MaterialSkin.Controls.MaterialLabel();
+            this.txt_proc = new System.Windows.Forms.TextBox();
+            this.btn_proc_add = new System.Windows.Forms.Button();
             this.pnl_init = new System.Windows.Forms.Panel();
             this.label54 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_search = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btn_print_search = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.materialLabel49 = new MaterialSkin.Controls.MaterialLabel();
@@ -213,7 +208,6 @@
             this.pnl_print = new System.Windows.Forms.Panel();
             this.dgv_print = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_search_prt = new System.Windows.Forms.Button();
             this.cb_select_step = new System.Windows.Forms.ComboBox();
             this.materialLabel53 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel52 = new MaterialSkin.Controls.MaterialLabel();
@@ -223,31 +217,23 @@
             this.dt_fromdate = new System.Windows.Forms.DateTimePicker();
             this.materialLabel50 = new MaterialSkin.Controls.MaterialLabel();
             this.btn_print = new System.Windows.Forms.Button();
-            this.materialLabel65 = new MaterialSkin.Controls.MaterialLabel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.materialLabel66 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel67 = new MaterialSkin.Controls.MaterialLabel();
+            this.pb_aboutUS = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pb_settings = new System.Windows.Forms.PictureBox();
+            this.pb_search = new System.Windows.Forms.PictureBox();
+            this.pB_data_view = new System.Windows.Forms.PictureBox();
+            this.pB_add_pattient = new System.Windows.Forms.PictureBox();
+            this.btn_search_prt = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).BeginInit();
             this.pnl_add_patient.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_inproc)).BeginInit();
             this.pnl_settings.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.pnl_payment.SuspendLayout();
-            this.grb_pay_his.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_old_payment)).BeginInit();
-            this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_dr_payment)).BeginInit();
-            this.pnl_add_proc.SuspendLayout();
-            this.grb_proc_update.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_proc_list)).BeginInit();
-            this.groupBox5.SuspendLayout();
             this.pnl_dr_add.SuspendLayout();
             this.grb_dr_update.SuspendLayout();
             this.grb_.SuspendLayout();
@@ -263,22 +249,39 @@
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_color_list)).BeginInit();
             this.groupBox7.SuspendLayout();
+            this.pnl_payment.SuspendLayout();
+            this.grb_pay_his.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_old_payment)).BeginInit();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_dr_payment)).BeginInit();
+            this.pnl_add_proc.SuspendLayout();
+            this.grb_proc_update.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_proc_list)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.pnl_init.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_search.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).BeginInit();
             this.pnl_print.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_print)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_aboutUS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_menu
             // 
             resources.ApplyResources(this.pnl_menu, "pnl_menu");
             this.pnl_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.pnl_menu.Controls.Add(this.pb_aboutUS);
             this.pnl_menu.Controls.Add(this.pictureBox2);
             this.pnl_menu.Controls.Add(this.pb_settings);
             this.pnl_menu.Controls.Add(this.pb_search);
@@ -286,52 +289,10 @@
             this.pnl_menu.Controls.Add(this.pB_add_pattient);
             this.pnl_menu.Name = "pnl_menu";
             // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // pb_settings
-            // 
-            this.pb_settings.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pb_settings, "pb_settings");
-            this.pb_settings.Image = global::calypso_dental_V2.Resource_picture.settings;
-            this.pb_settings.Name = "pb_settings";
-            this.pb_settings.TabStop = false;
-            this.pb_settings.Click += new System.EventHandler(this.pb_settings_Click);
-            // 
-            // pb_search
-            // 
-            this.pb_search.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pb_search, "pb_search");
-            this.pb_search.Image = global::calypso_dental_V2.Resource_picture.search;
-            this.pb_search.Name = "pb_search";
-            this.pb_search.TabStop = false;
-            this.pb_search.Click += new System.EventHandler(this.pb_search_Click);
-            // 
-            // pB_data_view
-            // 
-            this.pB_data_view.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pB_data_view, "pB_data_view");
-            this.pB_data_view.Image = global::calypso_dental_V2.Resource_picture.print;
-            this.pB_data_view.Name = "pB_data_view";
-            this.pB_data_view.TabStop = false;
-            this.pB_data_view.Click += new System.EventHandler(this.pB_data_view_Click);
-            // 
-            // pB_add_pattient
-            // 
-            this.pB_add_pattient.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pB_add_pattient, "pB_add_pattient");
-            this.pB_add_pattient.Image = global::calypso_dental_V2.Resource_picture.add_pat;
-            this.pB_add_pattient.Name = "pB_add_pattient";
-            this.pB_add_pattient.TabStop = false;
-            this.pB_add_pattient.Click += new System.EventHandler(this.pB_add_pattient_Click);
-            // 
             // pnl_add_patient
             // 
             resources.ApplyResources(this.pnl_add_patient, "pnl_add_patient");
-            this.pnl_add_patient.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnl_add_patient.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnl_add_patient.Controls.Add(this.groupBox1);
             this.pnl_add_patient.Name = "pnl_add_patient";
             // 
@@ -546,14 +507,14 @@
             this.dgv_inproc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_inproc.EnableHeadersVisualStyles = false;
             this.dgv_inproc.Name = "dgv_inproc";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_inproc.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_inproc.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_inproc.RowTemplate.Height = 24;
             this.dgv_inproc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_inproc.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_inproc_CellDoubleClick);
@@ -562,12 +523,13 @@
             // pnl_settings
             // 
             resources.ApplyResources(this.pnl_settings, "pnl_settings");
+            this.pnl_settings.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnl_settings.Controls.Add(this.menuStrip1);
             this.pnl_settings.Controls.Add(this.pnl_dr_add);
             this.pnl_settings.Controls.Add(this.pnl_add_step);
             this.pnl_settings.Controls.Add(this.pnl_add_color);
-            this.pnl_settings.Controls.Add(this.pnl_payment);
             this.pnl_settings.Controls.Add(this.pnl_add_proc);
+            this.pnl_settings.Controls.Add(this.pnl_payment);
             this.pnl_settings.Name = "pnl_settings";
             // 
             // menuStrip1
@@ -619,6 +581,659 @@
             resources.ApplyResources(this.ödemelerToolStripMenuItem, "ödemelerToolStripMenuItem");
             this.ödemelerToolStripMenuItem.Click += new System.EventHandler(this.ödemelerToolStripMenuItem_Click);
             // 
+            // pnl_dr_add
+            // 
+            this.pnl_dr_add.BackColor = System.Drawing.Color.White;
+            this.pnl_dr_add.Controls.Add(this.grb_dr_update);
+            this.pnl_dr_add.Controls.Add(this.label2);
+            this.pnl_dr_add.Controls.Add(this.label1);
+            this.pnl_dr_add.Controls.Add(this.materialLabel16);
+            this.pnl_dr_add.Controls.Add(this.materialLabel15);
+            this.pnl_dr_add.Controls.Add(this.materialLabel13);
+            this.pnl_dr_add.Controls.Add(this.materialLabel12);
+            this.pnl_dr_add.Controls.Add(this.grb_);
+            this.pnl_dr_add.Controls.Add(this.groupBox2);
+            resources.ApplyResources(this.pnl_dr_add, "pnl_dr_add");
+            this.pnl_dr_add.Name = "pnl_dr_add";
+            // 
+            // grb_dr_update
+            // 
+            this.grb_dr_update.BackColor = System.Drawing.SystemColors.Control;
+            this.grb_dr_update.Controls.Add(this.txt_new_dr_debt);
+            this.grb_dr_update.Controls.Add(this.txt_new_dr_tell);
+            this.grb_dr_update.Controls.Add(this.txt_new_dr_name);
+            this.grb_dr_update.Controls.Add(this.materialLabel62);
+            this.grb_dr_update.Controls.Add(this.materialLabel61);
+            this.grb_dr_update.Controls.Add(this.materialLabel60);
+            this.grb_dr_update.Controls.Add(this.btn_dr_delete);
+            this.grb_dr_update.Controls.Add(this.materialLabel14);
+            this.grb_dr_update.Controls.Add(this.txt_dr_tel_update);
+            this.grb_dr_update.Controls.Add(this.materialLabel17);
+            this.grb_dr_update.Controls.Add(this.txt_dr_debt_update);
+            this.grb_dr_update.Controls.Add(this.materialLabel18);
+            this.grb_dr_update.Controls.Add(this.txt_dr_name_update);
+            this.grb_dr_update.Controls.Add(this.btn_dr_update);
+            resources.ApplyResources(this.grb_dr_update, "grb_dr_update");
+            this.grb_dr_update.Name = "grb_dr_update";
+            this.grb_dr_update.TabStop = false;
+            // 
+            // txt_new_dr_debt
+            // 
+            resources.ApplyResources(this.txt_new_dr_debt, "txt_new_dr_debt");
+            this.txt_new_dr_debt.Name = "txt_new_dr_debt";
+            // 
+            // txt_new_dr_tell
+            // 
+            resources.ApplyResources(this.txt_new_dr_tell, "txt_new_dr_tell");
+            this.txt_new_dr_tell.Name = "txt_new_dr_tell";
+            // 
+            // txt_new_dr_name
+            // 
+            resources.ApplyResources(this.txt_new_dr_name, "txt_new_dr_name");
+            this.txt_new_dr_name.Name = "txt_new_dr_name";
+            // 
+            // materialLabel62
+            // 
+            resources.ApplyResources(this.materialLabel62, "materialLabel62");
+            this.materialLabel62.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel62.Depth = 0;
+            this.materialLabel62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel62.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel62.Name = "materialLabel62";
+            // 
+            // materialLabel61
+            // 
+            resources.ApplyResources(this.materialLabel61, "materialLabel61");
+            this.materialLabel61.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel61.Depth = 0;
+            this.materialLabel61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel61.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel61.Name = "materialLabel61";
+            // 
+            // materialLabel60
+            // 
+            resources.ApplyResources(this.materialLabel60, "materialLabel60");
+            this.materialLabel60.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel60.Depth = 0;
+            this.materialLabel60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel60.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel60.Name = "materialLabel60";
+            // 
+            // btn_dr_delete
+            // 
+            this.btn_dr_delete.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btn_dr_delete, "btn_dr_delete");
+            this.btn_dr_delete.Name = "btn_dr_delete";
+            this.btn_dr_delete.UseVisualStyleBackColor = false;
+            this.btn_dr_delete.Click += new System.EventHandler(this.btn_dr_delete_Click);
+            // 
+            // materialLabel14
+            // 
+            resources.ApplyResources(this.materialLabel14, "materialLabel14");
+            this.materialLabel14.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel14.Depth = 0;
+            this.materialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel14.Name = "materialLabel14";
+            // 
+            // txt_dr_tel_update
+            // 
+            resources.ApplyResources(this.txt_dr_tel_update, "txt_dr_tel_update");
+            this.txt_dr_tel_update.Name = "txt_dr_tel_update";
+            // 
+            // materialLabel17
+            // 
+            resources.ApplyResources(this.materialLabel17, "materialLabel17");
+            this.materialLabel17.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel17.Depth = 0;
+            this.materialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel17.Name = "materialLabel17";
+            // 
+            // txt_dr_debt_update
+            // 
+            resources.ApplyResources(this.txt_dr_debt_update, "txt_dr_debt_update");
+            this.txt_dr_debt_update.Name = "txt_dr_debt_update";
+            this.txt_dr_debt_update.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressed);
+            // 
+            // materialLabel18
+            // 
+            resources.ApplyResources(this.materialLabel18, "materialLabel18");
+            this.materialLabel18.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel18.Depth = 0;
+            this.materialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel18.Name = "materialLabel18";
+            // 
+            // txt_dr_name_update
+            // 
+            resources.ApplyResources(this.txt_dr_name_update, "txt_dr_name_update");
+            this.txt_dr_name_update.Name = "txt_dr_name_update";
+            // 
+            // btn_dr_update
+            // 
+            this.btn_dr_update.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btn_dr_update, "btn_dr_update");
+            this.btn_dr_update.Name = "btn_dr_update";
+            this.btn_dr_update.UseVisualStyleBackColor = false;
+            this.btn_dr_update.Click += new System.EventHandler(this.btn_dr_update_Click);
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Name = "label1";
+            // 
+            // materialLabel16
+            // 
+            resources.ApplyResources(this.materialLabel16, "materialLabel16");
+            this.materialLabel16.Depth = 0;
+            this.materialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel16.Name = "materialLabel16";
+            // 
+            // materialLabel15
+            // 
+            resources.ApplyResources(this.materialLabel15, "materialLabel15");
+            this.materialLabel15.Depth = 0;
+            this.materialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel15.Name = "materialLabel15";
+            // 
+            // materialLabel13
+            // 
+            resources.ApplyResources(this.materialLabel13, "materialLabel13");
+            this.materialLabel13.Depth = 0;
+            this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel13.Name = "materialLabel13";
+            // 
+            // materialLabel12
+            // 
+            resources.ApplyResources(this.materialLabel12, "materialLabel12");
+            this.materialLabel12.Depth = 0;
+            this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel12.Name = "materialLabel12";
+            // 
+            // grb_
+            // 
+            this.grb_.BackColor = System.Drawing.SystemColors.Control;
+            this.grb_.Controls.Add(this.dgv_dr_list);
+            resources.ApplyResources(this.grb_, "grb_");
+            this.grb_.Name = "grb_";
+            this.grb_.TabStop = false;
+            // 
+            // dgv_dr_list
+            // 
+            this.dgv_dr_list.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dgv_dr_list.AllowUserToAddRows = false;
+            this.dgv_dr_list.AllowUserToResizeColumns = false;
+            this.dgv_dr_list.AllowUserToResizeRows = false;
+            this.dgv_dr_list.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_dr_list.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgv_dr_list.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_dr_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_dr_list.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_dr_list.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgv_dr_list.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_dr_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_dr_list.EnableHeadersVisualStyles = false;
+            resources.ApplyResources(this.dgv_dr_list, "dgv_dr_list");
+            this.dgv_dr_list.Name = "dgv_dr_list";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_dr_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgv_dr_list.RowTemplate.Height = 24;
+            this.dgv_dr_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_dr_list.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dr_list_CellDoubleClick);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.materialLabel10);
+            this.groupBox2.Controls.Add(this.txt_tel_no);
+            this.groupBox2.Controls.Add(this.materialLabel9);
+            this.groupBox2.Controls.Add(this.txt_dr_debt);
+            this.groupBox2.Controls.Add(this.materialLabel11);
+            this.groupBox2.Controls.Add(this.txt_dr_name);
+            this.groupBox2.Controls.Add(this.button1);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // materialLabel10
+            // 
+            resources.ApplyResources(this.materialLabel10, "materialLabel10");
+            this.materialLabel10.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel10.Depth = 0;
+            this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel10.Name = "materialLabel10";
+            // 
+            // txt_tel_no
+            // 
+            resources.ApplyResources(this.txt_tel_no, "txt_tel_no");
+            this.txt_tel_no.Name = "txt_tel_no";
+            // 
+            // materialLabel9
+            // 
+            resources.ApplyResources(this.materialLabel9, "materialLabel9");
+            this.materialLabel9.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel9.Depth = 0;
+            this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel9.Name = "materialLabel9";
+            // 
+            // txt_dr_debt
+            // 
+            resources.ApplyResources(this.txt_dr_debt, "txt_dr_debt");
+            this.txt_dr_debt.Name = "txt_dr_debt";
+            this.txt_dr_debt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressed);
+            // 
+            // materialLabel11
+            // 
+            resources.ApplyResources(this.materialLabel11, "materialLabel11");
+            this.materialLabel11.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel11.Depth = 0;
+            this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel11.Name = "materialLabel11";
+            // 
+            // txt_dr_name
+            // 
+            resources.ApplyResources(this.txt_dr_name, "txt_dr_name");
+            this.txt_dr_name.Name = "txt_dr_name";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pnl_add_step
+            // 
+            this.pnl_add_step.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnl_add_step.Controls.Add(this.grb_step_update);
+            this.pnl_add_step.Controls.Add(this.label7);
+            this.pnl_add_step.Controls.Add(this.label8);
+            this.pnl_add_step.Controls.Add(this.materialLabel32);
+            this.pnl_add_step.Controls.Add(this.materialLabel33);
+            this.pnl_add_step.Controls.Add(this.materialLabel34);
+            this.pnl_add_step.Controls.Add(this.materialLabel35);
+            this.pnl_add_step.Controls.Add(this.groupBox8);
+            this.pnl_add_step.Controls.Add(this.groupBox9);
+            resources.ApplyResources(this.pnl_add_step, "pnl_add_step");
+            this.pnl_add_step.Name = "pnl_add_step";
+            // 
+            // grb_step_update
+            // 
+            this.grb_step_update.BackColor = System.Drawing.SystemColors.Control;
+            this.grb_step_update.Controls.Add(this.materialLabel63);
+            this.grb_step_update.Controls.Add(this.txt_new_step);
+            this.grb_step_update.Controls.Add(this.materialLabel19);
+            this.grb_step_update.Controls.Add(this.btn_delete_step);
+            this.grb_step_update.Controls.Add(this.txt_step_update);
+            this.grb_step_update.Controls.Add(this.button3);
+            resources.ApplyResources(this.grb_step_update, "grb_step_update");
+            this.grb_step_update.Name = "grb_step_update";
+            this.grb_step_update.TabStop = false;
+            // 
+            // materialLabel63
+            // 
+            resources.ApplyResources(this.materialLabel63, "materialLabel63");
+            this.materialLabel63.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel63.Depth = 0;
+            this.materialLabel63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel63.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel63.Name = "materialLabel63";
+            // 
+            // txt_new_step
+            // 
+            resources.ApplyResources(this.txt_new_step, "txt_new_step");
+            this.txt_new_step.Name = "txt_new_step";
+            // 
+            // materialLabel19
+            // 
+            resources.ApplyResources(this.materialLabel19, "materialLabel19");
+            this.materialLabel19.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel19.Depth = 0;
+            this.materialLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel19.Name = "materialLabel19";
+            // 
+            // btn_delete_step
+            // 
+            this.btn_delete_step.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btn_delete_step, "btn_delete_step");
+            this.btn_delete_step.Name = "btn_delete_step";
+            this.btn_delete_step.UseVisualStyleBackColor = false;
+            this.btn_delete_step.Click += new System.EventHandler(this.btn_delete_step_Click);
+            // 
+            // txt_step_update
+            // 
+            resources.ApplyResources(this.txt_step_update, "txt_step_update");
+            this.txt_step_update.Name = "txt_step_update";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.Color.Maroon;
+            this.label7.Name = "label7";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label8.Name = "label8";
+            // 
+            // materialLabel32
+            // 
+            resources.ApplyResources(this.materialLabel32, "materialLabel32");
+            this.materialLabel32.Depth = 0;
+            this.materialLabel32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel32.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel32.Name = "materialLabel32";
+            // 
+            // materialLabel33
+            // 
+            resources.ApplyResources(this.materialLabel33, "materialLabel33");
+            this.materialLabel33.Depth = 0;
+            this.materialLabel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel33.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel33.Name = "materialLabel33";
+            // 
+            // materialLabel34
+            // 
+            resources.ApplyResources(this.materialLabel34, "materialLabel34");
+            this.materialLabel34.Depth = 0;
+            this.materialLabel34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel34.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel34.Name = "materialLabel34";
+            // 
+            // materialLabel35
+            // 
+            resources.ApplyResources(this.materialLabel35, "materialLabel35");
+            this.materialLabel35.Depth = 0;
+            this.materialLabel35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel35.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel35.Name = "materialLabel35";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox8.Controls.Add(this.dgv_step_list);
+            resources.ApplyResources(this.groupBox8, "groupBox8");
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.TabStop = false;
+            // 
+            // dgv_step_list
+            // 
+            this.dgv_step_list.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dgv_step_list.AllowUserToAddRows = false;
+            this.dgv_step_list.AllowUserToResizeColumns = false;
+            this.dgv_step_list.AllowUserToResizeRows = false;
+            this.dgv_step_list.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_step_list.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgv_step_list.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_step_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_step_list.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_step_list.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgv_step_list.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_step_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_step_list.EnableHeadersVisualStyles = false;
+            resources.ApplyResources(this.dgv_step_list, "dgv_step_list");
+            this.dgv_step_list.Name = "dgv_step_list";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_step_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgv_step_list.RowTemplate.Height = 24;
+            this.dgv_step_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_step_list.DoubleClick += new System.EventHandler(this.dgv_step_list_DoubleClick);
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox9.Controls.Add(this.materialLabel36);
+            this.groupBox9.Controls.Add(this.txt_step_add);
+            this.groupBox9.Controls.Add(this.btn_add_step);
+            resources.ApplyResources(this.groupBox9, "groupBox9");
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.TabStop = false;
+            // 
+            // materialLabel36
+            // 
+            resources.ApplyResources(this.materialLabel36, "materialLabel36");
+            this.materialLabel36.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel36.Depth = 0;
+            this.materialLabel36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel36.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel36.Name = "materialLabel36";
+            // 
+            // txt_step_add
+            // 
+            resources.ApplyResources(this.txt_step_add, "txt_step_add");
+            this.txt_step_add.Name = "txt_step_add";
+            // 
+            // btn_add_step
+            // 
+            this.btn_add_step.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btn_add_step, "btn_add_step");
+            this.btn_add_step.Name = "btn_add_step";
+            this.btn_add_step.UseVisualStyleBackColor = false;
+            this.btn_add_step.Click += new System.EventHandler(this.btn_add_step_Click);
+            // 
+            // pnl_add_color
+            // 
+            this.pnl_add_color.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnl_add_color.Controls.Add(this.grb_color_update);
+            this.pnl_add_color.Controls.Add(this.label5);
+            this.pnl_add_color.Controls.Add(this.label6);
+            this.pnl_add_color.Controls.Add(this.materialLabel21);
+            this.pnl_add_color.Controls.Add(this.materialLabel26);
+            this.pnl_add_color.Controls.Add(this.materialLabel28);
+            this.pnl_add_color.Controls.Add(this.materialLabel29);
+            this.pnl_add_color.Controls.Add(this.groupBox6);
+            this.pnl_add_color.Controls.Add(this.groupBox7);
+            resources.ApplyResources(this.pnl_add_color, "pnl_add_color");
+            this.pnl_add_color.Name = "pnl_add_color";
+            // 
+            // grb_color_update
+            // 
+            this.grb_color_update.BackColor = System.Drawing.SystemColors.Control;
+            this.grb_color_update.Controls.Add(this.materialLabel64);
+            this.grb_color_update.Controls.Add(this.txt_new_color);
+            this.grb_color_update.Controls.Add(this.materialLabel31);
+            this.grb_color_update.Controls.Add(this.btn_color_delete);
+            this.grb_color_update.Controls.Add(this.txt_color_update);
+            this.grb_color_update.Controls.Add(this.btn_color_update);
+            resources.ApplyResources(this.grb_color_update, "grb_color_update");
+            this.grb_color_update.Name = "grb_color_update";
+            this.grb_color_update.TabStop = false;
+            // 
+            // materialLabel64
+            // 
+            resources.ApplyResources(this.materialLabel64, "materialLabel64");
+            this.materialLabel64.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel64.Depth = 0;
+            this.materialLabel64.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel64.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel64.Name = "materialLabel64";
+            // 
+            // txt_new_color
+            // 
+            resources.ApplyResources(this.txt_new_color, "txt_new_color");
+            this.txt_new_color.Name = "txt_new_color";
+            // 
+            // materialLabel31
+            // 
+            resources.ApplyResources(this.materialLabel31, "materialLabel31");
+            this.materialLabel31.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel31.Depth = 0;
+            this.materialLabel31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel31.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel31.Name = "materialLabel31";
+            // 
+            // btn_color_delete
+            // 
+            this.btn_color_delete.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btn_color_delete, "btn_color_delete");
+            this.btn_color_delete.Name = "btn_color_delete";
+            this.btn_color_delete.UseVisualStyleBackColor = false;
+            this.btn_color_delete.Click += new System.EventHandler(this.btn_color_delete_Click);
+            // 
+            // txt_color_update
+            // 
+            resources.ApplyResources(this.txt_color_update, "txt_color_update");
+            this.txt_color_update.Name = "txt_color_update";
+            // 
+            // btn_color_update
+            // 
+            this.btn_color_update.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btn_color_update, "btn_color_update");
+            this.btn_color_update.Name = "btn_color_update";
+            this.btn_color_update.UseVisualStyleBackColor = false;
+            this.btn_color_update.Click += new System.EventHandler(this.btn_color_update_Click);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.Color.Maroon;
+            this.label5.Name = "label5";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label6.Name = "label6";
+            // 
+            // materialLabel21
+            // 
+            resources.ApplyResources(this.materialLabel21, "materialLabel21");
+            this.materialLabel21.Depth = 0;
+            this.materialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel21.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel21.Name = "materialLabel21";
+            // 
+            // materialLabel26
+            // 
+            resources.ApplyResources(this.materialLabel26, "materialLabel26");
+            this.materialLabel26.Depth = 0;
+            this.materialLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel26.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel26.Name = "materialLabel26";
+            // 
+            // materialLabel28
+            // 
+            resources.ApplyResources(this.materialLabel28, "materialLabel28");
+            this.materialLabel28.Depth = 0;
+            this.materialLabel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel28.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel28.Name = "materialLabel28";
+            // 
+            // materialLabel29
+            // 
+            resources.ApplyResources(this.materialLabel29, "materialLabel29");
+            this.materialLabel29.Depth = 0;
+            this.materialLabel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel29.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel29.Name = "materialLabel29";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox6.Controls.Add(this.dgv_color_list);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            // 
+            // dgv_color_list
+            // 
+            this.dgv_color_list.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dgv_color_list.AllowUserToAddRows = false;
+            this.dgv_color_list.AllowUserToResizeColumns = false;
+            this.dgv_color_list.AllowUserToResizeRows = false;
+            this.dgv_color_list.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_color_list.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgv_color_list.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_color_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_color_list.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_color_list.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgv_color_list.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_color_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_color_list.EnableHeadersVisualStyles = false;
+            resources.ApplyResources(this.dgv_color_list, "dgv_color_list");
+            this.dgv_color_list.Name = "dgv_color_list";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_color_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgv_color_list.RowTemplate.Height = 24;
+            this.dgv_color_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_color_list.DoubleClick += new System.EventHandler(this.dgv_color_list_DoubleClick);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox7.Controls.Add(this.materialLabel30);
+            this.groupBox7.Controls.Add(this.txt_color_add);
+            this.groupBox7.Controls.Add(this.btn_color_add);
+            resources.ApplyResources(this.groupBox7, "groupBox7");
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.TabStop = false;
+            // 
+            // materialLabel30
+            // 
+            resources.ApplyResources(this.materialLabel30, "materialLabel30");
+            this.materialLabel30.BackColor = System.Drawing.SystemColors.Control;
+            this.materialLabel30.Depth = 0;
+            this.materialLabel30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel30.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel30.Name = "materialLabel30";
+            // 
+            // txt_color_add
+            // 
+            resources.ApplyResources(this.txt_color_add, "txt_color_add");
+            this.txt_color_add.Name = "txt_color_add";
+            // 
+            // btn_color_add
+            // 
+            this.btn_color_add.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btn_color_add, "btn_color_add");
+            this.btn_color_add.Name = "btn_color_add";
+            this.btn_color_add.UseVisualStyleBackColor = false;
+            this.btn_color_add.Click += new System.EventHandler(this.btn_color_add_Click);
+            // 
             // pnl_payment
             // 
             this.pnl_payment.Controls.Add(this.materialLabel65);
@@ -633,6 +1248,36 @@
             this.pnl_payment.Controls.Add(this.groupBox10);
             resources.ApplyResources(this.pnl_payment, "pnl_payment");
             this.pnl_payment.Name = "pnl_payment";
+            // 
+            // materialLabel65
+            // 
+            resources.ApplyResources(this.materialLabel65, "materialLabel65");
+            this.materialLabel65.Depth = 0;
+            this.materialLabel65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel65.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel65.Name = "materialLabel65";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.ForeColor = System.Drawing.Color.Brown;
+            this.label13.Name = "label13";
+            // 
+            // materialLabel66
+            // 
+            resources.ApplyResources(this.materialLabel66, "materialLabel66");
+            this.materialLabel66.Depth = 0;
+            this.materialLabel66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel66.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel66.Name = "materialLabel66";
+            // 
+            // materialLabel67
+            // 
+            resources.ApplyResources(this.materialLabel67, "materialLabel67");
+            this.materialLabel67.Depth = 0;
+            this.materialLabel67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel67.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel67.Name = "materialLabel67";
             // 
             // materialLabel56
             // 
@@ -886,14 +1531,14 @@
             this.dgv_proc_list.EnableHeadersVisualStyles = false;
             resources.ApplyResources(this.dgv_proc_list, "dgv_proc_list");
             this.dgv_proc_list.Name = "dgv_proc_list";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_proc_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_proc_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgv_proc_list.RowTemplate.Height = 24;
             this.dgv_proc_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_proc_list.DoubleClick += new System.EventHandler(this.dgv_proc_list_DoubleClick);
@@ -930,659 +1575,6 @@
             this.btn_proc_add.UseVisualStyleBackColor = false;
             this.btn_proc_add.Click += new System.EventHandler(this.btn_proc_add_Click);
             // 
-            // pnl_dr_add
-            // 
-            this.pnl_dr_add.BackColor = System.Drawing.Color.White;
-            this.pnl_dr_add.Controls.Add(this.grb_dr_update);
-            this.pnl_dr_add.Controls.Add(this.label2);
-            this.pnl_dr_add.Controls.Add(this.label1);
-            this.pnl_dr_add.Controls.Add(this.materialLabel16);
-            this.pnl_dr_add.Controls.Add(this.materialLabel15);
-            this.pnl_dr_add.Controls.Add(this.materialLabel13);
-            this.pnl_dr_add.Controls.Add(this.materialLabel12);
-            this.pnl_dr_add.Controls.Add(this.grb_);
-            this.pnl_dr_add.Controls.Add(this.groupBox2);
-            resources.ApplyResources(this.pnl_dr_add, "pnl_dr_add");
-            this.pnl_dr_add.Name = "pnl_dr_add";
-            // 
-            // grb_dr_update
-            // 
-            this.grb_dr_update.BackColor = System.Drawing.SystemColors.Control;
-            this.grb_dr_update.Controls.Add(this.txt_new_dr_debt);
-            this.grb_dr_update.Controls.Add(this.txt_new_dr_tell);
-            this.grb_dr_update.Controls.Add(this.txt_new_dr_name);
-            this.grb_dr_update.Controls.Add(this.materialLabel62);
-            this.grb_dr_update.Controls.Add(this.materialLabel61);
-            this.grb_dr_update.Controls.Add(this.materialLabel60);
-            this.grb_dr_update.Controls.Add(this.btn_dr_delete);
-            this.grb_dr_update.Controls.Add(this.materialLabel14);
-            this.grb_dr_update.Controls.Add(this.txt_dr_tel_update);
-            this.grb_dr_update.Controls.Add(this.materialLabel17);
-            this.grb_dr_update.Controls.Add(this.txt_dr_debt_update);
-            this.grb_dr_update.Controls.Add(this.materialLabel18);
-            this.grb_dr_update.Controls.Add(this.txt_dr_name_update);
-            this.grb_dr_update.Controls.Add(this.btn_dr_update);
-            resources.ApplyResources(this.grb_dr_update, "grb_dr_update");
-            this.grb_dr_update.Name = "grb_dr_update";
-            this.grb_dr_update.TabStop = false;
-            // 
-            // txt_new_dr_debt
-            // 
-            resources.ApplyResources(this.txt_new_dr_debt, "txt_new_dr_debt");
-            this.txt_new_dr_debt.Name = "txt_new_dr_debt";
-            // 
-            // txt_new_dr_tell
-            // 
-            resources.ApplyResources(this.txt_new_dr_tell, "txt_new_dr_tell");
-            this.txt_new_dr_tell.Name = "txt_new_dr_tell";
-            // 
-            // txt_new_dr_name
-            // 
-            resources.ApplyResources(this.txt_new_dr_name, "txt_new_dr_name");
-            this.txt_new_dr_name.Name = "txt_new_dr_name";
-            // 
-            // materialLabel62
-            // 
-            resources.ApplyResources(this.materialLabel62, "materialLabel62");
-            this.materialLabel62.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel62.Depth = 0;
-            this.materialLabel62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel62.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel62.Name = "materialLabel62";
-            // 
-            // materialLabel61
-            // 
-            resources.ApplyResources(this.materialLabel61, "materialLabel61");
-            this.materialLabel61.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel61.Depth = 0;
-            this.materialLabel61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel61.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel61.Name = "materialLabel61";
-            // 
-            // materialLabel60
-            // 
-            resources.ApplyResources(this.materialLabel60, "materialLabel60");
-            this.materialLabel60.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel60.Depth = 0;
-            this.materialLabel60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel60.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel60.Name = "materialLabel60";
-            // 
-            // btn_dr_delete
-            // 
-            this.btn_dr_delete.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_dr_delete, "btn_dr_delete");
-            this.btn_dr_delete.Name = "btn_dr_delete";
-            this.btn_dr_delete.UseVisualStyleBackColor = false;
-            this.btn_dr_delete.Click += new System.EventHandler(this.btn_dr_delete_Click);
-            // 
-            // materialLabel14
-            // 
-            resources.ApplyResources(this.materialLabel14, "materialLabel14");
-            this.materialLabel14.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel14.Depth = 0;
-            this.materialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel14.Name = "materialLabel14";
-            // 
-            // txt_dr_tel_update
-            // 
-            resources.ApplyResources(this.txt_dr_tel_update, "txt_dr_tel_update");
-            this.txt_dr_tel_update.Name = "txt_dr_tel_update";
-            // 
-            // materialLabel17
-            // 
-            resources.ApplyResources(this.materialLabel17, "materialLabel17");
-            this.materialLabel17.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel17.Depth = 0;
-            this.materialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel17.Name = "materialLabel17";
-            // 
-            // txt_dr_debt_update
-            // 
-            resources.ApplyResources(this.txt_dr_debt_update, "txt_dr_debt_update");
-            this.txt_dr_debt_update.Name = "txt_dr_debt_update";
-            this.txt_dr_debt_update.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressed);
-            // 
-            // materialLabel18
-            // 
-            resources.ApplyResources(this.materialLabel18, "materialLabel18");
-            this.materialLabel18.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel18.Depth = 0;
-            this.materialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel18.Name = "materialLabel18";
-            // 
-            // txt_dr_name_update
-            // 
-            resources.ApplyResources(this.txt_dr_name_update, "txt_dr_name_update");
-            this.txt_dr_name_update.Name = "txt_dr_name_update";
-            // 
-            // btn_dr_update
-            // 
-            this.btn_dr_update.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_dr_update, "btn_dr_update");
-            this.btn_dr_update.Name = "btn_dr_update";
-            this.btn_dr_update.UseVisualStyleBackColor = false;
-            this.btn_dr_update.Click += new System.EventHandler(this.btn_dr_update_Click);
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Name = "label2";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Name = "label1";
-            // 
-            // materialLabel16
-            // 
-            resources.ApplyResources(this.materialLabel16, "materialLabel16");
-            this.materialLabel16.Depth = 0;
-            this.materialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel16.Name = "materialLabel16";
-            // 
-            // materialLabel15
-            // 
-            resources.ApplyResources(this.materialLabel15, "materialLabel15");
-            this.materialLabel15.Depth = 0;
-            this.materialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel15.Name = "materialLabel15";
-            // 
-            // materialLabel13
-            // 
-            resources.ApplyResources(this.materialLabel13, "materialLabel13");
-            this.materialLabel13.Depth = 0;
-            this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel13.Name = "materialLabel13";
-            // 
-            // materialLabel12
-            // 
-            resources.ApplyResources(this.materialLabel12, "materialLabel12");
-            this.materialLabel12.Depth = 0;
-            this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel12.Name = "materialLabel12";
-            // 
-            // grb_
-            // 
-            this.grb_.BackColor = System.Drawing.SystemColors.Control;
-            this.grb_.Controls.Add(this.dgv_dr_list);
-            resources.ApplyResources(this.grb_, "grb_");
-            this.grb_.Name = "grb_";
-            this.grb_.TabStop = false;
-            // 
-            // dgv_dr_list
-            // 
-            this.dgv_dr_list.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.dgv_dr_list.AllowUserToAddRows = false;
-            this.dgv_dr_list.AllowUserToResizeColumns = false;
-            this.dgv_dr_list.AllowUserToResizeRows = false;
-            this.dgv_dr_list.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_dr_list.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.dgv_dr_list.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgv_dr_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_dr_list.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_dr_list.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dgv_dr_list.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_dr_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_dr_list.EnableHeadersVisualStyles = false;
-            resources.ApplyResources(this.dgv_dr_list, "dgv_dr_list");
-            this.dgv_dr_list.Name = "dgv_dr_list";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_dr_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgv_dr_list.RowTemplate.Height = 24;
-            this.dgv_dr_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_dr_list.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dr_list_CellDoubleClick);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Controls.Add(this.materialLabel10);
-            this.groupBox2.Controls.Add(this.txt_tel_no);
-            this.groupBox2.Controls.Add(this.materialLabel9);
-            this.groupBox2.Controls.Add(this.txt_dr_debt);
-            this.groupBox2.Controls.Add(this.materialLabel11);
-            this.groupBox2.Controls.Add(this.txt_dr_name);
-            this.groupBox2.Controls.Add(this.button1);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // materialLabel10
-            // 
-            resources.ApplyResources(this.materialLabel10, "materialLabel10");
-            this.materialLabel10.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel10.Depth = 0;
-            this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel10.Name = "materialLabel10";
-            // 
-            // txt_tel_no
-            // 
-            resources.ApplyResources(this.txt_tel_no, "txt_tel_no");
-            this.txt_tel_no.Name = "txt_tel_no";
-            // 
-            // materialLabel9
-            // 
-            resources.ApplyResources(this.materialLabel9, "materialLabel9");
-            this.materialLabel9.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel9.Depth = 0;
-            this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel9.Name = "materialLabel9";
-            // 
-            // txt_dr_debt
-            // 
-            resources.ApplyResources(this.txt_dr_debt, "txt_dr_debt");
-            this.txt_dr_debt.Name = "txt_dr_debt";
-            this.txt_dr_debt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressed);
-            // 
-            // materialLabel11
-            // 
-            resources.ApplyResources(this.materialLabel11, "materialLabel11");
-            this.materialLabel11.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel11.Depth = 0;
-            this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel11.Name = "materialLabel11";
-            // 
-            // txt_dr_name
-            // 
-            resources.ApplyResources(this.txt_dr_name, "txt_dr_name");
-            this.txt_dr_name.Name = "txt_dr_name";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pnl_add_step
-            // 
-            this.pnl_add_step.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pnl_add_step.Controls.Add(this.grb_step_update);
-            this.pnl_add_step.Controls.Add(this.label7);
-            this.pnl_add_step.Controls.Add(this.label8);
-            this.pnl_add_step.Controls.Add(this.materialLabel32);
-            this.pnl_add_step.Controls.Add(this.materialLabel33);
-            this.pnl_add_step.Controls.Add(this.materialLabel34);
-            this.pnl_add_step.Controls.Add(this.materialLabel35);
-            this.pnl_add_step.Controls.Add(this.groupBox8);
-            this.pnl_add_step.Controls.Add(this.groupBox9);
-            resources.ApplyResources(this.pnl_add_step, "pnl_add_step");
-            this.pnl_add_step.Name = "pnl_add_step";
-            // 
-            // grb_step_update
-            // 
-            this.grb_step_update.BackColor = System.Drawing.SystemColors.Control;
-            this.grb_step_update.Controls.Add(this.materialLabel63);
-            this.grb_step_update.Controls.Add(this.txt_new_step);
-            this.grb_step_update.Controls.Add(this.materialLabel19);
-            this.grb_step_update.Controls.Add(this.btn_delete_step);
-            this.grb_step_update.Controls.Add(this.txt_step_update);
-            this.grb_step_update.Controls.Add(this.button3);
-            resources.ApplyResources(this.grb_step_update, "grb_step_update");
-            this.grb_step_update.Name = "grb_step_update";
-            this.grb_step_update.TabStop = false;
-            // 
-            // materialLabel63
-            // 
-            resources.ApplyResources(this.materialLabel63, "materialLabel63");
-            this.materialLabel63.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel63.Depth = 0;
-            this.materialLabel63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel63.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel63.Name = "materialLabel63";
-            // 
-            // txt_new_step
-            // 
-            resources.ApplyResources(this.txt_new_step, "txt_new_step");
-            this.txt_new_step.Name = "txt_new_step";
-            // 
-            // materialLabel19
-            // 
-            resources.ApplyResources(this.materialLabel19, "materialLabel19");
-            this.materialLabel19.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel19.Depth = 0;
-            this.materialLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel19.Name = "materialLabel19";
-            // 
-            // btn_delete_step
-            // 
-            this.btn_delete_step.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_delete_step, "btn_delete_step");
-            this.btn_delete_step.Name = "btn_delete_step";
-            this.btn_delete_step.UseVisualStyleBackColor = false;
-            this.btn_delete_step.Click += new System.EventHandler(this.btn_delete_step_Click);
-            // 
-            // txt_step_update
-            // 
-            resources.ApplyResources(this.txt_step_update, "txt_step_update");
-            this.txt_step_update.Name = "txt_step_update";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.ForeColor = System.Drawing.Color.Maroon;
-            this.label7.Name = "label7";
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label8.Name = "label8";
-            // 
-            // materialLabel32
-            // 
-            resources.ApplyResources(this.materialLabel32, "materialLabel32");
-            this.materialLabel32.Depth = 0;
-            this.materialLabel32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel32.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel32.Name = "materialLabel32";
-            // 
-            // materialLabel33
-            // 
-            resources.ApplyResources(this.materialLabel33, "materialLabel33");
-            this.materialLabel33.Depth = 0;
-            this.materialLabel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel33.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel33.Name = "materialLabel33";
-            // 
-            // materialLabel34
-            // 
-            resources.ApplyResources(this.materialLabel34, "materialLabel34");
-            this.materialLabel34.Depth = 0;
-            this.materialLabel34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel34.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel34.Name = "materialLabel34";
-            // 
-            // materialLabel35
-            // 
-            resources.ApplyResources(this.materialLabel35, "materialLabel35");
-            this.materialLabel35.Depth = 0;
-            this.materialLabel35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel35.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel35.Name = "materialLabel35";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox8.Controls.Add(this.dgv_step_list);
-            resources.ApplyResources(this.groupBox8, "groupBox8");
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.TabStop = false;
-            // 
-            // dgv_step_list
-            // 
-            this.dgv_step_list.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.dgv_step_list.AllowUserToAddRows = false;
-            this.dgv_step_list.AllowUserToResizeColumns = false;
-            this.dgv_step_list.AllowUserToResizeRows = false;
-            this.dgv_step_list.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_step_list.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.dgv_step_list.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgv_step_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_step_list.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_step_list.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dgv_step_list.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_step_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_step_list.EnableHeadersVisualStyles = false;
-            resources.ApplyResources(this.dgv_step_list, "dgv_step_list");
-            this.dgv_step_list.Name = "dgv_step_list";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_step_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgv_step_list.RowTemplate.Height = 24;
-            this.dgv_step_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_step_list.DoubleClick += new System.EventHandler(this.dgv_step_list_DoubleClick);
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox9.Controls.Add(this.materialLabel36);
-            this.groupBox9.Controls.Add(this.txt_step_add);
-            this.groupBox9.Controls.Add(this.btn_add_step);
-            resources.ApplyResources(this.groupBox9, "groupBox9");
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.TabStop = false;
-            // 
-            // materialLabel36
-            // 
-            resources.ApplyResources(this.materialLabel36, "materialLabel36");
-            this.materialLabel36.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel36.Depth = 0;
-            this.materialLabel36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel36.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel36.Name = "materialLabel36";
-            // 
-            // txt_step_add
-            // 
-            resources.ApplyResources(this.txt_step_add, "txt_step_add");
-            this.txt_step_add.Name = "txt_step_add";
-            // 
-            // btn_add_step
-            // 
-            this.btn_add_step.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_add_step, "btn_add_step");
-            this.btn_add_step.Name = "btn_add_step";
-            this.btn_add_step.UseVisualStyleBackColor = false;
-            this.btn_add_step.Click += new System.EventHandler(this.btn_add_step_Click);
-            // 
-            // pnl_add_color
-            // 
-            this.pnl_add_color.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pnl_add_color.Controls.Add(this.grb_color_update);
-            this.pnl_add_color.Controls.Add(this.label5);
-            this.pnl_add_color.Controls.Add(this.label6);
-            this.pnl_add_color.Controls.Add(this.materialLabel21);
-            this.pnl_add_color.Controls.Add(this.materialLabel26);
-            this.pnl_add_color.Controls.Add(this.materialLabel28);
-            this.pnl_add_color.Controls.Add(this.materialLabel29);
-            this.pnl_add_color.Controls.Add(this.groupBox6);
-            this.pnl_add_color.Controls.Add(this.groupBox7);
-            resources.ApplyResources(this.pnl_add_color, "pnl_add_color");
-            this.pnl_add_color.Name = "pnl_add_color";
-            // 
-            // grb_color_update
-            // 
-            this.grb_color_update.BackColor = System.Drawing.SystemColors.Control;
-            this.grb_color_update.Controls.Add(this.materialLabel64);
-            this.grb_color_update.Controls.Add(this.txt_new_color);
-            this.grb_color_update.Controls.Add(this.materialLabel31);
-            this.grb_color_update.Controls.Add(this.btn_color_delete);
-            this.grb_color_update.Controls.Add(this.txt_color_update);
-            this.grb_color_update.Controls.Add(this.btn_color_update);
-            resources.ApplyResources(this.grb_color_update, "grb_color_update");
-            this.grb_color_update.Name = "grb_color_update";
-            this.grb_color_update.TabStop = false;
-            // 
-            // materialLabel64
-            // 
-            resources.ApplyResources(this.materialLabel64, "materialLabel64");
-            this.materialLabel64.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel64.Depth = 0;
-            this.materialLabel64.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel64.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel64.Name = "materialLabel64";
-            // 
-            // txt_new_color
-            // 
-            resources.ApplyResources(this.txt_new_color, "txt_new_color");
-            this.txt_new_color.Name = "txt_new_color";
-            // 
-            // materialLabel31
-            // 
-            resources.ApplyResources(this.materialLabel31, "materialLabel31");
-            this.materialLabel31.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel31.Depth = 0;
-            this.materialLabel31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel31.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel31.Name = "materialLabel31";
-            // 
-            // btn_color_delete
-            // 
-            this.btn_color_delete.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_color_delete, "btn_color_delete");
-            this.btn_color_delete.Name = "btn_color_delete";
-            this.btn_color_delete.UseVisualStyleBackColor = false;
-            this.btn_color_delete.Click += new System.EventHandler(this.btn_color_delete_Click);
-            // 
-            // txt_color_update
-            // 
-            resources.ApplyResources(this.txt_color_update, "txt_color_update");
-            this.txt_color_update.Name = "txt_color_update";
-            // 
-            // btn_color_update
-            // 
-            this.btn_color_update.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_color_update, "btn_color_update");
-            this.btn_color_update.Name = "btn_color_update";
-            this.btn_color_update.UseVisualStyleBackColor = false;
-            this.btn_color_update.Click += new System.EventHandler(this.btn_color_update_Click);
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.ForeColor = System.Drawing.Color.Maroon;
-            this.label5.Name = "label5";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label6.Name = "label6";
-            // 
-            // materialLabel21
-            // 
-            resources.ApplyResources(this.materialLabel21, "materialLabel21");
-            this.materialLabel21.Depth = 0;
-            this.materialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel21.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel21.Name = "materialLabel21";
-            // 
-            // materialLabel26
-            // 
-            resources.ApplyResources(this.materialLabel26, "materialLabel26");
-            this.materialLabel26.Depth = 0;
-            this.materialLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel26.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel26.Name = "materialLabel26";
-            // 
-            // materialLabel28
-            // 
-            resources.ApplyResources(this.materialLabel28, "materialLabel28");
-            this.materialLabel28.Depth = 0;
-            this.materialLabel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel28.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel28.Name = "materialLabel28";
-            // 
-            // materialLabel29
-            // 
-            resources.ApplyResources(this.materialLabel29, "materialLabel29");
-            this.materialLabel29.Depth = 0;
-            this.materialLabel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel29.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel29.Name = "materialLabel29";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox6.Controls.Add(this.dgv_color_list);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.TabStop = false;
-            // 
-            // dgv_color_list
-            // 
-            this.dgv_color_list.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.dgv_color_list.AllowUserToAddRows = false;
-            this.dgv_color_list.AllowUserToResizeColumns = false;
-            this.dgv_color_list.AllowUserToResizeRows = false;
-            this.dgv_color_list.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_color_list.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.dgv_color_list.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgv_color_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_color_list.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_color_list.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dgv_color_list.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_color_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_color_list.EnableHeadersVisualStyles = false;
-            resources.ApplyResources(this.dgv_color_list, "dgv_color_list");
-            this.dgv_color_list.Name = "dgv_color_list";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_color_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgv_color_list.RowTemplate.Height = 24;
-            this.dgv_color_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_color_list.DoubleClick += new System.EventHandler(this.dgv_color_list_DoubleClick);
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox7.Controls.Add(this.materialLabel30);
-            this.groupBox7.Controls.Add(this.txt_color_add);
-            this.groupBox7.Controls.Add(this.btn_color_add);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.TabStop = false;
-            // 
-            // materialLabel30
-            // 
-            resources.ApplyResources(this.materialLabel30, "materialLabel30");
-            this.materialLabel30.BackColor = System.Drawing.SystemColors.Control;
-            this.materialLabel30.Depth = 0;
-            this.materialLabel30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel30.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel30.Name = "materialLabel30";
-            // 
-            // txt_color_add
-            // 
-            resources.ApplyResources(this.txt_color_add, "txt_color_add");
-            this.txt_color_add.Name = "txt_color_add";
-            // 
-            // btn_color_add
-            // 
-            this.btn_color_add.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_color_add, "btn_color_add");
-            this.btn_color_add.Name = "btn_color_add";
-            this.btn_color_add.UseVisualStyleBackColor = false;
-            this.btn_color_add.Click += new System.EventHandler(this.btn_color_add_Click);
-            // 
             // pnl_init
             // 
             resources.ApplyResources(this.pnl_init, "pnl_init");
@@ -1600,27 +1592,10 @@
             this.label54.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label54.Name = "label54";
             // 
-            // pictureBox4
-            // 
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
-            // 
             // pnl_search
             // 
             resources.ApplyResources(this.pnl_search, "pnl_search");
+            this.pnl_search.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnl_search.Controls.Add(this.pictureBox5);
             this.pnl_search.Controls.Add(this.btn_print_search);
             this.pnl_search.Controls.Add(this.label11);
@@ -1649,15 +1624,6 @@
             this.pnl_search.Controls.Add(this.txt_search_dr);
             this.pnl_search.Controls.Add(this.dgv_search);
             this.pnl_search.Name = "pnl_search";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Image = global::calypso_dental_V2.Resource_picture.icons8_google_web_search_100;
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.tableSeach);
             // 
             // btn_print_search
             // 
@@ -1843,7 +1809,7 @@
             this.dgv_search.AllowUserToAddRows = false;
             resources.ApplyResources(this.dgv_search, "dgv_search");
             this.dgv_search.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_search.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_search.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_search.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_search.Name = "dgv_search";
@@ -1854,17 +1820,19 @@
             // pnl_print
             // 
             resources.ApplyResources(this.pnl_print, "pnl_print");
+            this.pnl_print.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnl_print.Controls.Add(this.dgv_print);
             this.pnl_print.Controls.Add(this.groupBox3);
             this.pnl_print.Controls.Add(this.btn_print);
             this.pnl_print.Name = "pnl_print";
+            this.pnl_print.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_print_Paint);
             // 
             // dgv_print
             // 
             resources.ApplyResources(this.dgv_print, "dgv_print");
             this.dgv_print.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_print.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_print.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_print.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_print.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_print.Name = "dgv_print";
             this.dgv_print.RowTemplate.Height = 24;
@@ -1884,15 +1852,6 @@
             this.groupBox3.Controls.Add(this.materialLabel50);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
-            // 
-            // btn_search_prt
-            // 
-            this.btn_search_prt.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_search_prt.BackgroundImage = global::calypso_dental_V2.Resource_picture.icons8_google_web_search_100;
-            resources.ApplyResources(this.btn_search_prt, "btn_search_prt");
-            this.btn_search_prt.Name = "btn_search_prt";
-            this.btn_search_prt.UseVisualStyleBackColor = false;
-            this.btn_search_prt.Click += new System.EventHandler(this.btn_search_prt_Click);
             // 
             // cb_select_step
             // 
@@ -1962,35 +1921,92 @@
             this.btn_print.UseVisualStyleBackColor = false;
             this.btn_print.Click += new System.EventHandler(this.btn_print_click);
             // 
-            // materialLabel65
+            // pb_aboutUS
             // 
-            resources.ApplyResources(this.materialLabel65, "materialLabel65");
-            this.materialLabel65.Depth = 0;
-            this.materialLabel65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel65.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel65.Name = "materialLabel65";
+            this.pb_aboutUS.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pb_aboutUS, "pb_aboutUS");
+            this.pb_aboutUS.Image = global::calypso_dental_V2.Resource_picture.hakkımızda;
+            this.pb_aboutUS.Name = "pb_aboutUS";
+            this.pb_aboutUS.TabStop = false;
+            this.pb_aboutUS.Click += new System.EventHandler(this.pb_aboutUS_Click);
             // 
-            // label13
+            // pictureBox2
             // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.ForeColor = System.Drawing.Color.Brown;
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
             // 
-            // materialLabel66
+            // pb_settings
             // 
-            resources.ApplyResources(this.materialLabel66, "materialLabel66");
-            this.materialLabel66.Depth = 0;
-            this.materialLabel66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel66.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel66.Name = "materialLabel66";
+            this.pb_settings.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pb_settings, "pb_settings");
+            this.pb_settings.Image = global::calypso_dental_V2.Resource_picture.ayarlar;
+            this.pb_settings.Name = "pb_settings";
+            this.pb_settings.TabStop = false;
+            this.pb_settings.Click += new System.EventHandler(this.pb_settings_Click);
             // 
-            // materialLabel67
+            // pb_search
             // 
-            resources.ApplyResources(this.materialLabel67, "materialLabel67");
-            this.materialLabel67.Depth = 0;
-            this.materialLabel67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel67.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel67.Name = "materialLabel67";
+            this.pb_search.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pb_search, "pb_search");
+            this.pb_search.Image = global::calypso_dental_V2.Resource_picture.işlem_arama;
+            this.pb_search.Name = "pb_search";
+            this.pb_search.TabStop = false;
+            this.pb_search.Click += new System.EventHandler(this.pb_search_Click);
+            // 
+            // pB_data_view
+            // 
+            this.pB_data_view.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pB_data_view, "pB_data_view");
+            this.pB_data_view.Image = global::calypso_dental_V2.Resource_picture.Yazdır;
+            this.pB_data_view.Name = "pB_data_view";
+            this.pB_data_view.TabStop = false;
+            this.pB_data_view.Click += new System.EventHandler(this.pB_data_view_Click);
+            // 
+            // pB_add_pattient
+            // 
+            this.pB_add_pattient.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pB_add_pattient, "pB_add_pattient");
+            this.pB_add_pattient.Image = global::calypso_dental_V2.Resource_picture.hasta_ekle_ikon;
+            this.pB_add_pattient.Name = "pB_add_pattient";
+            this.pB_add_pattient.TabStop = false;
+            this.pB_add_pattient.Click += new System.EventHandler(this.pB_add_pattient_Click);
+            // 
+            // btn_search_prt
+            // 
+            this.btn_search_prt.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_search_prt.BackgroundImage = global::calypso_dental_V2.Resource_picture.icons8_google_web_search_100;
+            resources.ApplyResources(this.btn_search_prt, "btn_search_prt");
+            this.btn_search_prt.Name = "btn_search_prt";
+            this.btn_search_prt.UseVisualStyleBackColor = false;
+            this.btn_search_prt.Click += new System.EventHandler(this.btn_search_prt_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Image = global::calypso_dental_V2.Resource_picture.icons8_google_web_search_100;
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.tableSeach);
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
             // 
             // frm_main
             // 
@@ -1999,20 +2015,15 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.pnl_menu);
+            this.Controls.Add(this.pnl_search);
+            this.Controls.Add(this.pnl_init);
             this.Controls.Add(this.pnl_settings);
             this.Controls.Add(this.pnl_add_patient);
             this.Controls.Add(this.pnl_print);
-            this.Controls.Add(this.pnl_search);
-            this.Controls.Add(this.pnl_init);
             this.Name = "frm_main";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.frm_main_Load);
             this.pnl_menu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).EndInit();
             this.pnl_add_patient.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -2021,21 +2032,6 @@
             this.pnl_settings.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.pnl_payment.ResumeLayout(false);
-            this.pnl_payment.PerformLayout();
-            this.grb_pay_his.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_old_payment)).EndInit();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_dr_payment)).EndInit();
-            this.pnl_add_proc.ResumeLayout(false);
-            this.pnl_add_proc.PerformLayout();
-            this.grb_proc_update.ResumeLayout(false);
-            this.grb_proc_update.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_proc_list)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.pnl_dr_add.ResumeLayout(false);
             this.pnl_dr_add.PerformLayout();
             this.grb_dr_update.ResumeLayout(false);
@@ -2060,19 +2056,40 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_color_list)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.pnl_payment.ResumeLayout(false);
+            this.pnl_payment.PerformLayout();
+            this.grb_pay_his.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_old_payment)).EndInit();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_dr_payment)).EndInit();
+            this.pnl_add_proc.ResumeLayout(false);
+            this.pnl_add_proc.PerformLayout();
+            this.grb_proc_update.ResumeLayout(false);
+            this.grb_proc_update.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_proc_list)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.pnl_init.ResumeLayout(false);
             this.pnl_init.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_search.ResumeLayout(false);
             this.pnl_search.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).EndInit();
             this.pnl_print.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_print)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_aboutUS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2273,6 +2290,7 @@
         private System.Windows.Forms.Label label13;
         private MaterialSkin.Controls.MaterialLabel materialLabel66;
         private MaterialSkin.Controls.MaterialLabel materialLabel67;
+        private System.Windows.Forms.PictureBox pb_aboutUS;
     }
 }
 

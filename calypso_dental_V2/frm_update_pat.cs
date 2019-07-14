@@ -19,7 +19,7 @@ namespace calypso_dental_V2
         SqlCommand command;
         SqlDataReader dataReader;
         SqlDataAdapter adapter;
-        DataView dv;
+        cs_error error = new cs_error();
         DataTable table = new DataTable();
         string sql = null;
         string connetionString = null;
@@ -38,6 +38,7 @@ namespace calypso_dental_V2
             }
             catch (Exception ex)
             {
+                error.write_error(ex);
                 MessageBox.Show("hata :" + ex);
                 throw;
             }
@@ -99,6 +100,7 @@ namespace calypso_dental_V2
             }
             catch (Exception ex)
             {
+                error.write_error(ex);
                 MessageBox.Show("hata :" + ex);
                 throw;
             }
@@ -154,6 +156,7 @@ namespace calypso_dental_V2
             }
             catch (Exception ex)
             {
+                error.write_error(ex);
                 MessageBox.Show("Hata : "+ex.Message);
                 throw;
             }
@@ -193,6 +196,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception ex)
                     {
+                        error.write_error(ex);
                         MessageBox.Show("Hata : " + ex.Message);
                         throw;
                     }
@@ -219,7 +223,8 @@ namespace calypso_dental_V2
                         }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Hata : " + ex.Message);
+                            error.write_error(ex);
+                            MessageBox.Show("Hata : " + ex.Message);
                         throw;
                     }
 

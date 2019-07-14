@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.IO;
 
 namespace calypso_dental_V2
 {
@@ -33,6 +34,7 @@ namespace calypso_dental_V2
         public List<patient> lst_print = new List<patient>();
         public List<payment> lst_pay = new List<payment>();
         public print_info p_info= new  print_info();
+        public cs_error error = new cs_error();
         int reg_id = 0;
         int id = 0;
         string sql = null;
@@ -49,7 +51,7 @@ namespace calypso_dental_V2
             frm_print_pay.frm1 = this;
             
             connetionString = "Data Source=" + settings.data_source + "\\SQL_2014;Initial Catalog=" + settings.initial_catalog + ";Integrated Security=True";
-            cnn = new SqlConnection(connetionString);
+           cnn = new SqlConnection(connetionString);
         }
         void dgv_inproc_fill()
         {
@@ -57,7 +59,7 @@ namespace calypso_dental_V2
             {
                 if (cnn.State == ConnectionState.Closed)
                 {
-                    cnn.Open();
+                  cnn.Open();
                 }
                 adapter = new SqlDataAdapter("SELECT * FROM tbl_inproc WHERE reg_no=" + reg_id + "", cnn);
                 table.Clear();
@@ -68,6 +70,7 @@ namespace calypso_dental_V2
             }
             catch (Exception ex )
             {
+                error.write_error(ex);
                 MessageBox.Show(""+ex.Message);
                 throw;
             }
@@ -101,10 +104,19 @@ namespace calypso_dental_V2
             }
             txt_all_prices.Text = prices.ToString();
         }
+        void pb_default_pic()
+        {
+            pB_add_pattient.Image = Resource_picture.hasta_ekle_ikon;
+            pb_search.Image = Resource_picture.işlem_arama;
+            pb_settings.Image = Resource_picture.ayarlar;
+            pB_data_view.Image = Resource_picture.Yazdır;
+            pb_aboutUS.Image = Resource_picture.hakkımızda;
+        }
         private void pB_add_pattient_Click(object sender, EventArgs e)
         {
-
-            pnlVisible(pnl_add_patient);
+            pb_default_pic();
+            pB_add_pattient.Image = Resource_picture.hasta_ekle_ikon_ters;
+           pnlVisible(pnl_add_patient);
             cb_doctor_name.Items.Clear();
             try
             {
@@ -133,6 +145,7 @@ namespace calypso_dental_V2
             }
             catch (Exception ex)
             {
+                error.write_error(ex);
                 MessageBox.Show("hata :" + ex.Message);
                 throw;
             }
@@ -152,6 +165,7 @@ namespace calypso_dental_V2
             }
             catch (Exception ex)
             {
+                error.write_error(ex);
                 MessageBox.Show("hata :" + ex.Message);
                 throw;
             }
@@ -160,6 +174,8 @@ namespace calypso_dental_V2
 
         private void pb_settings_Click(object sender, EventArgs e)
         {
+            pb_default_pic();
+            pb_settings.Image = Resource_picture.ayarlar_ters;
             pnlVisible(pnl_settings);
             var pnl = pnl_settings.Controls.OfType<Panel>();
             foreach (var item in pnl)
@@ -194,6 +210,7 @@ namespace calypso_dental_V2
             }
             catch (Exception Ex)
             {
+                error.write_error(ex);
                 adapter.Dispose();
                 cnn.Close();
                 MessageBox.Show("hata :" + Ex);
@@ -226,6 +243,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception ex)
                     {
+                        error.write_error(ex);
                         cnn.Close();
                         MessageBox.Show("Hata " + ex);
 
@@ -265,6 +283,7 @@ namespace calypso_dental_V2
                 }
                 catch (Exception Ex)
                 {
+                    error.write_error(ex);
                     cnn.Close();
                     MessageBox.Show("Hata  :" + Ex);
 
@@ -299,6 +318,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception Ex)
                     {
+                        error.write_error(ex);
                         cnn.Close();
                         MessageBox.Show("Hata  :" + Ex);
 
@@ -328,6 +348,7 @@ namespace calypso_dental_V2
             }
             catch (Exception Ex)
             {
+                error.write_error(ex);
                 adapter.Dispose();
                 cnn.Close();
                 MessageBox.Show("hata :" + Ex);
@@ -451,6 +472,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception ex)
                     {
+                        error.write_error(ex);
                         cnn.Close();
                         MessageBox.Show("Hata " + ex);
 
@@ -488,6 +510,7 @@ namespace calypso_dental_V2
                 }
                 catch (Exception Ex)
                 {
+                    error.write_error(ex);
                     cnn.Close();
                     MessageBox.Show("Hata  :" + Ex);
 
@@ -521,6 +544,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception Ex)
                     {
+                        error.write_error(ex);
                         cnn.Close();
                         MessageBox.Show("Hata  :" + Ex);
 
@@ -550,6 +574,7 @@ namespace calypso_dental_V2
             }
             catch (Exception Ex)
             {
+                error.write_error(ex);
                 adapter.Dispose();
                 cnn.Close();
                 MessageBox.Show("hata :" + Ex);
@@ -580,6 +605,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception ex)
                     {
+                        error.write_error(ex);
                         cnn.Close();
                         MessageBox.Show("Hata " + ex);
 
@@ -619,6 +645,7 @@ namespace calypso_dental_V2
                 }
                 catch (Exception Ex)
                 {
+                    error.write_error(ex);
                     cnn.Close();
                     MessageBox.Show("Hata  :" + Ex);
 
@@ -651,6 +678,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception Ex)
                     {
+                        error.write_error(ex);
                         cnn.Close();
                         MessageBox.Show("Hata  :" + Ex);
 
@@ -680,6 +708,7 @@ namespace calypso_dental_V2
             }
             catch (Exception Ex)
             {
+                error.write_error(ex);
                 adapter.Dispose();
                 cnn.Close();
                 MessageBox.Show("hata :" + Ex);
@@ -710,6 +739,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception ex)
                     {
+                        error.write_error(ex);
                         cnn.Close();
                         MessageBox.Show("Hata " + ex);
 
@@ -746,6 +776,7 @@ namespace calypso_dental_V2
                 }
                 catch (Exception Ex)
                 {
+                    error.write_error(ex);
                     cnn.Close();
                     MessageBox.Show("Hata  :" + Ex);
 
@@ -778,6 +809,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception Ex)
                     {
+                        error.write_error(ex);
                         command.Dispose();
                         cnn.Close();
                         MessageBox.Show("Hata  :" + Ex);
@@ -817,6 +849,7 @@ namespace calypso_dental_V2
             }
             catch (Exception ex)
             {
+                error.write_error(ex);
                 MessageBox.Show("ERROR" + ex.Message);
                 throw;
             }
@@ -853,6 +886,7 @@ namespace calypso_dental_V2
                 }
                 catch (Exception ex)
                 {
+                    error.write_error(ex);
                     MessageBox.Show("ERROR" + ex.Message);
                     throw;
                 }
@@ -880,6 +914,7 @@ namespace calypso_dental_V2
             }
             catch (Exception ex)
             {
+                error.write_error(ex);
                 MessageBox.Show("ERROR" + ex.Message);
                 throw;
             }
@@ -946,6 +981,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception ex)
                     {
+                        error.write_error(ex);
                         MessageBox.Show("Hata : "+ex.Message);
                         throw;
                     }
@@ -984,6 +1020,7 @@ namespace calypso_dental_V2
                 }
                 catch (Exception ex)
                 {
+                    error.write_error(ex);
                     MessageBox.Show("Hata :" + ex.Message);
                     throw;
                 }
@@ -1036,6 +1073,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception ex)
                     {
+                        error.write_error(ex);
                         MessageBox.Show("Hata :" + ex.Message);
                         throw;
 
@@ -1048,6 +1086,8 @@ namespace calypso_dental_V2
 
         private void pb_search_Click(object sender, EventArgs e)
         {
+            pb_default_pic();
+            pb_search.Image = Resource_picture.işlem_arama_ters;
             pnlVisible(pnl_search);
             dgvSearchFill();
         }
@@ -1145,6 +1185,8 @@ namespace calypso_dental_V2
 
         private void pB_data_view_Click(object sender, EventArgs e)
         {
+            pb_default_pic();
+            pB_data_view.Image = Resource_picture.Yazdır_ters;
             pnlVisible(pnl_print);
             cb_select_dr.Text = null;
             cb_select_step.Text = null;
@@ -1177,11 +1219,10 @@ namespace calypso_dental_V2
             }
             catch (Exception ex)
             {
+                error.write_error(ex);
                 MessageBox.Show("hata :" + ex.Message);
                 throw;
             }
-
-
         }
         private void btn_search_prt_Click(object sender, EventArgs e)
         {
@@ -1281,6 +1322,7 @@ namespace calypso_dental_V2
             }
             catch (Exception ex)
             {
+                error.write_error(ex);
                 MessageBox.Show("hata" + ex);
                 throw;
             }
@@ -1292,6 +1334,16 @@ namespace calypso_dental_V2
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
         }
 
+        private void pb_aboutUS_Click(object sender, EventArgs e)
+        {
+            pb_default_pic();
+            pb_aboutUS.Image = Resource_picture.hakkımızda_ters;
+        }
+
+        private void pnl_print_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

@@ -17,9 +17,7 @@ namespace calypso_dental_V2
     {
         SqlConnection cnn;
         SqlCommand command;
-        SqlDataReader dataReader;
-        SqlDataAdapter adapter;
-        DataView dv;
+        cs_error error = new cs_error();
         private Settings settings = new Settings();
         string sql = null;
         string connetionString = null;
@@ -76,6 +74,7 @@ namespace calypso_dental_V2
                     }
                     catch (Exception ex)
                     {
+                        error.write_error(ex);
                         MessageBox.Show("hata" + ex);
                         throw;
                     }

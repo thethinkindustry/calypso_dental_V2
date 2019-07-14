@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Threading;
+using System.IO;
 
 namespace calypso_dental_V2
 {
@@ -19,7 +20,7 @@ namespace calypso_dental_V2
         SqlConnection cnn;
         SqlDataAdapter adapter;
         DataTable table = new DataTable();
-        SqlDataReader dataReader;
+       public cs_error error = new cs_error();
         public Frm_login()
         {
             InitializeComponent();
@@ -71,7 +72,8 @@ namespace calypso_dental_V2
             }
             catch (Exception ex )
             {
-                MessageBox.Show("hata : "+ex.Message);
+                error.write_error(ex);
+               MessageBox.Show("hata : "+ex.Message);
                 if (cnn.State==ConnectionState.Open)
                 {
                     cnn.Close();
