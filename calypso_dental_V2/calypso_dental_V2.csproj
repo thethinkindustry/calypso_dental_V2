@@ -77,6 +77,12 @@
     <Compile Include="frm_add_proc.Designer.cs">
       <DependentUpon>frm_add_proc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_login.Designer.cs">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_print.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     </Compile>
     <Compile Include="Frm_print_search.Designer.cs">
       <DependentUpon>Frm_print_search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_settings.Designer.cs">
+      <DependentUpon>Frm_settings.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_update_pat.cs">
       <SubType>Form</SubType>
@@ -149,6 +161,9 @@
     <EmbeddedResource Include="frm_add_proc.resx">
       <DependentUpon>frm_add_proc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_login.resx">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_print.resx">
       <DependentUpon>Frm_print.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_print_search.resx">
       <DependentUpon>Frm_print_search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_settings.resx">
+      <DependentUpon>Frm_settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_update_pat.resx">
       <DependentUpon>frm_update_pat.cs</DependentUpon>
@@ -253,6 +271,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-google-web-search-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

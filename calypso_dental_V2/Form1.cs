@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Globalization;
+
 namespace calypso_dental_V2
 {
     public partial class frm_main : MaterialForm
@@ -46,9 +47,7 @@ namespace calypso_dental_V2
             frm_print_search.frm1 = this;
             frm_print.frm1 = this;
             frm_print_pay.frm1 = this;
-            settings.data_source = "DESKTOP-93568HR";
-            settings.initial_catalog = "db_calypso_v2";
-            settings.Save();
+            
             connetionString = "Data Source=" + settings.data_source + "\\SQL_2014;Initial Catalog=" + settings.initial_catalog + ";Integrated Security=True";
             cnn = new SqlConnection(connetionString);
         }
@@ -173,7 +172,7 @@ namespace calypso_dental_V2
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
         #region DoctorSettings
-        private void doktorlarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void colorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pnl_settingsVisible(pnl_dr_add);
             grb_dr_update.Enabled = false;
@@ -223,7 +222,7 @@ namespace calypso_dental_V2
                         command.ExecuteNonQuery();
                         command.Dispose();
                         cnn.Close();
-                        doktorlarToolStripMenuItem_Click(sender, e);
+                        colorsToolStripMenuItem_Click(sender, e);
                     }
                     catch (Exception ex)
                     {
@@ -243,22 +242,45 @@ namespace calypso_dental_V2
             if (selectedIndex > -1)
             {
                 id = int.Parse(dgv_dr_list.CurrentRow.Cells[0].Value.ToString());
-                txt_dr_name_update.Text = dgv_dr_list.CurrentRow.Cells[1].Value.ToString();
-                txt_dr_tel_update.Text = dgv_dr_list.CurrentRow.Cells[2].Value.ToString();
-                txt_dr_debt_update.Text = dgv_dr_list.CurrentRow.Cells[3].Value.ToString();
+               txt_new_dr_name.Text= txt_dr_name_update.Text = dgv_dr_list.CurrentRow.Cells[1].Value.ToString();
+                txt_new_dr_tell.Text= txt_dr_tel_update.Text = dgv_dr_list.CurrentRow.Cells[2].Value.ToString();
+               txt_new_dr_debt.Text= txt_dr_debt_update.Text = dgv_dr_list.CurrentRow.Cells[3].Value.ToString();
             }
         }
+        private void btn_dr_delete_Click(object sender, EventArgs e)
+        {
+            DialogResult mg;
+            mg = MessageBox.Show(txt_dr_name_update.Text + "\n"+txt_dr_tel_update.Text + "\n" + txt_dr_debt_update.Text + "\n" + " Adlı doktoru  silmek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (mg == DialogResult.Yes)
+            {
+                try
+                {
+                    cnn.Open();
+                    sql = "DELETE FROM tbl_dr WHERE dr_id=" + id + "";
+                    command = new SqlCommand(sql, cnn);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                    cnn.Close();
+                    colorsToolStripMenuItem_Click(sender, e);
+                }
+                catch (Exception Ex)
+                {
+                    cnn.Close();
+                    MessageBox.Show("Hata  :" + Ex);
 
+                }
+            }
+        }
         private void btn_dr_update_Click(object sender, EventArgs e)
         {
-            if (txt_dr_name_update.Text == "" || txt_dr_debt_update.Text == "" || txt_dr_tel_update.Text == "")
+            if (txt_new_dr_name.Text == "" || txt_new_dr_debt.Text == "" || txt_new_dr_tell.Text == "")
             {
                 MessageBox.Show("Kayıt işin boş alan bırakılmamalıdır.");
             }
             else
             {
                 DialogResult mg;
-                mg = MessageBox.Show(txt_dr_name_update.Text + Environment.NewLine + txt_dr_tel_update.Text + Environment.NewLine + "Borç :" + txt_dr_debt_update.Text + Environment.NewLine + "Bilgilerine sahip doktoru eklemek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                mg = MessageBox.Show(txt_new_dr_name.Text + Environment.NewLine + txt_new_dr_tell.Text + Environment.NewLine + "Borç :" + txt_new_dr_debt.Text + Environment.NewLine + "Bilgilerine sahip doktoru güncellemek  istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (mg == DialogResult.Yes)
                 {
                     try
@@ -266,14 +288,14 @@ namespace calypso_dental_V2
                         cnn.Open();
                         sql = "UPDATE tbl_dr SET dr_name=@dr,dr_tel=@tel,dr_debt=@debt WHERE dr_id=@id";
                         command = new SqlCommand(sql, cnn);
-                        command.Parameters.AddWithValue("@dr", txt_dr_name_update.Text);
-                        command.Parameters.AddWithValue("@tel", txt_dr_tel_update.Text);
-                        command.Parameters.AddWithValue("@debt", int.Parse(txt_dr_debt_update.Text));
+                        command.Parameters.AddWithValue("@dr", txt_new_dr_name.Text);
+                        command.Parameters.AddWithValue("@tel", txt_new_dr_tell.Text);
+                        command.Parameters.AddWithValue("@debt", int.Parse(txt_new_dr_debt.Text));
                         command.Parameters.AddWithValue("@id", id);
                         command.ExecuteNonQuery();
                         command.Dispose();
                         cnn.Close();
-                        doktorlarToolStripMenuItem_Click(sender, e);
+                        colorsToolStripMenuItem_Click(sender, e);
                     }
                     catch (Exception Ex)
                     {
@@ -448,17 +470,41 @@ namespace calypso_dental_V2
                 txt_proc_update.Text = dgv_proc_list.CurrentRow.Cells[1].Value.ToString();
             }
         }
+        private void btn_proc_delete_Click(object sender, EventArgs e)
+        {
+            DialogResult mg;
+            mg = MessageBox.Show(txt_proc_update.Text + Environment.NewLine + Environment.NewLine + " Adlı işlemi silmek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (mg == DialogResult.Yes)
+            {
+                try
+                {
+                    cnn.Open();
+                    sql = "DELETE FROM tbl_proc WHERE proc_id=" +id+ "";
+                    command = new SqlCommand(sql, cnn);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                    cnn.Close();
+                    işlemlerToolStripMenuItem_Click(sender, e);
+                }
+                catch (Exception Ex)
+                {
+                    cnn.Close();
+                    MessageBox.Show("Hata  :" + Ex);
+
+                }
+            }
+        }
 
         private void btn_proc_update_Click(object sender, EventArgs e)
         {
-            if (txt_proc_update.Text == "")
+            if (txt_new_proc_name.Text == "")
             {
                 MessageBox.Show("Kayıt için boş alan bırakılmamalıdır.");
             }
             else
             {
                 DialogResult mg;
-                mg = MessageBox.Show(txt_proc_update.Text + Environment.NewLine + Environment.NewLine + " Adlı işlemi güncellemek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                mg = MessageBox.Show(txt_new_proc_name.Text + Environment.NewLine + Environment.NewLine + " Adlı işlemi güncellemek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (mg == DialogResult.Yes)
                 {
                     try
@@ -466,7 +512,7 @@ namespace calypso_dental_V2
                         cnn.Open();
                         sql = "UPDATE tbl_proc SET proc_name=@proc WHERE proc_id=@id";
                         command = new SqlCommand(sql, cnn);
-                        command.Parameters.AddWithValue("@proc", txt_proc_update.Text);
+                        command.Parameters.AddWithValue("@proc", txt_new_proc_name.Text);
                         command.Parameters.AddWithValue("@id", id);
                         command.ExecuteNonQuery();
                         command.Dispose();
@@ -555,7 +601,30 @@ namespace calypso_dental_V2
                 txt_color_update.Text = dgv_color_list.CurrentRow.Cells[1].Value.ToString();
             }
         }
+        private void btn_color_delete_Click(object sender, EventArgs e)
+        {
+            DialogResult mg;
+            mg = MessageBox.Show(txt_color_update.Text + "\n" +" Adlı rengi  silmek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (mg == DialogResult.Yes)
+            {
+                try
+                {
+                    cnn.Open();
+                    sql = "DELETE FROM tbl_color WHERE color_id=" + id + "";
+                    command = new SqlCommand(sql, cnn);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                    cnn.Close();
+                    reToolStripMenuItem_Click(sender, e);
+                }
+                catch (Exception Ex)
+                {
+                    cnn.Close();
+                    MessageBox.Show("Hata  :" + Ex);
 
+                }
+            }
+        }
         private void btn_color_update_Click(object sender, EventArgs e)
         {
             if (txt_color_update.Text == "")
@@ -565,7 +634,7 @@ namespace calypso_dental_V2
             else
             {
                 DialogResult mg;
-                mg = MessageBox.Show(txt_color_update.Text + Environment.NewLine + Environment.NewLine + " Adlı rengi güncellemek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                mg = MessageBox.Show(txt_new_color.Text + Environment.NewLine + Environment.NewLine + " Adlı rengi güncellemek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (mg == DialogResult.Yes)
                 {
                     try
@@ -573,7 +642,7 @@ namespace calypso_dental_V2
                         cnn.Open();
                         sql = "UPDATE tbl_color SET color_name=@color WHERE color_id=@id";
                         command = new SqlCommand(sql, cnn);
-                        command.Parameters.AddWithValue("@color", txt_color_update.Text);
+                        command.Parameters.AddWithValue("@color", txt_new_color.Text);
                         command.Parameters.AddWithValue("@id", id);
                         command.ExecuteNonQuery();
                         command.Dispose();
@@ -659,6 +728,30 @@ namespace calypso_dental_V2
                 txt_step_update.Text = dgv_step_list.CurrentRow.Cells[1].Value.ToString();
             }
         }
+        private void btn_delete_step_Click(object sender, EventArgs e)
+        {
+            DialogResult mg;
+            mg = MessageBox.Show(txt_step_update.Text + Environment.NewLine + Environment.NewLine + " Adlı aşamayı silmek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (mg == DialogResult.Yes)
+            {
+                try
+                {
+                    cnn.Open();
+                    sql = "DELETE FROM tbl_step WHERE step_id=" + id + "";
+                    command = new SqlCommand(sql, cnn);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                    cnn.Close();
+                    aşamaToolStripMenuItem_Click(sender, e);
+                }
+                catch (Exception Ex)
+                {
+                    cnn.Close();
+                    MessageBox.Show("Hata  :" + Ex);
+
+                }
+            }
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             if (txt_step_update.Text == "")
@@ -668,7 +761,7 @@ namespace calypso_dental_V2
             else
             {
                 DialogResult mg;
-                mg = MessageBox.Show(txt_step_update.Text + Environment.NewLine + Environment.NewLine + " Adlı aşamayı güncellemek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                mg = MessageBox.Show(txt_new_step.Text + Environment.NewLine + Environment.NewLine + " Adlı aşamayı güncellemek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (mg == DialogResult.Yes)
                 {
                     try
@@ -676,7 +769,7 @@ namespace calypso_dental_V2
                         cnn.Open();
                         sql = "UPDATE tbl_step SET step_name=@step WHERE step_id=@id";
                         command = new SqlCommand(sql, cnn);
-                        command.Parameters.AddWithValue("@step", txt_step_update.Text);
+                        command.Parameters.AddWithValue("@step", txt_new_step.Text);
                         command.Parameters.AddWithValue("@id", id);
                         command.ExecuteNonQuery();
                         command.Dispose();
@@ -728,22 +821,59 @@ namespace calypso_dental_V2
                 throw;
             }
         }
+        private void dgv_old_payment_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DialogResult mg;
+            mg = MessageBox.Show( " n ödeme geçmişini silmek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (mg == DialogResult.Yes)
+            {
+                try
+                {
+                    cnn.Open();
+                    var dr_debt = new SqlCommand("SELECT dr_debt FROM tbl_dr where dr_name='" + dgv_dr_payment.CurrentRow.Cells[0].Value.ToString() + "'", cnn).ExecuteScalar().ToString();
+                    //MessageBox.Show(dr_debt);
+                    var dr_payment = new SqlCommand("SELECT pay_price FROM tbl_pay where pay_id='" + dgv_old_payment.CurrentRow.Cells[0].Value.ToString() + "'", cnn).ExecuteScalar().ToString();
+                    cnn.Close();
+                    //MessageBox.Show(dr_payment);
+                    int new_debt = int.Parse(dr_debt) + int.Parse(dr_payment);
+                    cnn.Open();
+                    sql = "UPDATE  tbl_dr SET dr_debt=@debt WHERE dr_name='" + dgv_old_payment.CurrentRow.Cells[1].Value.ToString() + "'";
+                    command = new SqlCommand(sql, cnn);
+                    command.Parameters.AddWithValue("@debt", new_debt);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                    cnn.Close();
+                    cnn.Open();
+                    sql = "DELETE FROM tbl_pay  WHERE pay_id=" + dgv_old_payment.CurrentRow.Cells[0].Value.ToString() + " ";
+                    command = new SqlCommand(sql, cnn);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                    cnn.Close();
+                    ödemelerToolStripMenuItem_Click(sender, e);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR" + ex.Message);
+                    throw;
+                }
+            }
+        }
         private void dgv_dr_payment_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             grb_pay_his.Enabled = true;
             try
             {
                 cnn.Open();
-                sql = "select dr_name,pay_date,pay_price From tbl_dr INNER JOIN tbl_pay ON tbl_dr.dr_id=tbl_pay.dr_id WHERE dr_name='"+ dgv_dr_payment.CurrentRow.Cells[0].Value.ToString()+ "' ";
-                adapter = new SqlDataAdapter(sql, cnn);
+                sql = "select pay_id,dr_name,pay_date,pay_price From tbl_dr INNER JOIN tbl_pay ON tbl_dr.dr_id=tbl_pay.dr_id WHERE dr_name='"+ dgv_dr_payment.CurrentRow.Cells[0].Value.ToString()+ "' ";
                 adapter = new SqlDataAdapter(sql, cnn);
                 DataTable oldpaytable = new DataTable();
                 adapter.Fill(oldpaytable);
                 cnn.Close();
                 dgv_old_payment.DataSource = oldpaytable;
-                dgv_old_payment.Columns[0].HeaderText = "Doktor Adı";
-                dgv_old_payment.Columns[1].HeaderText = "Ödeme Tarihi";
-                dgv_old_payment.Columns[2].HeaderText = "Miktar";
+                dgv_old_payment.Columns[0].Visible = false;
+                dgv_old_payment.Columns[1].HeaderText = "Doktor Adı";
+                dgv_old_payment.Columns[2].HeaderText = "Ödeme Tarihi";
+                dgv_old_payment.Columns[3].HeaderText = "Miktar";
                 dgv_dr_payment.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 adapter.Dispose();
                 cnn.Close();
@@ -1154,6 +1284,12 @@ namespace calypso_dental_V2
                 MessageBox.Show("hata" + ex);
                 throw;
             }
+        }
+
+      
+        private void frm_main_Load(object sender, EventArgs e)
+        {
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
         }
 
     }

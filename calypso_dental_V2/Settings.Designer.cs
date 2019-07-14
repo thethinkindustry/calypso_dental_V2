@@ -46,5 +46,17 @@ namespace calypso_dental_V2 {
                 this["initial_catalog"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public string p_password {
+            get {
+                return ((string)(this["p_password"]));
+            }
+            set {
+                this["p_password"] = value;
+            }
+        }
     }
 }

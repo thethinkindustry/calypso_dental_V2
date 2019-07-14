@@ -16,7 +16,7 @@ namespace calypso_dental_V2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_main());
+            Application.Run(new Frm_login());
         }
     }
 }
