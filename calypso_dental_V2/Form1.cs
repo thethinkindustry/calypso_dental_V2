@@ -208,12 +208,12 @@ namespace calypso_dental_V2
                 adapter.Dispose();
                 cnn.Close();
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
                 error.write_error(ex);
                 adapter.Dispose();
                 cnn.Close();
-                MessageBox.Show("hata :" + Ex);
+                MessageBox.Show("hata :" + ex);
             }
         }
  private void button1_Click(object sender, EventArgs e)
@@ -281,11 +281,11 @@ namespace calypso_dental_V2
                     cnn.Close();
                     colorsToolStripMenuItem_Click(sender, e);
                 }
-                catch (Exception Ex)
+                catch (Exception ex)
                 {
                     error.write_error(ex);
                     cnn.Close();
-                    MessageBox.Show("Hata  :" + Ex);
+                    MessageBox.Show("Hata  :" + ex);
 
                 }
             }
@@ -316,11 +316,11 @@ namespace calypso_dental_V2
                         cnn.Close();
                         colorsToolStripMenuItem_Click(sender, e);
                     }
-                    catch (Exception Ex)
+                    catch (Exception ex)
                     {
                         error.write_error(ex);
                         cnn.Close();
-                        MessageBox.Show("Hata  :" + Ex);
+                        MessageBox.Show("Hata  :" + ex);
 
                     }
                 }
@@ -346,12 +346,12 @@ namespace calypso_dental_V2
                 adapter.Dispose();
                 cnn.Close();
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
                 error.write_error(ex);
                 adapter.Dispose();
                 cnn.Close();
-                MessageBox.Show("hata :" + Ex);
+                MessageBox.Show("hata :" + ex);
             }
         }
         public void tableSeach(object sender, EventArgs e)
@@ -508,11 +508,11 @@ namespace calypso_dental_V2
                     cnn.Close();
                     işlemlerToolStripMenuItem_Click(sender, e);
                 }
-                catch (Exception Ex)
+                catch (Exception ex)
                 {
                     error.write_error(ex);
                     cnn.Close();
-                    MessageBox.Show("Hata  :" + Ex);
+                    MessageBox.Show("Hata  :" + ex);
 
                 }
             }
@@ -542,11 +542,11 @@ namespace calypso_dental_V2
                         cnn.Close();
                         işlemlerToolStripMenuItem_Click(sender, e);
                     }
-                    catch (Exception Ex)
+                    catch (Exception ex)
                     {
                         error.write_error(ex);
                         cnn.Close();
-                        MessageBox.Show("Hata  :" + Ex);
+                        MessageBox.Show("Hata  :" + ex);
 
                     }
                 }
@@ -572,12 +572,12 @@ namespace calypso_dental_V2
                 adapter.Dispose();
                 cnn.Close();
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
                 error.write_error(ex);
                 adapter.Dispose();
                 cnn.Close();
-                MessageBox.Show("hata :" + Ex);
+                MessageBox.Show("hata :" + ex);
             }
         }
         private void btn_color_add_Click(object sender, EventArgs e)
@@ -643,11 +643,11 @@ namespace calypso_dental_V2
                     cnn.Close();
                     reToolStripMenuItem_Click(sender, e);
                 }
-                catch (Exception Ex)
+                catch (Exception ex)
                 {
                     error.write_error(ex);
                     cnn.Close();
-                    MessageBox.Show("Hata  :" + Ex);
+                    MessageBox.Show("Hata  :" + ex);
 
                 }
             }
@@ -676,11 +676,11 @@ namespace calypso_dental_V2
                         cnn.Close();
                         reToolStripMenuItem_Click(sender, e);
                     }
-                    catch (Exception Ex)
+                    catch (Exception ex)
                     {
                         error.write_error(ex);
                         cnn.Close();
-                        MessageBox.Show("Hata  :" + Ex);
+                        MessageBox.Show("Hata  :" + ex);
 
                     }
                 }
@@ -706,12 +706,12 @@ namespace calypso_dental_V2
                 adapter.Dispose();
                 cnn.Close();
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
                 error.write_error(ex);
                 adapter.Dispose();
                 cnn.Close();
-                MessageBox.Show("hata :" + Ex);
+                MessageBox.Show("hata :" + ex);
             }
         }
         private void btn_add_step_Click(object sender, EventArgs e)
@@ -774,11 +774,11 @@ namespace calypso_dental_V2
                     cnn.Close();
                     aşamaToolStripMenuItem_Click(sender, e);
                 }
-                catch (Exception Ex)
+                catch (Exception ex)
                 {
                     error.write_error(ex);
                     cnn.Close();
-                    MessageBox.Show("Hata  :" + Ex);
+                    MessageBox.Show("Hata  :" + ex);
 
                 }
             }
@@ -807,12 +807,12 @@ namespace calypso_dental_V2
                         cnn.Close();
                         aşamaToolStripMenuItem_Click(sender, e);
                     }
-                    catch (Exception Ex)
+                    catch (Exception ex)
                     {
                         error.write_error(ex);
                         command.Dispose();
                         cnn.Close();
-                        MessageBox.Show("Hata  :" + Ex);
+                        MessageBox.Show("Hata  :" + ex);
 
                     }
                 }

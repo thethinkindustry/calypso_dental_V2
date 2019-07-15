@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calypso_dental_V2", "calypso_dental_V2\calypso_dental_V2.csproj", "{FD70788B-4BD4-4856-85BC-EC25463C0C06}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Calypso_Dental", "Calypso_Dental\Calypso_Dental.vdproj", "{13939D66-6262-4E81-B0EB-7E3138BA137A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{FD70788B-4BD4-4856-85BC-EC25463C0C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD70788B-4BD4-4856-85BC-EC25463C0C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD70788B-4BD4-4856-85BC-EC25463C0C06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13939D66-6262-4E81-B0EB-7E3138BA137A}.Debug|Any CPU.ActiveCfg = Debug
+		{13939D66-6262-4E81-B0EB-7E3138BA137A}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
