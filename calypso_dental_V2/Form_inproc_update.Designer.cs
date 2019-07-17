@@ -47,7 +47,6 @@
             this.btn_update_proc = new System.Windows.Forms.Button();
             this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.chk_sent_toDR = new System.Windows.Forms.CheckBox();
-            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label7 = new System.Windows.Forms.Label();
             this.grb_teeth = new System.Windows.Forms.GroupBox();
             this.label47 = new System.Windows.Forms.Label();
@@ -116,6 +115,7 @@
             this.t24 = new System.Windows.Forms.PictureBox();
             this.t25 = new System.Windows.Forms.PictureBox();
             this.t44 = new System.Windows.Forms.PictureBox();
+            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.grb_teeth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.t41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t42)).BeginInit();
@@ -159,7 +159,7 @@
             this.cb_procces_bar.Location = new System.Drawing.Point(579, 183);
             this.cb_procces_bar.Name = "cb_procces_bar";
             this.cb_procces_bar.Size = new System.Drawing.Size(300, 24);
-            this.cb_procces_bar.TabIndex = 149;
+            this.cb_procces_bar.TabIndex = 1;
             // 
             // cb_color_bar
             // 
@@ -169,7 +169,7 @@
             this.cb_color_bar.Location = new System.Drawing.Point(742, 230);
             this.cb_color_bar.Name = "cb_color_bar";
             this.cb_color_bar.Size = new System.Drawing.Size(137, 24);
-            this.cb_color_bar.TabIndex = 150;
+            this.cb_color_bar.TabIndex = 2;
             // 
             // cb_steps_bar
             // 
@@ -179,7 +179,7 @@
             this.cb_steps_bar.Location = new System.Drawing.Point(579, 282);
             this.cb_steps_bar.Name = "cb_steps_bar";
             this.cb_steps_bar.Size = new System.Drawing.Size(300, 24);
-            this.cb_steps_bar.TabIndex = 167;
+            this.cb_steps_bar.TabIndex = 3;
             // 
             // txt_unit_price
             // 
@@ -189,6 +189,7 @@
             this.txt_unit_price.Name = "txt_unit_price";
             this.txt_unit_price.Size = new System.Drawing.Size(123, 34);
             this.txt_unit_price.TabIndex = 155;
+            this.txt_unit_price.Text = "5";
             // 
             // materialLabel5
             // 
@@ -225,6 +226,7 @@
             this.dtp_register_date.Name = "dtp_register_date";
             this.dtp_register_date.Size = new System.Drawing.Size(114, 22);
             this.dtp_register_date.TabIndex = 163;
+            this.dtp_register_date.ValueChanged += new System.EventHandler(this.dtp_register_date_ValueChanged);
             // 
             // materialLabel4
             // 
@@ -329,7 +331,7 @@
             this.btn_cancel.Location = new System.Drawing.Point(608, 541);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(128, 51);
-            this.btn_cancel.TabIndex = 157;
+            this.btn_cancel.TabIndex = 6;
             this.btn_cancel.Text = "İptal";
             this.btn_cancel.UseVisualStyleBackColor = false;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
@@ -345,7 +347,7 @@
             this.btn_update_proc.Location = new System.Drawing.Point(742, 541);
             this.btn_update_proc.Name = "btn_update_proc";
             this.btn_update_proc.Size = new System.Drawing.Size(128, 51);
-            this.btn_update_proc.TabIndex = 156;
+            this.btn_update_proc.TabIndex = 5;
             this.btn_update_proc.Text = "İşlemi Güncelle";
             this.btn_update_proc.UseVisualStyleBackColor = false;
             this.btn_update_proc.Click += new System.EventHandler(this.btn_update_proc_Click);
@@ -376,22 +378,6 @@
             this.chk_sent_toDR.Size = new System.Drawing.Size(18, 17);
             this.chk_sent_toDR.TabIndex = 152;
             this.chk_sent_toDR.UseVisualStyleBackColor = true;
-            // 
-            // materialSingleLineTextField4
-            // 
-            this.materialSingleLineTextField4.Depth = 0;
-            this.materialSingleLineTextField4.Hint = "";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(653, 430);
-            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
-            this.materialSingleLineTextField4.PasswordChar = '\0';
-            this.materialSingleLineTextField4.SelectedText = "";
-            this.materialSingleLineTextField4.SelectionLength = 0;
-            this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(204, 28);
-            this.materialSingleLineTextField4.TabIndex = 153;
-            this.materialSingleLineTextField4.Text = "Doktora Gönderildi :";
-            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
             // 
             // label7
             // 
@@ -1172,11 +1158,29 @@
             this.t44.TabIndex = 104;
             this.t44.TabStop = false;
             // 
+            // materialSingleLineTextField1
+            // 
+            this.materialSingleLineTextField1.Depth = 0;
+            this.materialSingleLineTextField1.Hint = "";
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(630, 430);
+            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+            this.materialSingleLineTextField1.PasswordChar = '\0';
+            this.materialSingleLineTextField1.SelectedText = "";
+            this.materialSingleLineTextField1.SelectionLength = 0;
+            this.materialSingleLineTextField1.SelectionStart = 0;
+            this.materialSingleLineTextField1.Size = new System.Drawing.Size(240, 28);
+            this.materialSingleLineTextField1.TabIndex = 169;
+            this.materialSingleLineTextField1.Text = "Doktora Gönderildi :";
+            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            // 
             // Form_inproc_update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 648);
+            this.Controls.Add(this.chk_sent_toDR);
+            this.Controls.Add(this.materialSingleLineTextField1);
             this.Controls.Add(this.cb_procces_bar);
             this.Controls.Add(this.cb_color_bar);
             this.Controls.Add(this.cb_steps_bar);
@@ -1194,8 +1198,6 @@
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_update_proc);
             this.Controls.Add(this.materialSingleLineTextField5);
-            this.Controls.Add(this.chk_sent_toDR);
-            this.Controls.Add(this.materialSingleLineTextField4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.grb_teeth);
             this.Name = "Form_inproc_update";
@@ -1260,7 +1262,6 @@
         private System.Windows.Forms.Button btn_update_proc;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
         private System.Windows.Forms.CheckBox chk_sent_toDR;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox grb_teeth;
         private System.Windows.Forms.Label label47;
@@ -1329,5 +1330,6 @@
         private System.Windows.Forms.PictureBox t24;
         private System.Windows.Forms.PictureBox t25;
         private System.Windows.Forms.PictureBox t44;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
     }
 }

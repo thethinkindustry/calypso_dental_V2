@@ -1001,6 +1001,7 @@
             this.txt_unit_price.Name = "txt_unit_price";
             this.txt_unit_price.Size = new System.Drawing.Size(123, 34);
             this.txt_unit_price.TabIndex = 5;
+            this.txt_unit_price.Text = "0";
             this.txt_unit_price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressed);
             // 
             // btn_add_proc

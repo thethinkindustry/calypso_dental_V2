@@ -66,6 +66,7 @@ namespace calypso_dental_V2
                 {
                     this.Hide();
                     frm_main frm1 = new frm_main();
+                   
                     frm1.ShowDialog();
                     this.Close();
                 }

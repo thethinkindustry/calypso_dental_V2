@@ -29,12 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.pb_aboutUS = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pb_settings = new System.Windows.Forms.PictureBox();
+            this.pb_search = new System.Windows.Forms.PictureBox();
+            this.pB_data_view = new System.Windows.Forms.PictureBox();
+            this.pB_add_pattient = new System.Windows.Forms.PictureBox();
             this.pnl_add_patient = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.materialLabel38 = new MaterialSkin.Controls.MaterialLabel();
@@ -59,13 +65,6 @@
             this.btn_add_proc = new System.Windows.Forms.Button();
             this.dgv_inproc = new System.Windows.Forms.DataGridView();
             this.pnl_settings = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.genelAyarlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.doktorlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.işlemlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aşamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ödemelerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_dr_add = new System.Windows.Forms.Panel();
             this.grb_dr_update = new System.Windows.Forms.GroupBox();
             this.txt_new_dr_debt = new System.Windows.Forms.TextBox();
@@ -138,24 +137,6 @@
             this.materialLabel30 = new MaterialSkin.Controls.MaterialLabel();
             this.txt_color_add = new System.Windows.Forms.TextBox();
             this.btn_color_add = new System.Windows.Forms.Button();
-            this.pnl_payment = new System.Windows.Forms.Panel();
-            this.materialLabel65 = new MaterialSkin.Controls.MaterialLabel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.materialLabel66 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel67 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel56 = new MaterialSkin.Controls.MaterialLabel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.materialLabel54 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel55 = new MaterialSkin.Controls.MaterialLabel();
-            this.grb_pay_his = new System.Windows.Forms.GroupBox();
-            this.btn_add_payment = new System.Windows.Forms.Button();
-            this.dgv_old_payment = new System.Windows.Forms.DataGridView();
-            this.btn_print_payment = new System.Windows.Forms.Button();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.materialLabel58 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel57 = new MaterialSkin.Controls.MaterialLabel();
-            this.txt_total_debt = new System.Windows.Forms.TextBox();
-            this.dgv_dr_payment = new System.Windows.Forms.DataGridView();
             this.pnl_add_proc = new System.Windows.Forms.Panel();
             this.grb_proc_update = new System.Windows.Forms.GroupBox();
             this.materialLabel59 = new MaterialSkin.Controls.MaterialLabel();
@@ -176,9 +157,38 @@
             this.materialLabel27 = new MaterialSkin.Controls.MaterialLabel();
             this.txt_proc = new System.Windows.Forms.TextBox();
             this.btn_proc_add = new System.Windows.Forms.Button();
+            this.pnl_payment = new System.Windows.Forms.Panel();
+            this.materialLabel65 = new MaterialSkin.Controls.MaterialLabel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.materialLabel66 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel67 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel56 = new MaterialSkin.Controls.MaterialLabel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.materialLabel54 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel55 = new MaterialSkin.Controls.MaterialLabel();
+            this.grb_pay_his = new System.Windows.Forms.GroupBox();
+            this.btn_add_payment = new System.Windows.Forms.Button();
+            this.dgv_old_payment = new System.Windows.Forms.DataGridView();
+            this.btn_print_payment = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.materialLabel58 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel57 = new MaterialSkin.Controls.MaterialLabel();
+            this.txt_total_debt = new System.Windows.Forms.TextBox();
+            this.dgv_dr_payment = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.genelAyarlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doktorlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.işlemlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aşamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ödemelerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_init = new System.Windows.Forms.Panel();
             this.label54 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_search = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btn_print_search = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.materialLabel49 = new MaterialSkin.Controls.MaterialLabel();
@@ -208,6 +218,7 @@
             this.pnl_print = new System.Windows.Forms.Panel();
             this.dgv_print = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_search_prt = new System.Windows.Forms.Button();
             this.cb_select_step = new System.Windows.Forms.ComboBox();
             this.materialLabel53 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel52 = new MaterialSkin.Controls.MaterialLabel();
@@ -217,23 +228,27 @@
             this.dt_fromdate = new System.Windows.Forms.DateTimePicker();
             this.materialLabel50 = new MaterialSkin.Controls.MaterialLabel();
             this.btn_print = new System.Windows.Forms.Button();
-            this.pb_aboutUS = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pb_settings = new System.Windows.Forms.PictureBox();
-            this.pb_search = new System.Windows.Forms.PictureBox();
-            this.pB_data_view = new System.Windows.Forms.PictureBox();
-            this.pB_add_pattient = new System.Windows.Forms.PictureBox();
-            this.btn_search_prt = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.yedeklemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnl_backup = new System.Windows.Forms.Panel();
+            this.materialLabel68 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel69 = new MaterialSkin.Controls.MaterialLabel();
+            this.txt_server = new System.Windows.Forms.TextBox();
+            this.txt_database = new System.Windows.Forms.TextBox();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.lbl_percent = new System.Windows.Forms.Label();
+            this.lbl_status = new MaterialSkin.Controls.MaterialLabel();
+            this.btn_backup = new System.Windows.Forms.Button();
             this.pnl_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_aboutUS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).BeginInit();
             this.pnl_add_patient.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_inproc)).BeginInit();
             this.pnl_settings.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.pnl_dr_add.SuspendLayout();
             this.grb_dr_update.SuspendLayout();
             this.grb_.SuspendLayout();
@@ -249,32 +264,28 @@
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_color_list)).BeginInit();
             this.groupBox7.SuspendLayout();
-            this.pnl_payment.SuspendLayout();
-            this.grb_pay_his.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_old_payment)).BeginInit();
-            this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_dr_payment)).BeginInit();
             this.pnl_add_proc.SuspendLayout();
             this.grb_proc_update.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proc_list)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.pnl_payment.SuspendLayout();
+            this.grb_pay_his.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_old_payment)).BeginInit();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_dr_payment)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.pnl_init.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_search.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).BeginInit();
             this.pnl_print.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_print)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_aboutUS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnl_backup.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_menu
@@ -289,12 +300,64 @@
             this.pnl_menu.Controls.Add(this.pB_add_pattient);
             this.pnl_menu.Name = "pnl_menu";
             // 
+            // pb_aboutUS
+            // 
+            this.pb_aboutUS.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pb_aboutUS, "pb_aboutUS");
+            this.pb_aboutUS.Image = global::calypso_dental_V2.Resource_picture.hakkımızda;
+            this.pb_aboutUS.Name = "pb_aboutUS";
+            this.pb_aboutUS.TabStop = false;
+            this.pb_aboutUS.Click += new System.EventHandler(this.pb_aboutUS_Click);
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pb_settings
+            // 
+            this.pb_settings.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pb_settings, "pb_settings");
+            this.pb_settings.Image = global::calypso_dental_V2.Resource_picture.ayarlar;
+            this.pb_settings.Name = "pb_settings";
+            this.pb_settings.TabStop = false;
+            this.pb_settings.Click += new System.EventHandler(this.pb_settings_Click);
+            // 
+            // pb_search
+            // 
+            this.pb_search.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pb_search, "pb_search");
+            this.pb_search.Image = global::calypso_dental_V2.Resource_picture.işlem_arama;
+            this.pb_search.Name = "pb_search";
+            this.pb_search.TabStop = false;
+            this.pb_search.Click += new System.EventHandler(this.pb_search_Click);
+            // 
+            // pB_data_view
+            // 
+            this.pB_data_view.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pB_data_view, "pB_data_view");
+            this.pB_data_view.Image = global::calypso_dental_V2.Resource_picture.Yazdır;
+            this.pB_data_view.Name = "pB_data_view";
+            this.pB_data_view.TabStop = false;
+            this.pB_data_view.Click += new System.EventHandler(this.pB_data_view_Click);
+            // 
+            // pB_add_pattient
+            // 
+            this.pB_add_pattient.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pB_add_pattient, "pB_add_pattient");
+            this.pB_add_pattient.Image = global::calypso_dental_V2.Resource_picture.hasta_ekle_ikon;
+            this.pB_add_pattient.Name = "pB_add_pattient";
+            this.pB_add_pattient.TabStop = false;
+            this.pB_add_pattient.Click += new System.EventHandler(this.pB_add_pattient_Click);
+            // 
             // pnl_add_patient
             // 
             resources.ApplyResources(this.pnl_add_patient, "pnl_add_patient");
             this.pnl_add_patient.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnl_add_patient.Controls.Add(this.groupBox1);
             this.pnl_add_patient.Name = "pnl_add_patient";
+            this.pnl_add_patient.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_add_patient_Paint);
             // 
             // groupBox1
             // 
@@ -323,6 +386,7 @@
             this.groupBox1.Controls.Add(this.dgv_inproc);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // materialLabel38
             // 
@@ -507,14 +571,14 @@
             this.dgv_inproc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_inproc.EnableHeadersVisualStyles = false;
             this.dgv_inproc.Name = "dgv_inproc";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_inproc.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_inproc.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgv_inproc.RowTemplate.Height = 24;
             this.dgv_inproc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_inproc.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_inproc_CellDoubleClick);
@@ -524,6 +588,7 @@
             // 
             resources.ApplyResources(this.pnl_settings, "pnl_settings");
             this.pnl_settings.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnl_settings.Controls.Add(this.pnl_backup);
             this.pnl_settings.Controls.Add(this.menuStrip1);
             this.pnl_settings.Controls.Add(this.pnl_dr_add);
             this.pnl_settings.Controls.Add(this.pnl_add_step);
@@ -531,55 +596,6 @@
             this.pnl_settings.Controls.Add(this.pnl_add_proc);
             this.pnl_settings.Controls.Add(this.pnl_payment);
             this.pnl_settings.Name = "pnl_settings";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.genelAyarlarToolStripMenuItem,
-            this.ödemelerToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Name = "menuStrip1";
-            // 
-            // genelAyarlarToolStripMenuItem
-            // 
-            this.genelAyarlarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.doktorlarToolStripMenuItem,
-            this.işlemlerToolStripMenuItem,
-            this.reToolStripMenuItem,
-            this.aşamaToolStripMenuItem});
-            this.genelAyarlarToolStripMenuItem.Name = "genelAyarlarToolStripMenuItem";
-            resources.ApplyResources(this.genelAyarlarToolStripMenuItem, "genelAyarlarToolStripMenuItem");
-            // 
-            // doktorlarToolStripMenuItem
-            // 
-            this.doktorlarToolStripMenuItem.Name = "doktorlarToolStripMenuItem";
-            resources.ApplyResources(this.doktorlarToolStripMenuItem, "doktorlarToolStripMenuItem");
-            this.doktorlarToolStripMenuItem.Click += new System.EventHandler(this.colorsToolStripMenuItem_Click);
-            // 
-            // işlemlerToolStripMenuItem
-            // 
-            this.işlemlerToolStripMenuItem.Name = "işlemlerToolStripMenuItem";
-            resources.ApplyResources(this.işlemlerToolStripMenuItem, "işlemlerToolStripMenuItem");
-            this.işlemlerToolStripMenuItem.Click += new System.EventHandler(this.işlemlerToolStripMenuItem_Click);
-            // 
-            // reToolStripMenuItem
-            // 
-            this.reToolStripMenuItem.Name = "reToolStripMenuItem";
-            resources.ApplyResources(this.reToolStripMenuItem, "reToolStripMenuItem");
-            this.reToolStripMenuItem.Click += new System.EventHandler(this.reToolStripMenuItem_Click);
-            // 
-            // aşamaToolStripMenuItem
-            // 
-            this.aşamaToolStripMenuItem.Name = "aşamaToolStripMenuItem";
-            resources.ApplyResources(this.aşamaToolStripMenuItem, "aşamaToolStripMenuItem");
-            this.aşamaToolStripMenuItem.Click += new System.EventHandler(this.aşamaToolStripMenuItem_Click);
-            // 
-            // ödemelerToolStripMenuItem
-            // 
-            this.ödemelerToolStripMenuItem.Name = "ödemelerToolStripMenuItem";
-            resources.ApplyResources(this.ödemelerToolStripMenuItem, "ödemelerToolStripMenuItem");
-            this.ödemelerToolStripMenuItem.Click += new System.EventHandler(this.ödemelerToolStripMenuItem_Click);
             // 
             // pnl_dr_add
             // 
@@ -787,14 +803,14 @@
             this.dgv_dr_list.EnableHeadersVisualStyles = false;
             resources.ApplyResources(this.dgv_dr_list, "dgv_dr_list");
             this.dgv_dr_list.Name = "dgv_dr_list";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_dr_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_dr_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgv_dr_list.RowTemplate.Height = 24;
             this.dgv_dr_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_dr_list.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dr_list_CellDoubleClick);
@@ -1005,14 +1021,14 @@
             this.dgv_step_list.EnableHeadersVisualStyles = false;
             resources.ApplyResources(this.dgv_step_list, "dgv_step_list");
             this.dgv_step_list.Name = "dgv_step_list";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_step_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_step_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgv_step_list.RowTemplate.Height = 24;
             this.dgv_step_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_step_list.DoubleClick += new System.EventHandler(this.dgv_step_list_DoubleClick);
@@ -1190,14 +1206,14 @@
             this.dgv_color_list.EnableHeadersVisualStyles = false;
             resources.ApplyResources(this.dgv_color_list, "dgv_color_list");
             this.dgv_color_list.Name = "dgv_color_list";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_color_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_color_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgv_color_list.RowTemplate.Height = 24;
             this.dgv_color_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_color_list.DoubleClick += new System.EventHandler(this.dgv_color_list_DoubleClick);
@@ -1233,162 +1249,6 @@
             this.btn_color_add.Name = "btn_color_add";
             this.btn_color_add.UseVisualStyleBackColor = false;
             this.btn_color_add.Click += new System.EventHandler(this.btn_color_add_Click);
-            // 
-            // pnl_payment
-            // 
-            this.pnl_payment.Controls.Add(this.materialLabel65);
-            this.pnl_payment.Controls.Add(this.label13);
-            this.pnl_payment.Controls.Add(this.materialLabel66);
-            this.pnl_payment.Controls.Add(this.materialLabel67);
-            this.pnl_payment.Controls.Add(this.materialLabel56);
-            this.pnl_payment.Controls.Add(this.label12);
-            this.pnl_payment.Controls.Add(this.materialLabel54);
-            this.pnl_payment.Controls.Add(this.materialLabel55);
-            this.pnl_payment.Controls.Add(this.grb_pay_his);
-            this.pnl_payment.Controls.Add(this.groupBox10);
-            resources.ApplyResources(this.pnl_payment, "pnl_payment");
-            this.pnl_payment.Name = "pnl_payment";
-            // 
-            // materialLabel65
-            // 
-            resources.ApplyResources(this.materialLabel65, "materialLabel65");
-            this.materialLabel65.Depth = 0;
-            this.materialLabel65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel65.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel65.Name = "materialLabel65";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.ForeColor = System.Drawing.Color.Brown;
-            this.label13.Name = "label13";
-            // 
-            // materialLabel66
-            // 
-            resources.ApplyResources(this.materialLabel66, "materialLabel66");
-            this.materialLabel66.Depth = 0;
-            this.materialLabel66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel66.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel66.Name = "materialLabel66";
-            // 
-            // materialLabel67
-            // 
-            resources.ApplyResources(this.materialLabel67, "materialLabel67");
-            this.materialLabel67.Depth = 0;
-            this.materialLabel67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel67.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel67.Name = "materialLabel67";
-            // 
-            // materialLabel56
-            // 
-            resources.ApplyResources(this.materialLabel56, "materialLabel56");
-            this.materialLabel56.Depth = 0;
-            this.materialLabel56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel56.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel56.Name = "materialLabel56";
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.ForeColor = System.Drawing.Color.Blue;
-            this.label12.Name = "label12";
-            // 
-            // materialLabel54
-            // 
-            resources.ApplyResources(this.materialLabel54, "materialLabel54");
-            this.materialLabel54.Depth = 0;
-            this.materialLabel54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel54.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel54.Name = "materialLabel54";
-            // 
-            // materialLabel55
-            // 
-            resources.ApplyResources(this.materialLabel55, "materialLabel55");
-            this.materialLabel55.Depth = 0;
-            this.materialLabel55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel55.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel55.Name = "materialLabel55";
-            // 
-            // grb_pay_his
-            // 
-            this.grb_pay_his.Controls.Add(this.btn_add_payment);
-            this.grb_pay_his.Controls.Add(this.dgv_old_payment);
-            this.grb_pay_his.Controls.Add(this.btn_print_payment);
-            resources.ApplyResources(this.grb_pay_his, "grb_pay_his");
-            this.grb_pay_his.Name = "grb_pay_his";
-            this.grb_pay_his.TabStop = false;
-            // 
-            // btn_add_payment
-            // 
-            this.btn_add_payment.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            resources.ApplyResources(this.btn_add_payment, "btn_add_payment");
-            this.btn_add_payment.Name = "btn_add_payment";
-            this.btn_add_payment.UseVisualStyleBackColor = false;
-            this.btn_add_payment.Click += new System.EventHandler(this.btn_add_payment_Click);
-            // 
-            // dgv_old_payment
-            // 
-            this.dgv_old_payment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_old_payment.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_old_payment.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_old_payment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_old_payment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgv_old_payment, "dgv_old_payment");
-            this.dgv_old_payment.Name = "dgv_old_payment";
-            this.dgv_old_payment.RowTemplate.Height = 24;
-            this.dgv_old_payment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_old_payment.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_old_payment_CellMouseDoubleClick);
-            // 
-            // btn_print_payment
-            // 
-            this.btn_print_payment.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            resources.ApplyResources(this.btn_print_payment, "btn_print_payment");
-            this.btn_print_payment.Name = "btn_print_payment";
-            this.btn_print_payment.UseVisualStyleBackColor = false;
-            this.btn_print_payment.Click += new System.EventHandler(this.btn_print_payment_Click);
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.materialLabel58);
-            this.groupBox10.Controls.Add(this.materialLabel57);
-            this.groupBox10.Controls.Add(this.txt_total_debt);
-            this.groupBox10.Controls.Add(this.dgv_dr_payment);
-            resources.ApplyResources(this.groupBox10, "groupBox10");
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.TabStop = false;
-            // 
-            // materialLabel58
-            // 
-            resources.ApplyResources(this.materialLabel58, "materialLabel58");
-            this.materialLabel58.Depth = 0;
-            this.materialLabel58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel58.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel58.Name = "materialLabel58";
-            // 
-            // materialLabel57
-            // 
-            resources.ApplyResources(this.materialLabel57, "materialLabel57");
-            this.materialLabel57.Depth = 0;
-            this.materialLabel57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel57.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel57.Name = "materialLabel57";
-            // 
-            // txt_total_debt
-            // 
-            resources.ApplyResources(this.txt_total_debt, "txt_total_debt");
-            this.txt_total_debt.Name = "txt_total_debt";
-            // 
-            // dgv_dr_payment
-            // 
-            resources.ApplyResources(this.dgv_dr_payment, "dgv_dr_payment");
-            this.dgv_dr_payment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_dr_payment.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_dr_payment.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_dr_payment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_dr_payment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_dr_payment.Name = "dgv_dr_payment";
-            this.dgv_dr_payment.RowTemplate.Height = 24;
-            this.dgv_dr_payment.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_dr_payment_CellMouseDoubleClick);
             // 
             // pnl_add_proc
             // 
@@ -1531,14 +1391,14 @@
             this.dgv_proc_list.EnableHeadersVisualStyles = false;
             resources.ApplyResources(this.dgv_proc_list, "dgv_proc_list");
             this.dgv_proc_list.Name = "dgv_proc_list";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_proc_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_proc_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgv_proc_list.RowTemplate.Height = 24;
             this.dgv_proc_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_proc_list.DoubleClick += new System.EventHandler(this.dgv_proc_list_DoubleClick);
@@ -1575,15 +1435,223 @@
             this.btn_proc_add.UseVisualStyleBackColor = false;
             this.btn_proc_add.Click += new System.EventHandler(this.btn_proc_add_Click);
             // 
+            // pnl_payment
+            // 
+            this.pnl_payment.Controls.Add(this.label13);
+            this.pnl_payment.Controls.Add(this.materialLabel66);
+            this.pnl_payment.Controls.Add(this.materialLabel67);
+            this.pnl_payment.Controls.Add(this.materialLabel56);
+            this.pnl_payment.Controls.Add(this.label12);
+            this.pnl_payment.Controls.Add(this.materialLabel54);
+            this.pnl_payment.Controls.Add(this.materialLabel55);
+            this.pnl_payment.Controls.Add(this.grb_pay_his);
+            this.pnl_payment.Controls.Add(this.groupBox10);
+            this.pnl_payment.Controls.Add(this.materialLabel65);
+            resources.ApplyResources(this.pnl_payment, "pnl_payment");
+            this.pnl_payment.Name = "pnl_payment";
+            this.pnl_payment.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_payment_Paint);
+            // 
+            // materialLabel65
+            // 
+            resources.ApplyResources(this.materialLabel65, "materialLabel65");
+            this.materialLabel65.Depth = 0;
+            this.materialLabel65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel65.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel65.Name = "materialLabel65";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.ForeColor = System.Drawing.Color.Brown;
+            this.label13.Name = "label13";
+            // 
+            // materialLabel66
+            // 
+            resources.ApplyResources(this.materialLabel66, "materialLabel66");
+            this.materialLabel66.Depth = 0;
+            this.materialLabel66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel66.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel66.Name = "materialLabel66";
+            // 
+            // materialLabel67
+            // 
+            resources.ApplyResources(this.materialLabel67, "materialLabel67");
+            this.materialLabel67.Depth = 0;
+            this.materialLabel67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel67.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel67.Name = "materialLabel67";
+            // 
+            // materialLabel56
+            // 
+            resources.ApplyResources(this.materialLabel56, "materialLabel56");
+            this.materialLabel56.Depth = 0;
+            this.materialLabel56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel56.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel56.Name = "materialLabel56";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.ForeColor = System.Drawing.Color.Blue;
+            this.label12.Name = "label12";
+            // 
+            // materialLabel54
+            // 
+            resources.ApplyResources(this.materialLabel54, "materialLabel54");
+            this.materialLabel54.Depth = 0;
+            this.materialLabel54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel54.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel54.Name = "materialLabel54";
+            // 
+            // materialLabel55
+            // 
+            resources.ApplyResources(this.materialLabel55, "materialLabel55");
+            this.materialLabel55.Depth = 0;
+            this.materialLabel55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel55.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel55.Name = "materialLabel55";
+            // 
+            // grb_pay_his
+            // 
+            this.grb_pay_his.Controls.Add(this.btn_add_payment);
+            this.grb_pay_his.Controls.Add(this.dgv_old_payment);
+            this.grb_pay_his.Controls.Add(this.btn_print_payment);
+            resources.ApplyResources(this.grb_pay_his, "grb_pay_his");
+            this.grb_pay_his.Name = "grb_pay_his";
+            this.grb_pay_his.TabStop = false;
+            // 
+            // btn_add_payment
+            // 
+            this.btn_add_payment.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            resources.ApplyResources(this.btn_add_payment, "btn_add_payment");
+            this.btn_add_payment.Name = "btn_add_payment";
+            this.btn_add_payment.UseVisualStyleBackColor = false;
+            this.btn_add_payment.Click += new System.EventHandler(this.btn_add_payment_Click);
+            // 
+            // dgv_old_payment
+            // 
+            this.dgv_old_payment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_old_payment.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_old_payment.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_old_payment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_old_payment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgv_old_payment, "dgv_old_payment");
+            this.dgv_old_payment.Name = "dgv_old_payment";
+            this.dgv_old_payment.RowTemplate.Height = 24;
+            this.dgv_old_payment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_old_payment.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_old_payment_CellMouseDoubleClick);
+            // 
+            // btn_print_payment
+            // 
+            this.btn_print_payment.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            resources.ApplyResources(this.btn_print_payment, "btn_print_payment");
+            this.btn_print_payment.Name = "btn_print_payment";
+            this.btn_print_payment.UseVisualStyleBackColor = false;
+            this.btn_print_payment.Click += new System.EventHandler(this.btn_print_payment_Click);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.materialLabel58);
+            this.groupBox10.Controls.Add(this.materialLabel57);
+            this.groupBox10.Controls.Add(this.txt_total_debt);
+            this.groupBox10.Controls.Add(this.dgv_dr_payment);
+            resources.ApplyResources(this.groupBox10, "groupBox10");
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.TabStop = false;
+            // 
+            // materialLabel58
+            // 
+            resources.ApplyResources(this.materialLabel58, "materialLabel58");
+            this.materialLabel58.Depth = 0;
+            this.materialLabel58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel58.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel58.Name = "materialLabel58";
+            // 
+            // materialLabel57
+            // 
+            resources.ApplyResources(this.materialLabel57, "materialLabel57");
+            this.materialLabel57.Depth = 0;
+            this.materialLabel57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel57.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel57.Name = "materialLabel57";
+            // 
+            // txt_total_debt
+            // 
+            resources.ApplyResources(this.txt_total_debt, "txt_total_debt");
+            this.txt_total_debt.Name = "txt_total_debt";
+            // 
+            // dgv_dr_payment
+            // 
+            resources.ApplyResources(this.dgv_dr_payment, "dgv_dr_payment");
+            this.dgv_dr_payment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_dr_payment.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_dr_payment.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_dr_payment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_dr_payment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_dr_payment.Name = "dgv_dr_payment";
+            this.dgv_dr_payment.RowTemplate.Height = 24;
+            this.dgv_dr_payment.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_dr_payment_CellMouseDoubleClick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.genelAyarlarToolStripMenuItem,
+            this.ödemelerToolStripMenuItem,
+            this.yedeklemeToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // genelAyarlarToolStripMenuItem
+            // 
+            this.genelAyarlarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.doktorlarToolStripMenuItem,
+            this.işlemlerToolStripMenuItem,
+            this.reToolStripMenuItem,
+            this.aşamaToolStripMenuItem});
+            this.genelAyarlarToolStripMenuItem.Name = "genelAyarlarToolStripMenuItem";
+            resources.ApplyResources(this.genelAyarlarToolStripMenuItem, "genelAyarlarToolStripMenuItem");
+            // 
+            // doktorlarToolStripMenuItem
+            // 
+            this.doktorlarToolStripMenuItem.Name = "doktorlarToolStripMenuItem";
+            resources.ApplyResources(this.doktorlarToolStripMenuItem, "doktorlarToolStripMenuItem");
+            this.doktorlarToolStripMenuItem.Click += new System.EventHandler(this.colorsToolStripMenuItem_Click);
+            // 
+            // işlemlerToolStripMenuItem
+            // 
+            this.işlemlerToolStripMenuItem.Name = "işlemlerToolStripMenuItem";
+            resources.ApplyResources(this.işlemlerToolStripMenuItem, "işlemlerToolStripMenuItem");
+            this.işlemlerToolStripMenuItem.Click += new System.EventHandler(this.işlemlerToolStripMenuItem_Click);
+            // 
+            // reToolStripMenuItem
+            // 
+            this.reToolStripMenuItem.Name = "reToolStripMenuItem";
+            resources.ApplyResources(this.reToolStripMenuItem, "reToolStripMenuItem");
+            this.reToolStripMenuItem.Click += new System.EventHandler(this.reToolStripMenuItem_Click);
+            // 
+            // aşamaToolStripMenuItem
+            // 
+            this.aşamaToolStripMenuItem.Name = "aşamaToolStripMenuItem";
+            resources.ApplyResources(this.aşamaToolStripMenuItem, "aşamaToolStripMenuItem");
+            this.aşamaToolStripMenuItem.Click += new System.EventHandler(this.aşamaToolStripMenuItem_Click);
+            // 
+            // ödemelerToolStripMenuItem
+            // 
+            this.ödemelerToolStripMenuItem.Name = "ödemelerToolStripMenuItem";
+            resources.ApplyResources(this.ödemelerToolStripMenuItem, "ödemelerToolStripMenuItem");
+            this.ödemelerToolStripMenuItem.Click += new System.EventHandler(this.ödemelerToolStripMenuItem_Click);
+            // 
             // pnl_init
             // 
             resources.ApplyResources(this.pnl_init, "pnl_init");
             this.pnl_init.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnl_init.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_init.Controls.Add(this.label54);
-            this.pnl_init.Controls.Add(this.pictureBox4);
             this.pnl_init.Controls.Add(this.pictureBox1);
             this.pnl_init.Controls.Add(this.pictureBox3);
+            this.pnl_init.Controls.Add(this.pictureBox4);
             this.pnl_init.Name = "pnl_init";
             // 
             // label54
@@ -1591,6 +1659,24 @@
             resources.ApplyResources(this.label54, "label54");
             this.label54.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label54.Name = "label54";
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
             // 
             // pnl_search
             // 
@@ -1624,6 +1710,15 @@
             this.pnl_search.Controls.Add(this.txt_search_dr);
             this.pnl_search.Controls.Add(this.dgv_search);
             this.pnl_search.Name = "pnl_search";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Image = global::calypso_dental_V2.Resource_picture.icons8_google_web_search_100;
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.tableSeach);
             // 
             // btn_print_search
             // 
@@ -1732,6 +1827,8 @@
             this.txt_step.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txt_step, "txt_step");
             this.txt_step.Name = "txt_step";
+            this.txt_step.Enter += new System.EventHandler(this.tableSeach);
+            this.txt_step.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_dr_KeyDown);
             // 
             // dtp_init_date_upperlimit
             // 
@@ -1784,6 +1881,8 @@
             this.txt_search_procces.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txt_search_procces, "txt_search_procces");
             this.txt_search_procces.Name = "txt_search_procces";
+            this.txt_search_procces.Enter += new System.EventHandler(this.tableSeach);
+            this.txt_search_procces.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_dr_KeyDown);
             // 
             // txt_id
             // 
@@ -1797,12 +1896,15 @@
             this.txt_search_patient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txt_search_patient, "txt_search_patient");
             this.txt_search_patient.Name = "txt_search_patient";
+            this.txt_search_patient.Enter += new System.EventHandler(this.tableSeach);
+            this.txt_search_patient.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_dr_KeyDown);
             // 
             // txt_search_dr
             // 
             this.txt_search_dr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txt_search_dr, "txt_search_dr");
             this.txt_search_dr.Name = "txt_search_dr";
+            this.txt_search_dr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_dr_KeyDown);
             // 
             // dgv_search
             // 
@@ -1853,8 +1955,19 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
+            // btn_search_prt
+            // 
+            this.btn_search_prt.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_search_prt.BackgroundImage = global::calypso_dental_V2.Resource_picture.icons8_google_web_search_100;
+            resources.ApplyResources(this.btn_search_prt, "btn_search_prt");
+            this.btn_search_prt.Name = "btn_search_prt";
+            this.btn_search_prt.UseVisualStyleBackColor = false;
+            this.btn_search_prt.Click += new System.EventHandler(this.btn_search_prt_Click);
+            // 
             // cb_select_step
             // 
+            this.cb_select_step.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_select_step.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             resources.ApplyResources(this.cb_select_step, "cb_select_step");
             this.cb_select_step.FormattingEnabled = true;
             this.cb_select_step.Name = "cb_select_step";
@@ -1894,6 +2007,8 @@
             // 
             // cb_select_dr
             // 
+            this.cb_select_dr.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_select_dr.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             resources.ApplyResources(this.cb_select_dr, "cb_select_dr");
             this.cb_select_dr.FormattingEnabled = true;
             this.cb_select_dr.Name = "cb_select_dr";
@@ -1921,92 +2036,75 @@
             this.btn_print.UseVisualStyleBackColor = false;
             this.btn_print.Click += new System.EventHandler(this.btn_print_click);
             // 
-            // pb_aboutUS
+            // yedeklemeToolStripMenuItem
             // 
-            this.pb_aboutUS.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pb_aboutUS, "pb_aboutUS");
-            this.pb_aboutUS.Image = global::calypso_dental_V2.Resource_picture.hakkımızda;
-            this.pb_aboutUS.Name = "pb_aboutUS";
-            this.pb_aboutUS.TabStop = false;
-            this.pb_aboutUS.Click += new System.EventHandler(this.pb_aboutUS_Click);
+            this.yedeklemeToolStripMenuItem.Name = "yedeklemeToolStripMenuItem";
+            resources.ApplyResources(this.yedeklemeToolStripMenuItem, "yedeklemeToolStripMenuItem");
+            this.yedeklemeToolStripMenuItem.Click += new System.EventHandler(this.yedeklemeToolStripMenuItem_Click);
             // 
-            // pictureBox2
+            // pnl_backup
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            this.pnl_backup.Controls.Add(this.btn_backup);
+            this.pnl_backup.Controls.Add(this.lbl_status);
+            this.pnl_backup.Controls.Add(this.lbl_percent);
+            this.pnl_backup.Controls.Add(this.progressBar);
+            this.pnl_backup.Controls.Add(this.txt_database);
+            this.pnl_backup.Controls.Add(this.txt_server);
+            this.pnl_backup.Controls.Add(this.materialLabel69);
+            this.pnl_backup.Controls.Add(this.materialLabel68);
+            resources.ApplyResources(this.pnl_backup, "pnl_backup");
+            this.pnl_backup.Name = "pnl_backup";
             // 
-            // pb_settings
+            // materialLabel68
             // 
-            this.pb_settings.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pb_settings, "pb_settings");
-            this.pb_settings.Image = global::calypso_dental_V2.Resource_picture.ayarlar;
-            this.pb_settings.Name = "pb_settings";
-            this.pb_settings.TabStop = false;
-            this.pb_settings.Click += new System.EventHandler(this.pb_settings_Click);
+            resources.ApplyResources(this.materialLabel68, "materialLabel68");
+            this.materialLabel68.Depth = 0;
+            this.materialLabel68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel68.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel68.Name = "materialLabel68";
             // 
-            // pb_search
+            // materialLabel69
             // 
-            this.pb_search.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pb_search, "pb_search");
-            this.pb_search.Image = global::calypso_dental_V2.Resource_picture.işlem_arama;
-            this.pb_search.Name = "pb_search";
-            this.pb_search.TabStop = false;
-            this.pb_search.Click += new System.EventHandler(this.pb_search_Click);
+            resources.ApplyResources(this.materialLabel69, "materialLabel69");
+            this.materialLabel69.Depth = 0;
+            this.materialLabel69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel69.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel69.Name = "materialLabel69";
             // 
-            // pB_data_view
+            // txt_server
             // 
-            this.pB_data_view.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pB_data_view, "pB_data_view");
-            this.pB_data_view.Image = global::calypso_dental_V2.Resource_picture.Yazdır;
-            this.pB_data_view.Name = "pB_data_view";
-            this.pB_data_view.TabStop = false;
-            this.pB_data_view.Click += new System.EventHandler(this.pB_data_view_Click);
+            resources.ApplyResources(this.txt_server, "txt_server");
+            this.txt_server.Name = "txt_server";
             // 
-            // pB_add_pattient
+            // txt_database
             // 
-            this.pB_add_pattient.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pB_add_pattient, "pB_add_pattient");
-            this.pB_add_pattient.Image = global::calypso_dental_V2.Resource_picture.hasta_ekle_ikon;
-            this.pB_add_pattient.Name = "pB_add_pattient";
-            this.pB_add_pattient.TabStop = false;
-            this.pB_add_pattient.Click += new System.EventHandler(this.pB_add_pattient_Click);
+            resources.ApplyResources(this.txt_database, "txt_database");
+            this.txt_database.Name = "txt_database";
             // 
-            // btn_search_prt
+            // progressBar
             // 
-            this.btn_search_prt.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_search_prt.BackgroundImage = global::calypso_dental_V2.Resource_picture.icons8_google_web_search_100;
-            resources.ApplyResources(this.btn_search_prt, "btn_search_prt");
-            this.btn_search_prt.Name = "btn_search_prt";
-            this.btn_search_prt.UseVisualStyleBackColor = false;
-            this.btn_search_prt.Click += new System.EventHandler(this.btn_search_prt_Click);
+            resources.ApplyResources(this.progressBar, "progressBar");
+            this.progressBar.Name = "progressBar";
             // 
-            // pictureBox5
+            // lbl_percent
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Image = global::calypso_dental_V2.Resource_picture.icons8_google_web_search_100;
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.tableSeach);
+            resources.ApplyResources(this.lbl_percent, "lbl_percent");
+            this.lbl_percent.Name = "lbl_percent";
             // 
-            // pictureBox4
+            // lbl_status
             // 
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
+            resources.ApplyResources(this.lbl_status, "lbl_status");
+            this.lbl_status.Depth = 0;
+            this.lbl_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_status.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_status.Name = "lbl_status";
             // 
-            // pictureBox1
+            // btn_backup
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
+            resources.ApplyResources(this.btn_backup, "btn_backup");
+            this.btn_backup.Name = "btn_backup";
+            this.btn_backup.UseVisualStyleBackColor = true;
+            this.btn_backup.Click += new System.EventHandler(this.btn_backup_Click);
             // 
             // frm_main
             // 
@@ -2015,23 +2113,28 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.pnl_menu);
+            this.Controls.Add(this.pnl_settings);
+            this.Controls.Add(this.pnl_print);
             this.Controls.Add(this.pnl_search);
             this.Controls.Add(this.pnl_init);
-            this.Controls.Add(this.pnl_settings);
             this.Controls.Add(this.pnl_add_patient);
-            this.Controls.Add(this.pnl_print);
             this.Name = "frm_main";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.frm_main_Load);
+            this.Enter += new System.EventHandler(this.tableSeach);
             this.pnl_menu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_aboutUS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).EndInit();
             this.pnl_add_patient.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_inproc)).EndInit();
             this.pnl_settings.ResumeLayout(false);
             this.pnl_settings.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.pnl_dr_add.ResumeLayout(false);
             this.pnl_dr_add.PerformLayout();
             this.grb_dr_update.ResumeLayout(false);
@@ -2056,13 +2159,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_color_list)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.pnl_payment.ResumeLayout(false);
-            this.pnl_payment.PerformLayout();
-            this.grb_pay_his.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_old_payment)).EndInit();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_dr_payment)).EndInit();
             this.pnl_add_proc.ResumeLayout(false);
             this.pnl_add_proc.PerformLayout();
             this.grb_proc_update.ResumeLayout(false);
@@ -2071,27 +2167,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proc_list)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.pnl_payment.ResumeLayout(false);
+            this.pnl_payment.PerformLayout();
+            this.grb_pay_his.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_old_payment)).EndInit();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_dr_payment)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.pnl_init.ResumeLayout(false);
             this.pnl_init.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_search.ResumeLayout(false);
             this.pnl_search.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).EndInit();
             this.pnl_print.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_print)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_aboutUS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_settings)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_search)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_data_view)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pB_add_pattient)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnl_backup.ResumeLayout(false);
+            this.pnl_backup.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -2291,6 +2391,16 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel66;
         private MaterialSkin.Controls.MaterialLabel materialLabel67;
         private System.Windows.Forms.PictureBox pb_aboutUS;
+        private System.Windows.Forms.Panel pnl_backup;
+        private MaterialSkin.Controls.MaterialLabel lbl_status;
+        private System.Windows.Forms.Label lbl_percent;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.TextBox txt_database;
+        private System.Windows.Forms.TextBox txt_server;
+        private MaterialSkin.Controls.MaterialLabel materialLabel69;
+        private MaterialSkin.Controls.MaterialLabel materialLabel68;
+        private System.Windows.Forms.ToolStripMenuItem yedeklemeToolStripMenuItem;
+        private System.Windows.Forms.Button btn_backup;
     }
 }
 

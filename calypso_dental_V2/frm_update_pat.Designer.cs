@@ -50,6 +50,7 @@
             this.txt_doctor_notes = new System.Windows.Forms.RichTextBox();
             this.btn_delete_proc = new System.Windows.Forms.Button();
             this.dgv_inproc = new System.Windows.Forms.DataGridView();
+            this.btn_add_inproc = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_inproc)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.btn_add_inproc);
             this.groupBox1.Controls.Add(this.materialLabel38);
             this.groupBox1.Controls.Add(this.materialLabel37);
             this.groupBox1.Controls.Add(this.label10);
@@ -358,6 +360,22 @@
             this.dgv_inproc.TabIndex = 117;
             this.dgv_inproc.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgv_inproc_MouseDoubleClick);
             // 
+            // btn_add_inproc
+            // 
+            this.btn_add_inproc.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_add_inproc.FlatAppearance.BorderSize = 0;
+            this.btn_add_inproc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_add_inproc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_add_inproc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add_inproc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_add_inproc.Location = new System.Drawing.Point(152, 575);
+            this.btn_add_inproc.Name = "btn_add_inproc";
+            this.btn_add_inproc.Size = new System.Drawing.Size(123, 55);
+            this.btn_add_inproc.TabIndex = 152;
+            this.btn_add_inproc.Text = "İşlem Ekle";
+            this.btn_add_inproc.UseVisualStyleBackColor = false;
+            this.btn_add_inproc.Click += new System.EventHandler(this.btn_add_inproc_Click);
+            // 
             // frm_update_pat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -397,5 +415,6 @@
         private System.Windows.Forms.RichTextBox txt_doctor_notes;
         private System.Windows.Forms.Button btn_delete_proc;
         private System.Windows.Forms.DataGridView dgv_inproc;
+        private System.Windows.Forms.Button btn_add_inproc;
     }
 }

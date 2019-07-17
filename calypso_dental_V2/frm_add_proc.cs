@@ -19,6 +19,7 @@ namespace calypso_dental_V2
         SqlDataReader dataReader;
         cs_error error = new cs_error();
         public frm_main frm1;
+        private id reg_no = new calypso_dental_V2.id();
         string sql = null;
         string connetionString = null;
         private Settings settings = new Settings();
@@ -124,21 +125,7 @@ namespace calypso_dental_V2
                     price = int.Parse(txt_unit_price.Text);
                     try
                     {
-
-                        int reg_id = 0;
-                        cnn.Open();
-                        sql = "SELECT TOP(1) reg_no  FROM tbl_reg order by reg_no desc ";
-                        command = new SqlCommand(sql, cnn);
-                        dataReader = command.ExecuteReader();
-                        if (dataReader.Read())
-                        {
-                            reg_id = int.Parse(dataReader["reg_no"].ToString());
-                        }
-                        //MessageBox.Show("reg_id :"+reg_id.ToString());
-                        dataReader.Close();
-                        cnn.Close();
-                        reg_id += 1;
-                        string dr_sent = "Hayır";
+                     string dr_sent = "Hayır";
                         if (chk_sent_toDR.Checked == true)
                         {
                             dr_sent = "Evet";
@@ -146,7 +133,7 @@ namespace calypso_dental_V2
                         cnn.Open();
                         sql = "INSERT tbl_inproc(reg_no,proc_name,inproc_init_date,inproc_deadline,step_name,color_name,teet,teet_num,price,total_price,sent) VALUES(@reg_no,@proc_name,@init_date,@deadline_date,@step_name,@color_name,@teet,@teet_num,@price,@total_price,@sent)";
                         command = new SqlCommand(sql, cnn);
-                        command.Parameters.Add(new SqlParameter("@reg_no", reg_id));
+                        command.Parameters.Add(new SqlParameter("@reg_no", reg_no.Selected_id));
                         command.Parameters.Add(new SqlParameter("@proc_name", cb_procces_bar.Text));
                         command.Parameters.Add(new SqlParameter("@init_date", dtp_register_date.Value.ToString("yyyy-MM-dd")));
                         command.Parameters.Add(new SqlParameter("@deadline_date", dtp_deadline.Value.ToString("yyyy-MM-dd")));
@@ -159,6 +146,7 @@ namespace calypso_dental_V2
                         command.Parameters.Add(new SqlParameter("@sent", dr_sent));
                         command.ExecuteNonQuery();
                         command.Dispose();
+                        MessageBox.Show("eklendi");
                         cnn.Close();
                         this.Close();
                     }

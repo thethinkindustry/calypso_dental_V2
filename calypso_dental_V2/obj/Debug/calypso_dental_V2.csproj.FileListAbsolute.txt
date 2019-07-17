@@ -32,3 +32,12 @@ C:\Users\m98tu\Documents\Visual Studio 2015\Projects\calypso_dental_V2\calypso_d
 C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.Frm_print_payment.resources
 C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.Frm_login.resources
 C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.Frm_settings.resources
+C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\Microsoft.SqlServer.ForEachSMOEnumerator.dll
+C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\m98tu\documents\visual studio 2015\Projects\calypso_dental_V2\calypso_dental_V2\obj\Debug\calypso_dental_V2.csproj.calypso_dental_V2.exe.config

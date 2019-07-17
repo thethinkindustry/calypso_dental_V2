@@ -97,7 +97,7 @@ namespace calypso_dental_V2
         {
             string teeth = null;
             cnn.Open();
-            sql = "SELECT teet FROM tbl_inproc WHERE reg_no="+reg_no.Selected_id+"";
+            sql = "SELECT teet FROM tbl_inproc WHERE inproc_id="+reg_no.inproc_id+"";
             command = new SqlCommand(sql, cnn);
             dataReader = command.ExecuteReader();
             while (dataReader.Read())
@@ -132,14 +132,17 @@ namespace calypso_dental_V2
             try
             {
                 cnn.Open();
-                sql = "SELECT * FROM tbl_inproc WHERE reg_no=" + reg_no.Selected_id + "";
+                sql = "SELECT * FROM tbl_inproc WHERE inproc_id=" + reg_no.inproc_id + "";
                 command = new SqlCommand(sql, cnn);
                 dataReader = command.ExecuteReader();
-                while (dataReader.Read())
+                if (dataReader.Read())
                 {
+                    dtp_register_date.Text = dataReader["inproc_init_date"].ToString();
                     cb_procces_bar.Text = dataReader["proc_name"].ToString();
                     cb_color_bar.Text = dataReader["color_name"].ToString();
                     cb_steps_bar.Text = dataReader["step_name"].ToString();
+                   
+                    dtp_deadline.Text = dataReader["inproc_deadline"].ToString();
                     txt_unit_price.Text = dataReader["price"].ToString();
                     old_inproc_price = int.Parse(dataReader["total_price"].ToString());
                     if (dataReader["sent"].ToString()=="Evet")
@@ -174,7 +177,7 @@ namespace calypso_dental_V2
         }
         private void btn_update_proc_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cb_procces_bar?.SelectedItem?.ToString()) || string.IsNullOrEmpty(cb_color_bar.SelectedItem?.ToString()) || string.IsNullOrEmpty(cb_steps_bar?.SelectedItem?.ToString()) || string.IsNullOrEmpty(txt_unit_price.Text))
+            if (string.IsNullOrEmpty(cb_procces_bar.Text) || string.IsNullOrEmpty(cb_color_bar.Text) || string.IsNullOrEmpty(cb_steps_bar.Text) || string.IsNullOrEmpty(txt_unit_price.Text))
             {
                 MessageBox.Show("Kayıt İçin Tüm Alanlar Doldurulmalıdır.");
             }
@@ -270,6 +273,11 @@ namespace calypso_dental_V2
                     }
                 }
             }
+        }
+
+        private void dtp_register_date_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

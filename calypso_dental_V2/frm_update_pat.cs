@@ -277,5 +277,17 @@ namespace calypso_dental_V2
                 this.Close();
             }
         }
+
+        private void btn_add_inproc_Click(object sender, EventArgs e)
+        {
+            reg_no.Selected_id = int.Parse(txt_reg_no.Text);
+            reg_no.Save();
+            MaterialForm frm_proc = new frm_add_proc();
+            frm_proc.ShowDialog();
+            updateDgv_inproc();
+            dgv_inproc.Refresh();
+            total_price();
+
+        }
     }
 }

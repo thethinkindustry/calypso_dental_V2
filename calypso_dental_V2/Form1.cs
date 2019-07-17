@@ -13,6 +13,8 @@ using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.IO;
+using Microsoft.SqlServer.Management.Smo;
+using Microsoft.SqlServer.Management.Common;
 
 namespace calypso_dental_V2
 {
@@ -91,6 +93,8 @@ namespace calypso_dental_V2
         }
         private void btn_add_proc_Click(object sender, EventArgs e)
         {
+            reg_no.Selected_id = int.Parse(txt_reg_no.Text);
+            reg_no.Save();
             MaterialForm frm_proc = new frm_add_proc();
             frm_proc.ShowDialog();
             dgv_inproc_fill();
@@ -117,6 +121,10 @@ namespace calypso_dental_V2
             pb_default_pic();
             pB_add_pattient.Image = Resource_picture.hasta_ekle_ikon_ters;
            pnlVisible(pnl_add_patient);
+            cb_doctor_name.Text = null;
+            cb_doctor_name.SelectedIndex = -1;
+            txt_patient_name.Text = null;
+            txt_doctor_notes.Text = null;
             cb_doctor_name.Items.Clear();
             try
             {
@@ -930,19 +938,29 @@ namespace calypso_dental_V2
         }
         private void btn_print_payment_Click(object sender, EventArgs e)
         {
-            lst_pay.Clear();
-            p_info.Totaldebt =int.Parse( dgv_dr_payment.CurrentRow.Cells[2].Value.ToString());
-            for (int i = 0; i < dgv_old_payment.Rows.Count-1; i++)
+            try
             {
-                lst_pay.Add(new payment
+                lst_pay.Clear();
+                p_info.Totaldebt = int.Parse(dgv_dr_payment.CurrentRow.Cells[2].Value.ToString());
+                for (int i = 0; i < dgv_old_payment.Rows.Count - 1; i++)
                 {
-                    dr_name = dgv_old_payment.Rows[i].Cells[0].Value.ToString(),
-                    date = dgv_old_payment.Rows[i].Cells[1].Value.ToString(),
-                    pay = int.Parse(dgv_old_payment.Rows[i].Cells[2].Value.ToString())
-                });
+                    lst_pay.Add(new payment
+                    {
+                        dr_name = dgv_old_payment.Rows[i].Cells[1].Value.ToString(),
+                        date = dgv_old_payment.Rows[i].Cells[2].Value.ToString(),
+                        pay =int.Parse(dgv_old_payment.Rows[i].Cells[3].Value.ToString())
+                    });
+                }
             }
-            frm_print_pay.frm1.frm_print_pay.ShowDialog();
-            pnlVisible(pnl_init);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata "+ex.Message);
+                error.write_error(ex);
+                throw;
+            }
+          
+             frm_print_pay.frm1.frm_print_pay.ShowDialog();
+           pnlVisible(pnl_init);
         }
         #endregion
         void pnl_settingsVisible(Panel pnl)
@@ -1070,6 +1088,7 @@ namespace calypso_dental_V2
                           command.ExecuteNonQuery();
                           command.Dispose();
                           cnn.Close();
+                        pb_default_pic();
                     }
                     catch (Exception ex)
                     {
@@ -1086,6 +1105,11 @@ namespace calypso_dental_V2
 
         private void pb_search_Click(object sender, EventArgs e)
         {
+            var txt = pnl_search.Controls.OfType<TextBox>();
+            foreach (var item in txt)
+            {
+                item.Text = null;
+            }
             pb_default_pic();
             pb_search.Image = Resource_picture.işlem_arama_ters;
             pnlVisible(pnl_search);
@@ -1192,6 +1216,7 @@ namespace calypso_dental_V2
             cb_select_step.Text = null;
             cb_select_dr.Items.Clear();
             cb_select_step.Items.Clear();
+            dgv_print.DataSource = null;
             try
             {
                 cnn.Open();
@@ -1236,13 +1261,16 @@ namespace calypso_dental_V2
                 {
                     cnn.Open();
                 }
-                sql = "SELECT  tbl_reg.reg_no,pat_name,proc_name,inproc_deadline,price,total_price,printed FROM tbl_reg INNER JOIN tbl_inproc ON tbl_reg.reg_no=tbl_inproc.reg_no Where dr_name='"+cb_select_dr.SelectedItem.ToString()+"' AND step_name='"+cb_select_step.SelectedItem.ToString()+"' ";
+                sql = "SELECT  tbl_reg.reg_no,inproc_id,pat_name,proc_name,inproc_deadline,price,total_price,printed FROM tbl_reg INNER JOIN tbl_inproc ON tbl_reg.reg_no=tbl_inproc.reg_no Where dr_name='"+cb_select_dr.SelectedItem.ToString()+"'";
                 adapter = new SqlDataAdapter(sql, cnn);
                 DataTable table1 = new DataTable();
-                table1.Clear();
+               table1.Clear();
                 adapter.Fill(table1);
-                dgv_print.DataSource = table1;
+                dv = new DataView(table1);
+                dv.RowFilter = string.Format(CultureInfo.InvariantCulture.NumberFormat, " inproc_deadline>= #{0}# And inproc_deadline <= #{1}# ", dt_fromdate.Value.ToString("yyyy-MM-dd"), dt_todate.Value.ToString("yyyy-MM-dd"));
+                dgv_print.DataSource = dv;
                 dgv_print.Columns["reg_no"].HeaderText = "Kayıt No";
+                dgv_print.Columns["inproc_id"].HeaderText = "İşlem No";
                 dgv_print.Columns["pat_name"].HeaderText = "Hasta Adı";
                 dgv_print.Columns["proc_name"].HeaderText = "Yapılan İşlem ";
                 dgv_print.Columns["inproc_deadline"].HeaderText = "İstenilen Tarih";
@@ -1250,6 +1278,10 @@ namespace calypso_dental_V2
                 dgv_print.Columns["total_price"].HeaderText = "Toplam Fiyat";
                 dgv_print.Columns["printed"].HeaderText = "Yazdırıldı";
                 dgv_print.Columns[6].Visible = true;
+              
+               
+                
+                
                 dgv_print.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 adapter.Dispose();
                 cnn.Close();
@@ -1266,7 +1298,7 @@ namespace calypso_dental_V2
                     for (int i = 0; i < dgv_print.Rows.Count - 1; i++)
                     {
                         
-                        if ("Evet" == dgv_print.Rows[i].Cells[6].Value.ToString())
+                        if ("Evet" == dgv_print.Rows[i].Cells[7].Value.ToString())
                         {
                             DialogResult dialogResult = MessageBox.Show(dgv_print.Rows[i].Cells[1].Value.ToString() + " Adlı hasta daha once yazdırılmış Yazdırmak istediğinizden emin misiniz?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                             if (dialogResult == DialogResult.No)
@@ -1286,10 +1318,10 @@ namespace calypso_dental_V2
                     for (int i = 0; i < dgv_print.Rows.Count - 1; i++)
                 {
                         cnn.Open();
-                        sql = "UPDATE  tbl_inproc SET printed=@pat WHERE reg_no=@reg";
+                        sql = "UPDATE  tbl_inproc SET printed=@pat WHERE inproc_id=@reg";
                         command = new SqlCommand(sql, cnn);
                         command.Parameters.AddWithValue("@pat", "Evet");
-                        command.Parameters.AddWithValue("@reg", dgv_print.Rows[i].Cells[0].Value);
+                        command.Parameters.AddWithValue("@reg", dgv_print.Rows[i].Cells[1].Value);
                         command.ExecuteNonQuery();
                         command.Dispose();
                         cnn.Close();
@@ -1297,11 +1329,11 @@ namespace calypso_dental_V2
                         lst_print.Add(new patient
                     {
                         reg_no = int.Parse(dgv_print.Rows[i].Cells[0].Value.ToString()),
-                        pName = dgv_print.Rows[i].Cells[1].Value.ToString(),
-                        progName = dgv_print.Rows[i].Cells[2].Value.ToString(),
-                        regDate = dgv_print.Rows[i].Cells[3].Value.ToString(),
-                        uprice= int.Parse(dgv_print.Rows[i].Cells[4].Value.ToString()),
-                        price = int.Parse(dgv_print.Rows[i].Cells[5].Value.ToString())
+                        pName = dgv_print.Rows[i].Cells[2].Value.ToString(),
+                        progName = dgv_print.Rows[i].Cells[3].Value.ToString(),
+                        regDate = dgv_print.Rows[i].Cells[4].Value.ToString(),
+                        uprice= int.Parse(dgv_print.Rows[i].Cells[5].Value.ToString()),
+                        price = int.Parse(dgv_print.Rows[i].Cells[6].Value.ToString())
                     });
                 }
                     cnn.Open();
@@ -1343,6 +1375,87 @@ namespace calypso_dental_V2
         private void pnl_print_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnl_payment_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnl_add_patient_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void txt_search_dr_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tableSeach(sender ,e);
+            }
+        }
+
+        private void btn_backup_Click(object sender, EventArgs e)
+        {
+            string snnstr;
+            snnstr = "" + settings.data_source + "\\SQL_2014;Integrated Security=True";
+            progressBar.Value = 0;
+            try
+            {
+               
+                Server dbServer = new Server(new ServerConnection(settings.data_source+ "\\SQL_2014","admin","12324"));
+                dbServer.ConnectionContext.LoginSecure = true;
+                Backup dbBackup = new Backup() { Action = BackupActionType.Database, Database = settings.initial_catalog };
+                dbBackup.Devices.AddDevice(@"C:\calypso_dental_v2\backup\db_calypso_v2.bak",DeviceType.File);
+                dbBackup.PercentComplete += DbBackup_PercentComplete;
+                dbBackup.Complete += DbBackup_Complete;
+                dbBackup.SqlBackupAsync(dbServer);
+                MessageBox.Show("Yedekleme Tamamlandı  ");
+            }
+            catch (Exception ex)
+            {
+                error.write_error(ex);
+                MessageBox.Show("HATA : "+ex.Message);
+                throw;
+            }
+        }
+
+        private void DbBackup_Complete(object sender, ServerMessageEventArgs e)
+        {
+            if (e.Error!=null)
+            {
+                lbl_status.Invoke((MethodInvoker)delegate{
+                    lbl_status.Text = e.Error.Message;
+                });
+            }
+        }
+
+        private void DbBackup_PercentComplete(object sender, PercentCompleteEventArgs e)
+        {
+            progressBar.Invoke((MethodInvoker)delegate
+            {
+                progressBar.Value = e.Percent;
+                progressBar.Update();
+            });
+            lbl_percent.Invoke((MethodInvoker)delegate
+            {
+                lbl_percent.Text = (e.Percent)+"%";
+            });
+        }
+
+        private void yedeklemeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnl_settingsVisible(pnl_backup);
         }
     }
 }
